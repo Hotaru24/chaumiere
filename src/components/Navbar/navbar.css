@@ -1,0 +1,25 @@
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar-desktop {
+    display: none;
+}
+
+.navbar-mobile {
+    height: 100%;
+    text-align: end;
+}
+
+
+@media (min-width: 800px) {
+    .navbar-desktop {
+        display: unset;
+        display: flex;
+    }
+
+    .navbar-mobile, #basic-menu {
+        display: none;
+    }
+}
