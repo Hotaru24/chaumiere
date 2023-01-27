@@ -76,7 +76,7 @@ collections:
               label: Intro,
               name: intro,
               widget: object,
-              i18n: "true"
+              i18n: "true",
               fields:
                 [
                   { label: Heading, name: heading, widget: string, i18n: "true" } ,
@@ -98,7 +98,7 @@ collections:
               label: Main,
               name: main,
               widget: object,
-              i18n: "true"
+              i18n: "true",
               fields:
                 [
                   { label: Heading, name: heading, widget: string, i18n: "true" },
