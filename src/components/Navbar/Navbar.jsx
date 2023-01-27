@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 import "./navbar.css";
@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
+import { useState } from "react";
 
 
 const Navbar = () => {
@@ -19,6 +20,8 @@ const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const [locale, setLocale] = useState('FR');
 
   return (
     <nav
@@ -47,22 +50,22 @@ const Navbar = () => {
           }}
         >
           <MenuItem>
-              <Link className="navbar-item" to="/">
+              <Link className="navbar-item" to={`/${locale}`}>
                 Accueil
               </Link>
           </MenuItem>
           <MenuItem>
-            <Link className="navbar-item" to="/products">
+            <Link className="navbar-item" to={`/${locale}/products`}>
               Nos chambres
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link className="navbar-item" to="/blog">
+            <Link className="navbar-item" to={`/${locale}/blog`}>
               Tarifs
             </Link>
           </MenuItem>
           <MenuItem>
-          <Link className="navbar-item" to="/contact">
+          <Link className="navbar-item" to={`/${locale}/contact`}>
               Contact
             </Link>
           </MenuItem>
@@ -74,29 +77,33 @@ const Navbar = () => {
                 re-write that makes this unneccesary.
              */}
             <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/about">
+              <Link className="navbar-item" to={`/${locale}/about`}>
                 Accueil
               </Link>
             </li>
             <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/products">
+              <Link className="navbar-item" to={`/${locale}/products`}>
                 Nos chambres
               </Link>
             </li>
             <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/blog">
+              <Link className="navbar-item" to={`/${locale}/blog`}>
                 Tarifs
               </Link>
             </li>
             <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to={`/${locale}/contact`}>
                 Contacts
               </Link>
             </li>
             <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/contact/examples">
+              <Link className="navbar-item" to={`/${locale}/contact/examples`}>
                 Form Examples
               </Link>
+            </li>
+            <li className="navbar-item" style={{padding: "0px"}}>
+              <button onClick={() => locale === 'FR' ? setLocale('EN'): setLocale('FR')}>locale</button> 
+              {locale}
             </li>
         </ul>
       </div>

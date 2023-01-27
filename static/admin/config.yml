@@ -20,7 +20,28 @@ collections:
   - name: "blog"
     i18n: true
     label: "Blog"
-    folder: "src/pages/blog"
+    folder: "src/pages/EN/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+          i18n: true
+        }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime", i18n: true }
+      - { label: "Description", name: "description", widget: "text", i18n: true }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean", i18n: true }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - { label: "Tags", name: "tags", widget: "list", i18n: true }
+  - name: "blog"
+    i18n: true
+    label: "Blog"
+    folder: "src/pages/EN/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -45,7 +66,7 @@ collections:
       structure: single_file
       locales: [fr, en]
     files:
-      - file: "src/pages/index.md"
+      - file: "src/pages/EN/index.md"
         i18n: true
         label: "Landing Page"
         name: "index"
@@ -137,7 +158,7 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/about/index.md"
+      - file: "src/pages/EN/about/index.md"
         i18n: true
         label: "About"
         name: "about"
@@ -151,7 +172,7 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string", i18n: true }
           - { label: "Body", name: "body", widget: "markdown", i18n: true }
-      - file: "src/pages/products/index.md"
+      - file: "src/pages/EN/products/index.md"
         i18n: true
         label: "Products Page"
         name: "products"
