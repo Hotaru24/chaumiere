@@ -163,10 +163,10 @@ collections:
               i18n: true,
               default: "product-page",
             }
-          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Title, name: title, widget: string, i18n: duplicate }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string, i18n: true }
-          - { label: Description, name: description, widget: string, i18n: true }
+          - { label: Heading, name: heading, widget: string, i18n: duplicate }
+          - { label: Description, name: description, widget: string, i18n: duplicate }
           - {
               label: Intro,
               name: intro,
@@ -174,8 +174,8 @@ collections:
               i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true },
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Heading, name: heading, widget: string, i18n: duplicate },
+                  { label: Description, name: description, widget: text, i18n: duplicate },
                   {
                     label: Blurbs,
                     name: blurbs,
@@ -184,7 +184,7 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text, i18n: true },
+                        { label: Text, name: text, widget: text, i18n: duplicate },
                       ],
                   },
                 ],
