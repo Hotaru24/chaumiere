@@ -58,10 +58,9 @@ collections:
 
   - name: "pages_FR"
     label: "Pages FR"
-
     files:
       - file: "src/pages/FR/index.md"
-            label: "Landing Page"
+        label: "Landing Page"
         name: "index"
         fields:
           - {
