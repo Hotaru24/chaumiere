@@ -17,10 +17,10 @@ locales: [fr, en]
 default_locale: fr
 
 collections:
-  - name: "blog"
+  - name: "blog_FR"
     i18n: true
     label: "Blog"
-    folder: "src/pages/EN/blog"
+    folder: "src/pages/FR/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -38,7 +38,7 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
       - { label: "Tags", name: "tags", widget: "list", i18n: true }
-  - name: "blog"
+  - name: "blog_EN"
     i18n: true
     label: "Blog"
     folder: "src/pages/EN/blog"
