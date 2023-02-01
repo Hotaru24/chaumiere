@@ -18,7 +18,6 @@ default_locale: fr
 
 collections:
   - name: "blog_FR"
-    i18n: true
     label: "Blog FR"
     folder: "src/pages/FR/blog"
     create: true
@@ -29,17 +28,15 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "blog-post",
-          i18n: true
         }
-      - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Publish Date", name: "date", widget: "datetime", i18n: true }
-      - { label: "Description", name: "description", widget: "text", i18n: true }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean", i18n: true }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
-      - { label: "Tags", name: "tags", widget: "list", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
   - name: "blog_EN"
-    i18n: true
     label: "Blog EN"
     folder: "src/pages/EN/blog"
     create: true
@@ -50,25 +47,21 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "blog-post",
-          i18n: true
-        }
-      - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Publish Date", name: "date", widget: "datetime", i18n: true }
-      - { label: "Description", name: "description", widget: "text", i18n: true }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean", i18n: true }
+      }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
-      - { label: "Tags", name: "tags", widget: "list", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
 
   - name: "pages_FR"
     label: "Pages FR"
-    i18n:
-      structure: single_file
-      locales: [fr]
+
     files:
       - file: "src/pages/FR/index.md"
-        i18n: true
-        label: "Landing Page"
+            label: "Landing Page"
         name: "index"
         fields:
           - {
@@ -76,41 +69,38 @@ collections:
               name: "templateKey",
               widget: "hidden",
               default: "index-page",
-              i18n: true }
-          - { label: Title, name: title, widget: string, i18n: true }
+            }
+          - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string, i18n: true }
-          - { label: Subheading, name: subheading, widget: string, i18n: true }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
           - {
               label: Mainpitch,
               name: mainpitch,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Title, name: title, widget: string, i18n: true },
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
                 ],
             }
-          - { label: Description, name: description, widget: string, i18n: true }
+          - { label: Description, name: description, widget: string }
           - {
               label: Intro,
               name: intro,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true } ,
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Heading, name: heading, widget: string } ,
+                  { label: Description, name: description, widget: text },
                   {
                     label: Blurbs,
                     name: blurbs,
                     widget: list,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text, i18n: true },
+                        { label: Text, name: text, widget: text },
                       ],
                   },
                 ],
@@ -119,11 +109,10 @@ collections:
               label: Main,
               name: main,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true },
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
                   {
                     label: Image1,
                     name: image1,
@@ -131,35 +120,32 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image2,
                     name: image2,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image3,
                     name: image3,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                 ],
             }
       - file: "src/pages/FR/about/index.md"
-        i18n: true
         label: "About"
         name: "about"
         fields:
@@ -167,13 +153,11 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              i18n: true,
               default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/FR/products/index.md"
-        i18n: true
         label: "Products Page"
         name: "products"
         fields:
@@ -181,31 +165,28 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              i18n: true,
               default: "product-page",
             }
-          - { label: Title, name: title, widget: string, i18n: duplicate }
+          - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string, i18n: duplicate }
-          - { label: Description, name: description, widget: string, i18n: duplicate }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: string }
           - {
               label: Intro,
               name: intro,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: duplicate },
-                  { label: Description, name: description, widget: text, i18n: duplicate },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
                   {
                     label: Blurbs,
                     name: blurbs,
                     widget: list,
-                    i18n: true,
-                    fields:
+                          fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text, i18n: duplicate },
+                        { label: Text, name: text, widget: text },
                       ],
                   },
                 ],
@@ -214,42 +195,38 @@ collections:
               label: Main,
               name: main,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true },
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
                   {
                     label: Image1,
                     name: image1,
                     widget: object,
-                    i18n: true,
-                    fields:
+                          fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image2,
                     name: image2,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image3,
                     name: image3,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                 ],
@@ -260,8 +237,8 @@ collections:
               widget: list,
               fields:
                 [
-                  { label: Quote, name: quote, widget: string, i18n: true },
-                  { label: Author, name: author, widget: string, i18n: true },
+                  { label: Quote, name: quote, widget: string },
+                  { label: Author, name: author, widget: string },
                 ],
             }
           - { label: Full_image, name: full_image, widget: image }
@@ -269,26 +246,24 @@ collections:
               label: Pricing,
               name: pricing,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true },
-                  { label: Description, name: description, widget: string, i18n: true },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: string },
                   {
                     label: Plans,
                     name: plans,
                     widget: list,
                     fields:
                       [
-                        { label: Plan, name: plan, widget: string, i18n: true },
-                        { label: Price, name: price, widget: string, i18n: true },
+                        { label: Plan, name: plan, widget: string },
+                        { label: Price, name: price, widget: string },
                         {
                           label: Description,
                           name: description,
                           widget: string,
-                          i18n: true
                         },
-                        { label: Items, name: items, widget: list, i18n: true },
+                        { label: Items, name: items, widget: list },
                       ],
                   },
                 ],
@@ -296,12 +271,8 @@ collections:
 
   - name: "pages_EN"
     label: "Pages EN"
-    i18n:
-      structure: single_file
-      locales: [en]
     files:
       - file: "src/pages/EN/index.md"
-        i18n: true
         label: "Landing Page"
         name: "index"
         fields:
@@ -310,41 +281,38 @@ collections:
               name: "templateKey",
               widget: "hidden",
               default: "index-page",
-              i18n: true }
-          - { label: Title, name: title, widget: string, i18n: true }
+            }
+          - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string, i18n: true }
-          - { label: Subheading, name: subheading, widget: string, i18n: true }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
           - {
               label: Mainpitch,
               name: mainpitch,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Title, name: title, widget: string, i18n: true },
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
                 ],
             }
-          - { label: Description, name: description, widget: string, i18n: true }
+          - { label: Description, name: description, widget: string }
           - {
               label: Intro,
               name: intro,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true } ,
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Heading, name: heading, widget: string } ,
+                  { label: Description, name: description, widget: text },
                   {
                     label: Blurbs,
                     name: blurbs,
                     widget: list,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text, i18n: true },
+                        { label: Text, name: text, widget: text },
                       ],
                   },
                 ],
@@ -353,11 +321,10 @@ collections:
               label: Main,
               name: main,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true },
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
                   {
                     label: Image1,
                     name: image1,
@@ -365,35 +332,32 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image2,
                     name: image2,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image3,
                     name: image3,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                 ],
             }
       - file: "src/pages/EN/about/index.md"
-        i18n: true
         label: "About"
         name: "about"
         fields:
@@ -401,13 +365,11 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              i18n: true,
               default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/EN/products/index.md"
-        i18n: true
         label: "Products Page"
         name: "products"
         fields:
@@ -415,31 +377,28 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              i18n: true,
               default: "product-page",
             }
-          - { label: Title, name: title, widget: string, i18n: duplicate }
+          - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string, i18n: duplicate }
-          - { label: Description, name: description, widget: string, i18n: duplicate }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: string }
           - {
               label: Intro,
               name: intro,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: duplicate },
-                  { label: Description, name: description, widget: text, i18n: duplicate },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
                   {
                     label: Blurbs,
                     name: blurbs,
                     widget: list,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text, i18n: duplicate },
+                        { label: Text, name: text, widget: text },
                       ],
                   },
                 ],
@@ -448,42 +407,38 @@ collections:
               label: Main,
               name: main,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true },
-                  { label: Description, name: description, widget: text, i18n: true },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
                   {
                     label: Image1,
                     name: image1,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image2,
                     name: image2,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                   {
                     label: Image3,
                     name: image3,
                     widget: object,
-                    i18n: true,
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string, i18n: true },
+                        { label: Alt, name: alt, widget: string },
                       ],
                   },
                 ],
@@ -494,8 +449,8 @@ collections:
               widget: list,
               fields:
                 [
-                  { label: Quote, name: quote, widget: string, i18n: true },
-                  { label: Author, name: author, widget: string, i18n: true },
+                  { label: Quote, name: quote, widget: string },
+                  { label: Author, name: author, widget: string },
                 ],
             }
           - { label: Full_image, name: full_image, widget: image }
@@ -503,26 +458,24 @@ collections:
               label: Pricing,
               name: pricing,
               widget: object,
-              i18n: true,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string, i18n: true },
-                  { label: Description, name: description, widget: string, i18n: true },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: string },
                   {
                     label: Plans,
                     name: plans,
                     widget: list,
                     fields:
                       [
-                        { label: Plan, name: plan, widget: string, i18n: true },
-                        { label: Price, name: price, widget: string, i18n: true },
+                        { label: Plan, name: plan, widget: string },
+                        { label: Price, name: price, widget: string },
                         {
                           label: Description,
                           name: description,
                           widget: string,
-                          i18n: true
                         },
-                        { label: Items, name: items, widget: list, i18n: true },
+                        { label: Items, name: items, widget: list },
                       ],
                   },
                 ],
