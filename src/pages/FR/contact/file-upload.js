@@ -46,11 +46,11 @@ export default class Contact extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>File Upload</h1>
+              <h1>Chargement de fichier</h1>
               <form
                 name="file-upload"
                 method="post"
-                action="/contact/thanks/"
+                action="/FR/contact/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
@@ -65,7 +65,7 @@ export default class Contact extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={"name"}>
-                    Your name
+                    Votre nom
                   </label>
                   <div className="control">
                     <input
@@ -95,7 +95,7 @@ export default class Contact extends React.Component {
                 </div>
                 <div className="field">
                   <button className="button is-link" type="submit">
-                    Send
+                    Envoyer
                   </button>
                 </div>
               </form>
