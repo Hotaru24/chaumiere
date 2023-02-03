@@ -3,30 +3,30 @@ templateKey: 'product-page'
 path: /FR/products
 title: Our Coffee
 image: /img/jumbotron.jpg
-heading: Titre en français
+heading: Titre en français1
 description: >-
-  Texte en français.
+  Texte en français1.
 intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        Texte en français.
+        Texte en français2.
     - image: /img/coffee-gear.png
       text: >
-        Texte en français.
+        Texte en français3.
     - image: /img/tutorials.png
       text: >
-        Texte en français.
+        Texte en français4.
     - image: /img/meeting-space.png
       text: >
-        Texte en français.
+        Texte en français5.
   heading: What we offer
   description: >
     Texte en français.
 main:
-  heading: Titre en français
+  heading: Titre en français2
   description: >
-    Texte en français.
+    Texte en français6.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg

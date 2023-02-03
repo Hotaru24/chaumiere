@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, { useEffect, useState } from "react";
+import { Link, navigate } from "gatsby";
 
 import "./navbar.css";
 
@@ -7,12 +7,23 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import { useState } from "react";
 
 
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [locale, setLocale] = useState('FR');  
+  const [anchorEl, setAnchorEl] = useState(null);
+
   const open = Boolean(anchorEl);
+  
+  useEffect(() => {
+    if (!localStorage.getItem('locale')) {
+      const browserLocale = navigator.language?.split('-')[0];
+      const currentLocale = browserLocale === 'fr' ? localStorage.setItem('locale', 'FR') : localStorage.setItem('locale', 'EN');
+      setLocale(currentLocale);
+    } else {
+      setLocale(localStorage.getItem('locale'));
+    }
+  }, []);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -21,8 +32,12 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
-  const [locale, setLocale] = useState('FR');
-
+  const handleLocale = (newLocale) => {
+    localStorage.setItem('locale', newLocale);
+    setLocale(newLocale);
+    navigate(`/${newLocale}/${window.location.pathname.split('/').splice(2).join('/')}`);
+  }
+ 
   return (
     <nav
       className="navbar"
@@ -102,7 +117,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="navbar-item" style={{padding: "0px"}}>
-              <button onClick={() => locale === 'FR' ? setLocale('EN'): setLocale('FR')}>locale</button> 
+              <button onClick={() => locale === 'FR' ? handleLocale('EN'): handleLocale('FR')}>locale</button> 
               {locale}
             </li>
         </ul>
