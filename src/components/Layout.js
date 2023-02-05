@@ -10,20 +10,18 @@ import Footer from "../components/Footer";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
-  const [locale, setLocale] = useState('FR'); 
 
   useEffect(() => {
     if (!localStorage.getItem('locale')) {
       const browserLocale = navigator.language?.split('-')[0];
-      const currentLocale = browserLocale === 'fr' ? localStorage.setItem('locale', 'FR') : localStorage.setItem('locale', 'EN');
-      setLocale(currentLocale);
+      browserLocale === 'fr' ? localStorage.setItem('locale', 'FR') : localStorage.setItem('locale', 'EN');
     }
   }, []);
 
   return (
     <div>
       <Helmet>
-        <html lang={locale ? locale.toLowerCase() : 'fr'} />
+        <html lang="fr" />
         <title>{title}</title>
         <meta name="description" content={description} />
 
