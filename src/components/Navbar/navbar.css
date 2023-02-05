@@ -1,25 +1,77 @@
+.navbar {
+  display: flex;
+}
 
-.navbar a {
-    text-decoration: none;
+.navbar-desktop,
+.navbar-mobile {
+  width: 90vw;
 }
 
 .navbar-desktop {
-    display: none;
+  display: none;
 }
 
 .navbar-mobile {
-    height: 100%;
-    text-align: end;
+  height: 100%;
+  text-align: end;
 }
 
+.navbar-mobile .mobile-menu-button {
+  color: rgb(21, 21, 21);
+}
 
+.navbar button {
+  min-width: 0 !important;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(21, 21, 21);
+}
+
+/*current page link*/
+[aria-current]:not([aria-current="false"]) {
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  margin: 0rem 0.5rem
+}
+
+.nav-locale-flag {
+  border-radius: 100%;
+  width: 1.10rem;
+  height: 1.10rem;
+}
+.MuiSelect-select::before {
+  border-bottom: none !important;
+}
+
+/*====_Tablet_====*/
 @media (min-width: 800px) {
-    .navbar-desktop {
-        display: unset;
-        display: flex;
-    }
+  .navbar-desktop {
+    display: unset;
+    display: flex;
+    width: 85vw;
+  }
 
-    .navbar-mobile, #basic-menu {
-        display: none;
-    }
+  .navbar-mobile,
+  #basic-menu {
+    display: none;
+  }
+
+  .navbar button {
+    min-width: 64px;
+  }
+}
+
+/*====_Desktop_====*/
+@media (min-width: 1000px) {
+  .navbar-desktop {
+    width: 90vw;
+  }
 }

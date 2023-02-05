@@ -10,14 +10,14 @@ tags:
   - tasting
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
-Texte en français.
+Texte en français article 1.
 
 ## What the updates mean to you
 
-Texte en français.
+Texte en français article 2.
 
 * français
 * francçais
 * français
 
-Texte en français.
+Texte en français article 3.

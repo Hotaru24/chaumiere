@@ -7,26 +7,26 @@ subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Titre en français
   description: >
-    Texte en français.
+    Texte en français1.
 description: >-
-  Texte en français.
+  Texte en français2.
 intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        Texte en français.
+        Texte en français3.
     - image: /img/coffee-gear.png
       text: >
-        Texte en français.
+        Texte en français4.
     - image: /img/tutorials.png
       text: >
-        Texte en français.
+        Texte en français5.
     - image: /img/meeting-space.png
       text: >
-        Texte en français.
+        Texte en français6.
   heading: What we offer
   description: >
-    Texte en français.
+    Texte en français7.
 main:
   heading: Great coffee with no compromises
   description: >

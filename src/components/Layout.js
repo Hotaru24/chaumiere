@@ -1,17 +1,26 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar/Navbar";
-
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+
+  useEffect(() => {
+    if (!localStorage.getItem('locale')) {
+      const browserLocale = navigator.language?.split('-')[0];
+      browserLocale === 'fr' ? localStorage.setItem('locale', 'FR') : localStorage.setItem('locale', 'EN');
+    }
+  }, []);
+
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang={localStorage.getItem('locale') ? localStorage.getItem('locale').toLowerCase() : 'fr'} />
         <title>{title}</title>
         <meta name="description" content={description} />
 

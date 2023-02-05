@@ -4,16 +4,16 @@ path: /about
 title: About our values
 ---
 ### Shade-grown coffee
-Texte en français1.
+Texte en français (about) 1.
 
 ### Single origin
-Texte en français2.
+Texte en français (about) 2.
 
 ### Sustainable farming
-Texte en français3.
+Texte en français (about) 3.
 
 ### Direct sourcing
-Texte en français4.
+Texte en français (about) 4.
 
 ### Reinvest profits
-Texte en français5.
+Texte en français (about) 5.
