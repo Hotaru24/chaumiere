@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-import Footer from "../components/Footer";
+import useSiteMetadata from "./SiteMetadata";
+
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer";
 
 
 const TemplateWrapper = ({ children }) => {
@@ -20,7 +21,7 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <html lang={localStorage.getItem('locale') ? localStorage.getItem('locale').toLowerCase() : 'fr'} />
+        <html lang={localStorage.getItem('locale') ? localStorage.getItem('locale')?.toLowerCase() : 'fr'} />
         <title>{title}</title>
         <meta name="description" content={description} />
 
