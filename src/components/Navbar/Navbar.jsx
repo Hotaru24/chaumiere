@@ -12,7 +12,8 @@ import Menu from '@mui/material/Menu';
 
 
 const Navbar = () => {
-  const [locale, setLocale] = useState('FR');  
+  const [location, setLocation] = useState('');
+  const [locale, setLocale] = useState('FR');
   const [anchorMobileMenu, setAnchorMobileMenu] = useState(null);
   const [anchorLocaleSelect, setAnchorLocaleSelect] = useState(null);
 
@@ -22,6 +23,10 @@ const Navbar = () => {
   useEffect(() => {
     if (localStorage.getItem('locale')) {
       setLocale(localStorage.getItem('locale'));      
+    }
+
+    if (window.location.pathname) {
+      setLocation(window.location.pathname);
     }
   }, []);
 
@@ -87,27 +92,27 @@ const Navbar = () => {
               re-write that makes this unneccesary.
             */}
           <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === window.location.pathname}>
+            <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === location}>
             {locale === 'FR' ? 'Accueil' : 'About'}
             </Link>
           </li>
           <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to={`/${locale}/products`} selected={`/${locale}/products` === window.location.pathname}>
+            <Link className="navbar-item" to={`/${locale}/products`} selected={`/${locale}/products` === location}>
             {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
             </Link>
           </li>
           <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to={`/${locale}/blog`} selected={`/${locale}/blog` === window.location.pathname}>
+            <Link className="navbar-item" to={`/${locale}/blog`} selected={`/${locale}/blog` === location}>
             {locale === 'FR' ? 'Tarifs' : 'Prices'}
             </Link>
           </li>
           <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to={`/${locale}/contact`} selected={`/${locale}/contact` === window.location.pathname}>
+            <Link className="navbar-item" to={`/${locale}/contact`} selected={`/${locale}/contact` === location}>
               Contacts
             </Link>
           </li>
           <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to={`/${locale}/contact/examples`} selected={`/${locale}/contact/examples` === window.location.pathname}>
+            <Link className="navbar-item" to={`/${locale}/contact/examples`} selected={`/${locale}/contact/examples` === location}>
               Form Examples
             </Link>
           </li>
