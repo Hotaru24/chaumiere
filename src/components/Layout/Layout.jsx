@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { withPrefix } from "gatsby";
+import "./layout.css";
 
-import useSiteMetadata from "./SiteMetadata";
+import useSiteMetadata from "../SiteMetadata";
 
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 
 const TemplateWrapper = ({ children }) => {
@@ -19,7 +20,7 @@ const TemplateWrapper = ({ children }) => {
   }, []);
 
   return (
-    <div>
+    <>
       <Helmet>
         <html lang="fr" />
         <title>{title}</title>
@@ -59,9 +60,9 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

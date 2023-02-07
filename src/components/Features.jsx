@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
