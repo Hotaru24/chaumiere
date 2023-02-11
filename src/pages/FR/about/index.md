@@ -1,7 +1,9 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: La chaumière de Sainte-Alvère
+heading: La chaumière de Sainte-Alvère
+subheading: Gites et Chambres d'Hôtes
 ---
 ### Shade-grown coffee
 Texte en français (about) 1.

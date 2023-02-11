@@ -20,7 +20,12 @@ const Navbar = () => {
   const openMobileMenu = Boolean(anchorMobileMenu);
   const openLocaleMenu = Boolean(anchorLocaleSelect);
 
+  
+
   useEffect(() => {
+    scrollFunction();
+    document.body.addEventListener('scroll', scrollFunction);    
+
     if (localStorage.getItem('locale')) {
       setLocale(localStorage.getItem('locale'));
     }
@@ -29,6 +34,26 @@ const Navbar = () => {
       setLocation(window.location.pathname);
     }
   }, []);
+
+
+/** =====-_ Test _-===== */
+  const [bcolor, setBcolor] = useState('transparent');
+  const [tcolor, setTcolor] = useState("white");
+  const [underline, setUnderline] = useState("none");
+  const [logoColor, setLogocolor] = useState("brightness(1.75)");
+
+  const scrollFunction = (e) => {
+    const isHome = window.location.pathname.split('/').reverse()[0];
+
+    if (isHome === 'about' && document.body.scrollTop < 80) {
+      return setBcolor("transparent") & setTcolor("white") & setUnderline("none") & setLogocolor("brightness(1.75)")
+    } else {
+      return setBcolor("whiteSmoke ") & setTcolor("inherit") & setUnderline("inset 0px 0px 0px white, inset 0px -2.5px 0 #388654") & setLogocolor("none")
+    }
+  };   
+
+  
+/** =====-_ Test _-===== */
 
   const handleLocale = (locale) => {
     const newLocale = locale;
@@ -43,6 +68,10 @@ const Navbar = () => {
       className="navbar"
       role="navigation"
       aria-label="main-navigation"
+      style={{
+        backgroundColor : bcolor,
+        transitionDuration: "1.5s",
+      }}
     >
       <div className="navbar-mobile">
         <Button
@@ -66,7 +95,7 @@ const Navbar = () => {
         >
           <MenuItem>
             <Link className="navbar-item" to={`/${locale}`}>
-              {locale === 'FR' ? 'Accueil' : 'About'}
+              {locale === 'FR' ? 'Accueil' : 'Home'}
             </Link>
           </MenuItem>
           <MenuItem>
@@ -92,27 +121,27 @@ const Navbar = () => {
               re-write that makes this unneccesary.
             */}
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === location}>
+          <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Accueil' : 'About'}
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/products`} selected={`/${locale}/products` === location}>
+          <Link className="navbar-item" to={`/${locale}/products`} selected={`/${locale}/products` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/blog`} selected={`/${locale}/blog` === location}>
+          <Link className="navbar-item" to={`/${locale}/blog`} selected={`/${locale}/blog` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Tarifs' : 'Prices'}
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/contact`} selected={`/${locale}/contact` === location}>
+          <Link className="navbar-item" to={`/${locale}/contact`} selected={`/${locale}/contact` === location} style={{ color: tcolor }}>
             Contacts
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/contact/examples`} selected={`/${locale}/contact/examples` === location}>
+          <Link className="navbar-item" to={`/${locale}/contact/examples`} selected={`/${locale}/contact/examples` === location} style={{ color: tcolor }}>
             Form Examples
           </Link>
         </li>

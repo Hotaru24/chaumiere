@@ -1,9 +1,8 @@
 .navbar {
   z-index: 1250;
-  background-color: whitesmoke;
   display: flex;
   position: sticky;
-  top: 0;  
+  top: 0;
 }
 
 .navbar-desktop,
@@ -30,12 +29,13 @@
 
 .navbar a {
   text-decoration: none;
-  color: rgb(21, 21, 21);
+  font-size: larger;
 }
 
 /*current page link*/
 [aria-current]:not([aria-current="false"]) {
   font-weight: bold;
+  color: #EFD285;
 }
 
 .navbar ul {
