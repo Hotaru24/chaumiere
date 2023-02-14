@@ -13,17 +13,20 @@ import Menu from '@mui/material/Menu';
 
 
 const Navbar = () => {
+  const [anchorLocaleSelect, setAnchorLocaleSelect] = useState(null);
+  const [anchorMobileMenu, setAnchorMobileMenu] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(true);
   const [location, setLocation] = useState('');
   const [locale, setLocale] = useState('FR');
-  const [anchorMobileMenu, setAnchorMobileMenu] = useState(null);
-  const [anchorLocaleSelect, setAnchorLocaleSelect] = useState(null);
 
   const openMobileMenu = Boolean(anchorMobileMenu);
   const openLocaleMenu = Boolean(anchorLocaleSelect);
 
-  const isDesktop = useMediaQuery('(min-width:1200px)');
+  const windowWidth = useMediaQuery('(min-width:1200px)');
 
   useEffect(() => {
+    setIsDesktop(windowWidth);
+
     scrollFunction();
     document.body.addEventListener('scroll', scrollFunction);    
 
@@ -37,8 +40,8 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    scrollFunction();
-  }, [isDesktop]);
+    setIsDesktop(windowWidth);
+  }, [windowWidth]);
 
 
 /** =====-_ Test _-===== */
