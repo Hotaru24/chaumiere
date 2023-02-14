@@ -3,9 +3,9 @@ import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
 
-import home1 from '../../public/img/home1.jpg';
-import home2 from '../../public/img/home2.jpg';
-import home3 from '../../public/img/home3.jpg';
+// import home1 from '/img/home1.jpg';
+// import home2 from '/img/home2.jpg';
+// import home3 from '/img/home3.jpg';
 
 
 const divStyle = {
@@ -28,13 +28,13 @@ const properties = {
 
 const slideImages = [
   {
-    url: home1,
+    url: '/img/home1.jpg',
   },
   {
-    url: home2,
+    url: '/img/home2.jpg',
   },
   {
-    url: home3,
+    url: '/img/home3.jpg',
   },
 ];
 
@@ -55,7 +55,7 @@ const Carrousel = () => {
         height: '100vh',
         width: '100vw',
         position: 'absolute',
-        bottom: '268px',
+        bottom: '303px',
         opacity: '0.45',
         zIndex: '1'
       }}></div>

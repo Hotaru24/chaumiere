@@ -35,7 +35,7 @@
 /*current page link*/
 [aria-current]:not([aria-current="false"]) {
   font-weight: bold;
-  color: #EFD285;
+  color: #EFD285 !important;
 }
 
 .navbar ul {
@@ -51,6 +51,7 @@
   width: 1.10rem;
   height: 1.10rem;
 }
+
 .MuiSelect-select::before {
   border-bottom: none !important;
 }

@@ -24,15 +24,17 @@ export const AboutPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section about">
-              <header style={{position: 'relative', bottom: '54px'}}>
-                <Carrousel />
+              <header>
+                <div className="carrousel">
+                  <Carrousel />                  
+                </div>
                 <div className="caption">
                   <div className="text">
                     <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                       {title}
                     </h2>
                     <h3>{subheading}</h3>
-                    <a  id="scrollButton" href="#about-content" >{localStorage.getItem('locale') ==='FR' ? 'En découvrir plus' : 'Learn More'}</a>
+                    <a id="scrollButton" href="#about-content" >{localStorage.getItem('locale') ==='FR' ? 'En découvrir plus' : 'Learn More'}</a>
                   </div>
                   <div className="social">
                     <a title="facebook" href="https://facebook.com">

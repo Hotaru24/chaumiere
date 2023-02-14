@@ -5,6 +5,7 @@ import "./navbar.css";
 import FrFlag from "../../img/FR.png";
 import EnFlag from "../../img/EN.png";
 
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
@@ -20,7 +21,7 @@ const Navbar = () => {
   const openMobileMenu = Boolean(anchorMobileMenu);
   const openLocaleMenu = Boolean(anchorLocaleSelect);
 
-  
+  const isDesktop = useMediaQuery('(min-width:1200px)');
 
   useEffect(() => {
     scrollFunction();
@@ -35,20 +36,22 @@ const Navbar = () => {
     }
   }, []);
 
+  useEffect(() => {
+    scrollFunction();
+  }, [isDesktop]);
+
 
 /** =====-_ Test _-===== */
   const [bcolor, setBcolor] = useState('transparent');
   const [tcolor, setTcolor] = useState("white");
-  const [underline, setUnderline] = useState("none");
-  const [logoColor, setLogocolor] = useState("brightness(1.75)");
 
   const scrollFunction = (e) => {
     const isHome = window.location.pathname.split('/').reverse()[0];
 
-    if (isHome === 'about' && document.body.scrollTop < 80) {
-      return setBcolor("transparent") & setTcolor("white") & setUnderline("none") & setLogocolor("brightness(1.75)")
+    if (isHome === 'about' && document.body.scrollTop < 80 && isDesktop) {
+      return setBcolor("transparent") & setTcolor("white")
     } else {
-      return setBcolor("whiteSmoke ") & setTcolor("inherit") & setUnderline("inset 0px 0px 0px white, inset 0px -2.5px 0 #388654") & setLogocolor("none")
+      return setBcolor("whiteSmoke ") & setTcolor("inherit")
     }
   };   
 
