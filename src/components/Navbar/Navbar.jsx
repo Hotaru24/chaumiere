@@ -49,15 +49,15 @@ const Navbar = () => {
   const [tcolor, setTcolor] = useState("white");
 
   const scrollFunction = (e) => {
+    console.log(window.location.pathname)
+    console.log(window.location.pathname.split('/').reverse()[0])
+    console.log(isDesktop)
     if (window.location.pathname.split('/').reverse()[0] === 'about' && document.body.scrollTop < 80 && isDesktop) {
       return setBcolor("transparent") & setTcolor("white")
     } else {
       return setBcolor("whiteSmoke ") & setTcolor("inherit")
     }
   };   
-
-  
-/** =====-_ Test _-===== */
 
   const handleLocale = (locale) => {
     const newLocale = locale;
