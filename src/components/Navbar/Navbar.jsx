@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, navigate } from "gatsby";
+import { globalHistory } from "@reach/router";
 import "./navbar.css";
 
 import FrFlag from "../../img/FR.png";
@@ -52,7 +53,8 @@ const Navbar = () => {
     console.log(window.location.pathname)
     console.log(window.location.pathname.split('/').reverse()[0])
     console.log(isDesktop)
-    if (window.location.pathname.split('/').reverse()[0] === 'about' && document.body.scrollTop < 80 && isDesktop) {
+    console.log(globalHistory.location.pathname.includes('about'))
+    if (globalHistory.location.pathname.includes('about') && document.body.scrollTop < 80 && isDesktop) {
       return setBcolor("transparent") & setTcolor("white")
     } else {
       return setBcolor("whiteSmoke ") & setTcolor("inherit")
