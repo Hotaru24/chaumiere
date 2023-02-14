@@ -16,9 +16,12 @@ import Menu from '@mui/material/Menu';
 const Navbar = () => {
   const [anchorLocaleSelect, setAnchorLocaleSelect] = useState(null);
   const [anchorMobileMenu, setAnchorMobileMenu] = useState(null);
-  const [isDesktop, setIsDesktop] = useState(true);
+  const [bcolor, setBcolor] = useState('transparent');
+  const [isDesktop, setIsDesktop] = useState(true);  
+  const [tcolor, setTcolor] = useState("white");  
   const [location, setLocation] = useState('');
   const [locale, setLocale] = useState('FR');
+
 
   const openMobileMenu = Boolean(anchorMobileMenu);
   const openLocaleMenu = Boolean(anchorLocaleSelect);
@@ -46,14 +49,9 @@ const Navbar = () => {
 
 
 /** =====-_ Test _-===== */
-  const [bcolor, setBcolor] = useState('transparent');
-  const [tcolor, setTcolor] = useState("white");
 
-  const scrollFunction = (e) => {
-    console.log(window.location.pathname)
-    console.log(window.location.pathname.split('/').reverse()[0])
-    console.log(isDesktop)
-    console.log(globalHistory.location.pathname.includes('about'))
+
+  const scrollFunction = () => {
     if (globalHistory.location.pathname.includes('about') && document.body.scrollTop < 80 && isDesktop) {
       return setBcolor("transparent") & setTcolor("white")
     } else {
