@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
@@ -16,7 +16,14 @@ export const AboutPageTemplate = ({
   content,
   contentComponent 
 }) => {
+  const [locale, setLocale] = useState('FR');
   const PageContent = contentComponent || Content;
+
+  useEffect(() => {
+    if (localStorage.getItem('locale')) {
+      setLocale(localStorage.getItem('locale'));
+    }
+  }, []);
 
   return (
     <section className="section section--gradient">
@@ -34,7 +41,7 @@ export const AboutPageTemplate = ({
                       {title}
                     </h2>
                     <h3>{subheading}</h3>
-                    <a id="scrollButton" href="#about-content" >{localStorage.getItem('locale') ==='FR' ? 'En découvrir plus' : 'Learn More'}</a>
+                    <a id="scrollButton" href="#about-content" >{locale === 'FR' ? 'En découvrir plus' : 'Learn More'}</a>
                   </div>
                   <div className="social">
                     <a title="facebook" href="https://facebook.com">
