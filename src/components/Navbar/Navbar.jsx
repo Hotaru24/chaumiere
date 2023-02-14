@@ -16,6 +16,7 @@ const Navbar = () => {
   const [anchorLocaleSelect, setAnchorLocaleSelect] = useState(null);
   const [anchorMobileMenu, setAnchorMobileMenu] = useState(null);
   const [isDesktop, setIsDesktop] = useState(true);
+  const [isHome, setIsHome] = useState(true);
   const [location, setLocation] = useState('');
   const [locale, setLocale] = useState('FR');
 
@@ -49,9 +50,9 @@ const Navbar = () => {
   const [tcolor, setTcolor] = useState("white");
 
   const scrollFunction = (e) => {
-    const isHome = window.location.pathname.split('/').reverse()[0];
+    setIsHome(window.location.pathname.split('/').reverse()[0] === 'about');
 
-    if (isHome === 'about' && document.body.scrollTop < 80 && isDesktop) {
+    if (isHome && document.body.scrollTop < 80 && isDesktop) {
       return setBcolor("transparent") & setTcolor("white")
     } else {
       return setBcolor("whiteSmoke ") & setTcolor("inherit")
