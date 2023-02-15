@@ -3,6 +3,7 @@
   display: flex;
   position: sticky;
   top: 0;
+  color: white;
 }
 
 .navbar-desktop,
@@ -35,7 +36,7 @@
 /*current page link*/
 [aria-current]:not([aria-current="false"]) {
   font-weight: bold;
-  color: #EFD285 !important;
+  color: #FCA311 !important;
 }
 
 .navbar ul {

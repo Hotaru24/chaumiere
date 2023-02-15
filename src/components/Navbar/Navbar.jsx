@@ -48,14 +48,11 @@ const Navbar = () => {
   }, [windowWidth]);
 
 
-/** =====-_ Test _-===== */
-
-
   const scrollFunction = () => {
     if (globalHistory.location.pathname.includes('about') && document.body.scrollTop < 80 && isDesktop) {
-      return setBcolor("transparent") & setTcolor("white")
+      return setBcolor("transparent") & setTcolor("white");
     } else {
-      return setBcolor("whiteSmoke ") & setTcolor("inherit")
+      return setBcolor("#14213D") & setTcolor("inherit");
     }
   };   
 
@@ -103,12 +100,12 @@ const Navbar = () => {
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link className="navbar-item" to={`/${locale}/products`}>
+            <Link className="navbar-item" to={`/${locale}/blog`}>
               {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link className="navbar-item" to={`/${locale}/blog`}>
+            <Link className="navbar-item" to={`/${locale}/products`}>
               {locale === 'FR' ? 'Tarifs' : 'Prices'}
             </Link>
           </MenuItem>
@@ -120,10 +117,6 @@ const Navbar = () => {
         </Menu>
       </div>
       <ul className="navbar-desktop">
-        {/* TODO: inline override of padding is a result of refactoring
-              to a ul for accessibilty purposes, would like to see a css
-              re-write that makes this unneccesary.
-            */}
         <li className="navbar-item" style={{ padding: "0px" }}>
           <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Accueil' : 'About'}
@@ -141,12 +134,7 @@ const Navbar = () => {
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
           <Link className="navbar-item" to={`/${locale}/contact`} selected={`/${locale}/contact` === location} style={{ color: tcolor }}>
-            Contacts
-          </Link>
-        </li>
-        <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/contact/examples`} selected={`/${locale}/contact/examples` === location} style={{ color: tcolor }}>
-            Form Examples
+            {locale === 'FR' ? 'Contacts & Accès' : 'Contacts & Access'}
           </Link>
         </li>
       </ul>
