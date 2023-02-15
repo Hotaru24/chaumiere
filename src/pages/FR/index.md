@@ -1,9 +1,8 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: La chaumière de Sainte-Alvère
+heading: La chaumière de Sainte-Alvère
+subheading: Gites et Chambres d'Hôtes
 mainpitch:
   title: Titre en français
   description: >

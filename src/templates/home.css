@@ -1,8 +1,8 @@
-.about .carrousel {
+.home .carrousel {
   display: none;
 }
 
-.about .caption {
+.home .caption {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -10,7 +10,7 @@
 	
 }
 
-.about .caption #scrollButton {
+.home .caption #scrollButton {
   display: none;
 }
 
@@ -18,25 +18,25 @@
 
 
 @media (min-width: 1200px) {
-  .about header {
+  .home header {
     position: relative;
     bottom: 54px;
     overflow: hidden;
     height: 100vh;
   }
 
-  .about .carrousel {
+  .home .carrousel {
     display: unset;
   }
 
-  .about .carrousel .slider{
+  .home .carrousel .slider{
     height: 100vh;
     width: 100%;
     left: 0;
     top: 0;
   }
 
-  .about .carrousel .slider div {
+  .home .carrousel .slider div {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -45,17 +45,17 @@
     animation: animate 18s linear infinite;
   }
 
-  .about .carrousel .slider div:nth-child(1) {
+  .home .carrousel .slider div:nth-child(1) {
     background: url('/img/home1.jpg');
     animation-delay: 0s;
   }
 
-  .about .carrousel .slider div:nth-child(2) {
+  .home .carrousel .slider div:nth-child(2) {
     background: url('/img/home2.jpg');
     animation-delay: 6s;
   }
 
-  .about .carrousel .slider div:nth-child(3) {
+  .home .carrousel .slider div:nth-child(3) {
     background: url('/img/home3.jpg');
     animation-delay: 12s;
   }
@@ -66,46 +66,46 @@
     60%{opacity: 0; transform: scale(1.5)}
   }
 
-  .about .caption {
+  .home .caption {
     position: relative;
     bottom: 65vh;
     z-index: 100;
     color: #F2F2F2;
   }
 
-  .about .caption #scrollButton {
+  .home .caption #scrollButton {
     display: unset;
   }
 
-  .about .caption .text {
+  .home .caption .text {
     max-width: 700px;
   }
   
-  .about .caption .text h2 {
+  .home .caption .text h2 {
     font-size: 6rem;
     max-width: 50vw;
     margin: 0;
   }
   
-  .about .caption .text h3 {
+  .home .caption .text h3 {
     color: #EFD285;
     font-size: 3rem;
     margin: 0.25rem 0 2.5rem 0;
   }
   
-  .about .caption .social {
+  .home .caption .social {
     display: flex;
     flex-direction: column;
   }
   
-  .about .caption .social img {
+  .home .caption .social img {
     width: 1.5em;
     height: 1.5em;
     filter: contrast(0) brightness(1.8);
     margin: 1rem 0
   }
   
-  .about .caption .social img:hover {
+  .home .caption .social img:hover {
     scale: 1.2;
   }
 }

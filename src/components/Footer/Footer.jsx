@@ -34,7 +34,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="navbar-item" to={`/${locale}/products`}>
+                    <Link className="navbar-item" to={`/${locale}/prices`}>
                       {locale === 'FR' ? 'Tarifs' : 'Prices'}
                     </Link>
                   </li>

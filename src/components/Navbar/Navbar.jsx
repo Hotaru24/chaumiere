@@ -105,7 +105,7 @@ const Navbar = () => {
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link className="navbar-item" to={`/${locale}/products`}>
+            <Link className="navbar-item" to={`/${locale}/prices`}>
               {locale === 'FR' ? 'Tarifs' : 'Prices'}
             </Link>
           </MenuItem>
@@ -119,16 +119,16 @@ const Navbar = () => {
       <ul className="navbar-desktop">
         <li className="navbar-item" style={{ padding: "0px" }}>
           <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === location} style={{ color: tcolor }}>
-            {locale === 'FR' ? 'Accueil' : 'About'}
+            {locale === 'FR' ? 'Accueil' : 'Home'}
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/rooms`} selected={`/${locale}/products` === location} style={{ color: tcolor }}>
+          <Link className="navbar-item" to={`/${locale}/rooms`} selected={`/${locale}/rooms` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/products`} selected={`/${locale}/rooms` === location} style={{ color: tcolor }}>
+          <Link className="navbar-item" to={`/${locale}/prices`} selected={`/${locale}/prices` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Tarifs' : 'Prices'}
           </Link>
         </li>

@@ -1,6 +1,6 @@
 ---
-templateKey: 'product-page'
-path: /FR/products
+templateKey: 'prices-page'
+path: /FR/prices
 title: Our Coffee
 image: /img/jumbotron.jpg
 heading: Titre en français1

@@ -7,7 +7,7 @@ import Carrousel from '../components/Carrousel';
 import instagram from "../img/social/instagram.svg";
 import facebook from "../img/social/facebook.svg";
 
-import './about.css'
+import './home.css'
 
 // eslint-disable-next-line
 export const AboutPageTemplate = ({
@@ -30,7 +30,7 @@ export const AboutPageTemplate = ({
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="section about">
+            <div className="section home">
               <header>
                 <div className="carrousel">
                   <Carrousel />                  
