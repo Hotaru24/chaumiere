@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby-link";
+
 import Layout from "../../../components/Layout/Layout";
 
 const encode = (data) => {
@@ -12,7 +13,7 @@ const Index = (props) => {
   const [isvalidated, setisvalidated] = useState(false);
 
   const handleChange = (e) => {
-    setisvalidated({ [e.target.name]: e.target.value })
+    setisvalidated({ [e.target.name]: e.target.value });
   }
 
   const handleSubmit = (e) => {

@@ -29,7 +29,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="navbar-item" to={`/${locale}/blog`}>
+                    <Link className="navbar-item" to={`/${locale}/rooms`}>
                       {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
                     </Link>
                   </li>
@@ -45,7 +45,7 @@ const Footer = () => {
               <section>
                 <ul className="menu-list">
                   <li>
-                    <Link className="navbar-item" to="/blog">
+                    <Link className="navbar-item" to="/rooms">
                       Latest Stories
                     </Link>
                   </li>

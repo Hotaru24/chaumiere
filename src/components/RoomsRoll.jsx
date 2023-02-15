@@ -4,7 +4,7 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 
-const BlogRollTemplate = (props) => {
+const RoomsRollTemplate = (props) => {
   
   const { edges: posts } = props.data.allMarkdownRemark;
 
@@ -63,7 +63,7 @@ const BlogRollTemplate = (props) => {
   )
 }
 
-BlogRoll.propTypes = {
+RoomsRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -72,14 +72,14 @@ BlogRoll.propTypes = {
 }
 
 
-export default function BlogRoll() {
+export default function RoomsRoll() {
   return (
     <StaticQuery
       query={graphql`
-        query BlogRollQuery {
+        query RoomsRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+            filter: { frontmatter: { templateKey: { eq: "rooms-post" } } }
           ) {
             edges {
               node {
@@ -109,7 +109,7 @@ export default function BlogRoll() {
           }
         }
       `}
-      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <RoomsRollTemplate data={data} count={count} />}
     />
   );
 }

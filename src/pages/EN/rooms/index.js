@@ -1,9 +1,9 @@
 import * as React from "react";
 
 import Layout from "../../../components/Layout/Layout";
-import BlogRoll from "../../../components/BlogRoll";
+import RoomsRoll from "../../../components/RoomsRoll";
 
-const BlogIndexPage = () => {
+const RoomsIndexPage = () => {
   return (
     <Layout>
       <div
@@ -27,7 +27,7 @@ const BlogIndexPage = () => {
       <section className="section">
         <div className="container">
           <div className="content">
-            <BlogRoll />
+            <RoomsRoll />
           </div>
         </div>
       </section>
@@ -35,4 +35,4 @@ const BlogIndexPage = () => {
   );
 }
 
-export default BlogIndexPage;
+export default RoomsIndexPage;

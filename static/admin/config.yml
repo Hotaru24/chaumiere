@@ -17,9 +17,9 @@ locales: [fr, en]
 default_locale: fr
 
 collections:
-  - name: "blog_FR"
-    label: "Blog FR"
-    folder: "src/pages/FR/blog"
+  - name: "rooms_FR"
+    label: "Rooms FR"
+    folder: "src/pages/FR/rooms"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -27,7 +27,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "blog-post",
+          default: "rooms-post",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -35,9 +35,9 @@ collections:
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "blog_EN"
-    label: "Blog EN"
-    folder: "src/pages/EN/blog"
+  - name: "rooms_EN"
+    label: "Rooms EN"
+    folder: "src/pages/EN/rooms"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -45,7 +45,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "blog-post",
+          default: "rooms-post",
       }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
