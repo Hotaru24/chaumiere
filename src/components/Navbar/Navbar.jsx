@@ -101,7 +101,7 @@ const Navbar = () => {
           </MenuItem>
           <MenuItem>
             <Link className="navbar-item" to={`/${locale}/rooms`}>
-              {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
+              {locale === 'FR' ? 'Nos gites & chambres' : 'Accommodation'}
             </Link>
           </MenuItem>
           <MenuItem>
@@ -124,7 +124,7 @@ const Navbar = () => {
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
           <Link className="navbar-item" to={`/${locale}/rooms`} selected={`/${locale}/rooms` === location} style={{ color: tcolor }}>
-            {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
+            {locale === 'FR' ? 'Nos gites & chambres' : 'Accommodation'}
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>

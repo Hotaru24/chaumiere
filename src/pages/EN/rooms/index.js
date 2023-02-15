@@ -21,7 +21,7 @@ const RoomsIndexPage = () => {
             padding: "1rem",
           }}
         >
-          Latest Stories
+          Accommodation
         </h1>
       </div>
       <section className="section">

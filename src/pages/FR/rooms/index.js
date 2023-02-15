@@ -1,9 +1,10 @@
-import * as React from "react";
+import React from "react";
 
 import Layout from "../../../components/Layout/Layout";
 import RoomsRoll from "../../../components/RoomsRoll";
 
 const RoomsIndexPage = () => {
+
   return (
     <Layout>
       <div
@@ -21,7 +22,7 @@ const RoomsIndexPage = () => {
             padding: "1rem",
           }}
         >
-          Latest Stories
+          Nos gites & chambres
         </h1>
       </div>
       <section className="section">
