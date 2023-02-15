@@ -238,7 +238,7 @@ collections:
                   { label: Author, name: author, widget: string },
                 ],
             }
-          - { label: Full_image, name: full_image, widget: image }
+          - { label: Prices, name: prices, widget: image }
           - {
               label: Pricing,
               name: pricing,
@@ -450,7 +450,7 @@ collections:
                   { label: Author, name: author, widget: string },
                 ],
             }
-          - { label: Full_image, name: full_image, widget: image }
+          - { label: Prices, name: prices, widget: image }
           - {
               label: Pricing,
               name: pricing,

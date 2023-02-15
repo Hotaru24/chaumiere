@@ -42,14 +42,14 @@ const Index = (props) => {
               action="/EN/contact/thanks/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              onSubmit={this.handleSubmit}
+              onSubmit={handleSubmit}
             >
               {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
               <input type="hidden" name="form-name" value="contact" />
               <div hidden>
                 <label>
                   Don’t fill this out:{" "}
-                  <input name="bot-field" onChange={this.handleChange} />
+                  <input name="bot-field" onChange={handleChange} />
                 </label>
               </div>
               <div className="field">
@@ -61,7 +61,7 @@ const Index = (props) => {
                     className="input"
                     type={"text"}
                     name={"name"}
-                    onChange={this.handleChange}
+                    onChange={handleChange}
                     id={"name"}
                     required={true}
                   />
@@ -76,7 +76,7 @@ const Index = (props) => {
                     className="input"
                     type={"email"}
                     name={"email"}
-                    onChange={this.handleChange}
+                    onChange={handleChange}
                     id={"email"}
                     required={true}
                   />
@@ -90,7 +90,7 @@ const Index = (props) => {
                   <textarea
                     className="textarea"
                     name={"message"}
-                    onChange={this.handleChange}
+                    onChange={handleChange}
                     id={"message"}
                     required={true}
                   />

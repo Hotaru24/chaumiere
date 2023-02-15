@@ -1,0 +1,29 @@
+.prices header {
+	margin: 1vh 1vw 0 1vw;
+}
+
+.prices article {
+	margin: 4vh 2vw;
+}
+
+/*==========_Tablet_=========*/
+@media (min-width: 800px) {
+	.prices header {
+		margin: 2vh 2vw 1vh 2vw;
+	}
+	
+	.prices article {
+		margin: 5vh 5vw;
+	}
+}
+
+/*==========_Desktop_=========*/
+@media (min-width: 1200px) {
+	.prices header {
+		margin: 5vh 5vw;
+	}
+
+	.prices article {
+		margin: 5vh 15vw;
+	}
+}
