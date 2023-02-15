@@ -155,18 +155,18 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/FR/prices/index.md"
-          label: "Prices Page"
-          name: "prices"
-          fields:
-            - {
-                label: "Template Key",
-                name: "templateKey",
-                widget: "hidden",
-                default: "prices-page",
-              }
-            - { label: Heading, name: heading, widget: string }
-            - { label: Description, name: description, widget: string }
-            - { label: Prices, name: prices, widget: image }
+        label: "Prices Page"
+        name: "prices"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "prices-page",
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: string }          
+          - { label: Prices, name: prices, widget: image }
 
   - name: "pages_EN"
     label: "Pages EN"
