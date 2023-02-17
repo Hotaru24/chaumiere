@@ -9,7 +9,7 @@ import RoomsRoll from "../components/RoomsRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({
+export const PrestationPageTemplate = ({
   image,
   title,
   heading,
@@ -74,7 +74,7 @@ export const AboutPageTemplate = ({
   );
 };
 
-AboutPageTemplate.propTypes = {
+PrestationPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -86,12 +86,12 @@ AboutPageTemplate.propTypes = {
   }),
 };
 
-const AboutPage = ({ data }) => {
+const PrestationPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <PrestationPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -104,7 +104,7 @@ const AboutPage = ({ data }) => {
   );
 };
 
-AboutPage.propTypes = {
+PrestationPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -112,11 +112,11 @@ AboutPage.propTypes = {
   }),
 };
 
-export default AboutPage;
+export default PrestationPage;
 
 export const pageQuery = graphql`
-  query AboutPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+  query PrestationPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "prestation-page" } }) {
       frontmatter {
         title
         image {

@@ -1,6 +1,6 @@
 ---
-templateKey: about-page
-path: /about
+templateKey: prestation-page
+path: /prestation
 title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience

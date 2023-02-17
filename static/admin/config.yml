@@ -142,15 +142,15 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/FR/about/index.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/FR/prestation/index.md"
+        label: "Prestation"
+        name: "prestation"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "about-page",
+              default: "prestation-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -256,15 +256,15 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/EN/about/index.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/EN/prestation/index.md"
+        label: "Prestation"
+        name: "prestation"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "about-page",
+              default: "prestation-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }

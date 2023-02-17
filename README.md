@@ -67,7 +67,7 @@ import CMS from "netlify-cms-app";
 // import uploadcare from 'netlify-cms-media-library-uploadcare'
 // import cloudinary from 'netlify-cms-media-library-cloudinary'
 
-import AboutPagePreview from "./preview-templates/AboutPagePreview";
+import PrestationPagePreview from "./preview-templates/PrestationPagePreview";
 import RoomsPostPreview from "./preview-templates/RoomsPostPreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview";
 import HomePagePreview from "./preview-templates/HomePagePreview";
@@ -76,7 +76,7 @@ import HomePagePreview from "./preview-templates/HomePagePreview";
 // CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate("index", HomePagePreview);
-CMS.registerPreviewTemplate("about", AboutPagePreview);
+CMS.registerPreviewTemplate("about", PrestationPagePreview);
 CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("rooms", RoomsPostPreview);
 ```

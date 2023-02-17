@@ -24,7 +24,7 @@ const Footer = () => {
               <nav className="menu">
                 <ul className="menu-list">
                   <li>
-                    <Link className="navbar-item" to={`/${locale}/about`}>
+                    <Link className="navbar-item" to={`/${locale}/prestation`}>
                       {locale === 'FR' ? 'Accueil' : 'Home'}
                     </Link>
                   </li>

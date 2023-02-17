@@ -1,6 +1,6 @@
 ---
-templateKey: about-page
-path: /about
+templateKey: prestation-page
+path: /prestation
 title: La chaumière de Sainte-Alvère
 heading: La chaumière de Sainte-Alvère
 subheading: Gites et Chambres d'Hôtes

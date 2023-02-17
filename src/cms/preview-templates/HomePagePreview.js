@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { AboutPageTemplate } from '../../templates/home-page'
+import { PrestationPageTemplate } from '../../templates/home-page'
 
 const HomePagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
-      <AboutPageTemplate
+      <PrestationPageTemplate
         image={getAsset(data.image)}
         title={data.title}
         heading={data.heading}
