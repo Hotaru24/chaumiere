@@ -1,8 +1,8 @@
 ---
 templateKey: prestation-page
 path: /prestation
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+title: Services & Activities
+image: /img/cuisine.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:

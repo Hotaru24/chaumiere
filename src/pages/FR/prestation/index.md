@@ -1,9 +1,10 @@
 ---
 templateKey: prestation-page
 path: /prestation
-title: La chaumière de Sainte-Alvère
-heading: La chaumière de Sainte-Alvère
-subheading: Gites et Chambres d'Hôtes
+title: Services & Activités
+image: /img/cuisine.jpg
+heading: Services & Activités
+subheading: La chaumière de Sainte-Alvère
 mainpitch:
   title: Titre en français
   description: >
