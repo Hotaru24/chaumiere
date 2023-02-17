@@ -1,0 +1,12 @@
+.map-icon {
+  position: relative;
+  bottom: 15px;
+  right: 15px;
+  height: 50px;
+  width: 20px;
+}
+
+.leaflet-div-icon {
+  background: none !important;
+  border: none !important;
+}

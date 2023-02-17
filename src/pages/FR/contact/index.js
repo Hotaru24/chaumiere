@@ -1,7 +1,16 @@
 import React, { useState } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { navigate } from "gatsby-link";
 
 import Layout from "../../../components/Layout/Layout";
+
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { divIcon } from "leaflet";
+import 'leaflet/dist/leaflet.css';
+
+import image from '../../../img/map.svg';
+import '../../contact.css'
+
 
 const encode = (data) => {
   return Object.keys(data)
@@ -11,6 +20,14 @@ const encode = (data) => {
 
 const Index = (props) => {
   const [isvalidated, setisvalidated] = useState(false);
+
+  const iconMarkup = renderToStaticMarkup(
+    <img src={image} alt='localisation' className="map-icon" />
+  );
+  
+  const customMarkerIcon = divIcon({
+    html: iconMarkup
+  });
 
   const handleChange = (e) => {
     setisvalidated({ [e.target.name]: e.target.value });
@@ -37,6 +54,17 @@ const Index = (props) => {
         <div className="container">
           <div className="content">
             <h1>Contact</h1>
+            <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+            </MapContainer>
             <form
               name="contact"
               method="post"
