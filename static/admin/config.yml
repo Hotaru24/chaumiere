@@ -58,8 +58,21 @@ collections:
     label: "Pages FR"
     files:
       - file: "src/pages/FR/home.md"
-        label: "Landing Page"
+        label: "Home Page"
         name: "home"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "prestation-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          
+      - file: "src/pages/FR/prestation/index.md"
+        label: "Prestation Page"
+        name: "prestation"
         fields:
           - {
               label: "Template Key",
@@ -142,18 +155,6 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/FR/prestation/index.md"
-        label: "Prestation"
-        name: "prestation"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "prestation-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/FR/prices/index.md"
         label: "Prices Page"
         name: "prices"
@@ -172,8 +173,20 @@ collections:
     label: "Pages EN"
     files:
       - file: "src/pages/EN/home.md"
-        label: "Landing Page"
+        label: "Home Page"
         name: "home"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "prestation-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/EN/prestation/index.md"
+        label: "Prestation Page"
+        name: "prestation"
         fields:
           - {
               label: "Template Key",
@@ -256,18 +269,6 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/EN/prestation/index.md"
-        label: "Prestation"
-        name: "prestation"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "prestation-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/EN/prices/index.md"
         label: "Prices Page"
         name: "prices"
