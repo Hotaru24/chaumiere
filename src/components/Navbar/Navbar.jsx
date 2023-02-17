@@ -49,7 +49,7 @@ const Navbar = () => {
 
 
   const scrollFunction = () => {
-    if (globalHistory.location.pathname.includes('about') && document.body.scrollTop < 80 && isDesktop) {
+    if (globalHistory.location.pathname.includes('home') && document.body.scrollTop < 80 && isDesktop) {
       return setBcolor("transparent") & setTcolor("white");
     } else {
       return setBcolor("#14213D") & setTcolor("inherit");
@@ -95,13 +95,18 @@ const Navbar = () => {
           }}
         >
           <MenuItem>
-            <Link className="navbar-item" to={`/${locale}`}>
+            <Link className="navbar-item" to={`/${locale}/home`}>
               {locale === 'FR' ? 'Accueil' : 'Home'}
             </Link>
           </MenuItem>
           <MenuItem>
             <Link className="navbar-item" to={`/${locale}/rooms`}>
-              {locale === 'FR' ? 'Nos gites & chambres' : 'Accommodation'}
+              {locale === 'FR' ? 'Gites & Chambres' : 'Accommodation'}
+            </Link>
+          </MenuItem>          
+          <MenuItem>
+            <Link className="navbar-item" to={`/${locale}/about`}>
+              {locale === 'FR' ? 'Services & Activités' : 'Services & Activities'}
             </Link>
           </MenuItem>
           <MenuItem>
@@ -118,15 +123,20 @@ const Navbar = () => {
       </div>
       <ul className="navbar-desktop">
         <li className="navbar-item" style={{ padding: "0px" }}>
-          <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === location} style={{ color: tcolor }}>
+          <Link className="navbar-item" to={`/${locale}/home`} selected={`/${locale}/home` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Accueil' : 'Home'}
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
           <Link className="navbar-item" to={`/${locale}/rooms`} selected={`/${locale}/rooms` === location} style={{ color: tcolor }}>
-            {locale === 'FR' ? 'Nos gites & chambres' : 'Accommodation'}
+            {locale === 'FR' ? 'Gites & Chambres' : 'Accommodation'}
           </Link>
         </li>
+        <li className="navbar-item" style={{ padding: "0px" }}>
+          <Link className="navbar-item" to={`/${locale}/about`} selected={`/${locale}/about` === location} style={{ color: tcolor }}>
+            {locale === 'FR' ? 'Services & Activités' : 'Services & Activities'}
+          </Link>
+        </li>        
         <li className="navbar-item" style={{ padding: "0px" }}>
           <Link className="navbar-item" to={`/${locale}/prices`} selected={`/${locale}/prices` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Tarifs' : 'Prices'}

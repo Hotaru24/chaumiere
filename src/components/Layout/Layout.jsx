@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { withPrefix } from "gatsby";
+import { withPrefix, navigate } from "gatsby";
 import "./layout.css";
 
 import useSiteMetadata from "../SiteMetadata";
@@ -11,12 +11,19 @@ import Footer from "../Footer/Footer";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+  const [locale, setLocale] = useState('FR');
 
   useEffect(() => {
     if (!localStorage.getItem('locale')) {
       const browserLocale = navigator.language?.split('-')[0];
       browserLocale === 'fr' ? localStorage.setItem('locale', 'FR') : localStorage.setItem('locale', 'EN');
+      setLocale(browserLocale.toUpperCase());
     }
+
+    if (!window.location.pathname.includes('FR') && !window.location.pathname.includes('EN')) {
+      navigate(`/${locale}/home`);
+    }
+
   }, []);
 
   return (

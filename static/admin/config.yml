@@ -57,15 +57,15 @@ collections:
   - name: "pages_FR"
     label: "Pages FR"
     files:
-      - file: "src/pages/FR/index.md"
+      - file: "src/pages/FR/home.md"
         label: "Landing Page"
-        name: "index"
+        name: "home"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "index-page",
+              default: "home-page",
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
@@ -171,15 +171,15 @@ collections:
   - name: "pages_EN"
     label: "Pages EN"
     files:
-      - file: "src/pages/EN/index.md"
+      - file: "src/pages/EN/home.md"
         label: "Landing Page"
-        name: "index"
+        name: "home"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "index-page",
+              default: "home-page",
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }

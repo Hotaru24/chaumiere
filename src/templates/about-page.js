@@ -1,110 +1,148 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import Carrousel from '../components/Carrousel';
-import instagram from "../img/social/instagram.svg";
-import facebook from "../img/social/facebook.svg";
+import { Link, graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 
-import './home.css'
+import Layout from "../components/Layout/Layout";
+import Features from "../components/Features";
+import RoomsRoll from "../components/RoomsRoll";
+import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const AboutPageTemplate = ({
+  image,
   title,
+  heading,
   subheading,
-  content,
-  contentComponent 
+  mainpitch,
+  description,
+  intro,
 }) => {
-  const [locale, setLocale] = useState('FR');
-  const PageContent = contentComponent || Content;
-
-  useEffect(() => {
-    if (localStorage.getItem('locale')) {
-      setLocale(localStorage.getItem('locale'));
-    }
-  }, []);
+  const heroImage = getImage(image) || image;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section home">
-              <header>
-                <div className="carrousel">
-                  <Carrousel />                  
-                </div>
-                <div className="caption">
-                  <div className="text">
-                    <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                      {title}
-                    </h2>
-                    <h3>{subheading}</h3>
-                    <a id="scrollButton" href="#about-content" >{locale === 'FR' ? 'En découvrir plus' : 'Learn More'}</a>
+    <div>
+      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="content">
+                  <div className="content">
+                    <div className="tile">
+                      <h1 className="title">{mainpitch?.title}</h1>
+                    </div>
+                    <div className="tile">
+                      <h3 className="subtitle">{mainpitch?.description}</h3>
+                    </div>
                   </div>
-                  <div className="social">
-                    <a title="facebook" href="https://facebook.com">
-                      <img
-                        src={facebook}
-                        alt="Facebook"                        
-                      />
-                    </a>
-                    <a title="instagram" href="https://instagram.com">
-                      <img
-                        src={instagram}
-                        alt="Instagram"
-                      />
-                    </a>
+                  <div className="columns">
+                    <div className="column is-12">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        {heading}
+                      </h3>
+                      <p>{description}</p>
+                    </div>
+                  </div>
+                  <Features gridItems={intro.blurbs} />
+                  <div className="columns">
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/products">
+                        See all products
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="column is-12">
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Latest stories
+                    </h3>
+                    <RoomsRoll />
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/rooms">
+                        Read more
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </header>
-              <div id="about-content">
-                <PageContent  className="content" content={content} />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
   subheading: PropTypes.string,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  mainpitch: PropTypes.object,
+  description: PropTypes.string,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
 };
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>      
+    <Layout>
       <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        subheading={post.frontmatter.subheading}
-        content={post.html}
+        image={frontmatter.image}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        mainpitch={frontmatter.mainpitch}
+        description={frontmatter.description}
+        intro={frontmatter.intro}
       />
     </Layout>
   );
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default AboutPage;
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+export const pageQuery = graphql`
+  query AboutPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
         title
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        heading
         subheading
+        mainpitch {
+          title
+          description
+        }
+        description
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              }
+            }
+            text
+          }
+          heading
+          description
+        }
       }
     }
   }

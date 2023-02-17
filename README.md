@@ -70,12 +70,12 @@ import CMS from "netlify-cms-app";
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import RoomsPostPreview from "./preview-templates/RoomsPostPreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview";
-import IndexPagePreview from "./preview-templates/IndexPagePreview";
+import HomePagePreview from "./preview-templates/HomePagePreview";
 
 // CMS.registerMediaLibrary(uploadcare);
 // CMS.registerMediaLibrary(cloudinary);
 
-CMS.registerPreviewTemplate("index", IndexPagePreview);
+CMS.registerPreviewTemplate("index", HomePagePreview);
 CMS.registerPreviewTemplate("about", AboutPagePreview);
 CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("rooms", RoomsPostPreview);
