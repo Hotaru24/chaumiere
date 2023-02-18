@@ -5,10 +5,10 @@ import { navigate } from "gatsby-link";
 import Layout from "../../../components/Layout/Layout";
 
 //import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { divIcon } from "leaflet";
-import 'leaflet/dist/leaflet.css';
+// import { divIcon } from "leaflet";
+// import 'leaflet/dist/leaflet.css';
 
-import image from '../../../img/map.svg';
+//import image from '../../../img/map.svg';
 import '../../contact.css'
 
 
