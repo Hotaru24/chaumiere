@@ -74,7 +74,7 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: title, widget: string },
+                  { label: Titlesection, name: titlesection, widget: string },
                   { label: Description, name: description, widget: text },
                 ],
             }
@@ -84,7 +84,7 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: title, widget: string },
+                  { label: Titlesection, name: titlesection, widget: string },
                   { label: Description, name: description, widget: text },
                 ],
             }
@@ -94,7 +94,7 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: title, widget: string },
+                  { label: Titlesection, name: titlesection, widget: string },
                   { label: Description, name: description, widget: text },
                 ],
             }
@@ -211,21 +211,21 @@ collections:
               widget: "hidden",
               default: "prestation-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Titlesection", name: "titlesection", widget: "string" }
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
               default: "prestation-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Titlesection", name: "titlesection", widget: "string" }
           - {
               label: Presentation,
               name: presentation,
               widget: object,
               fields:
                 [
-                  { label: Title, name: title, widget: string },
+                  { label: Titlesection, name: titlesection, widget: string },
                   { label: Description, name: description, widget: text },
                 ],
             }
