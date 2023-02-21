@@ -212,7 +212,6 @@ collections:
               default: "prestation-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-                  fields:
           - {
               label: "Template Key",
               name: "templateKey",
