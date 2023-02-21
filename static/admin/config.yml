@@ -79,8 +79,8 @@ collections:
                 ],
             }
           - {
-              label: Rooms,
-              name: rooms,
+              label: Accommodation,
+              name: accommodation,
               widget: object,
               fields:
                 [
@@ -89,8 +89,8 @@ collections:
                 ],
             }
           - {
-              label: About,
-              name: about,
+              label: Manager,
+              name: manager,
               widget: object,
               fields:
                 [
@@ -230,8 +230,8 @@ collections:
                 ],
             }
           - {
-              label: Rooms,
-              name: rooms,
+              label: Accommodation,
+              name: accommodation,
               widget: object,
               fields:
                 [
@@ -240,8 +240,8 @@ collections:
                 ],
             }
           - {
-              label: About,
-              name: about,
+              label: Manager,
+              name: manager,
               widget: object,
               fields:
                 [

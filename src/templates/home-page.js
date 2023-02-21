@@ -15,14 +15,13 @@ export const HomePageTemplate = ({
   title,
   subheading,
   image,
-  about,
-  rooms,
+  manager,
+  accommodation,
   presentation
 }) => {
   const [locale, setLocale] = useState('FR');
 
   const mobileBackground = getImage(image) || image;
-  const articles = [presentation, rooms, about]
 
   useEffect(() => {
     if (localStorage.getItem('locale')) {
@@ -70,8 +69,8 @@ export const HomePageTemplate = ({
                 </div>
               </header>
               <div id="about-content">
-                {about.abouttitle}
-                {rooms.roomstitle}
+                {manager.abouttitle}
+                {accommodation.roomstitle}
                 {presentation.presentationtitle}
               </div>
             </div>
@@ -85,11 +84,11 @@ export const HomePageTemplate = ({
 HomePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   subheading: PropTypes.string,
-  about: PropTypes.shape({
+  manager: PropTypes.shape({
     abouttitle: PropTypes.string,
     aboutdescription: PropTypes.string,
   }),
-  rooms: PropTypes.shape({
+  accommodation: PropTypes.shape({
     roomstitle: PropTypes.string,
     roomsdescription: PropTypes.string,
   }),
@@ -107,8 +106,8 @@ const HomePage = ({ data }) => {
       <HomePageTemplate
         title={post.frontmatter.title}
         subheading={post.frontmatter.subheading}
-        about={post.frontmatter.about}
-        rooms={post.frontmatter.rooms}
+        manager={post.frontmatter.manager}
+        accommodation={post.frontmatter.accommodation}
         presentation={post.frontmatter.presentation}
       />
     </Layout>
@@ -132,11 +131,11 @@ export const homeQuery = graphql`
           }
         }
         subheading
-        about {
+        manager {
           abouttitle
           aboutdescription
         }
-        rooms {
+        accommodation {
           roomstitle
           roomsdescription
         }
