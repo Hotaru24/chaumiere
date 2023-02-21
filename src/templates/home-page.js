@@ -70,14 +70,9 @@ export const HomePageTemplate = ({
                 </div>
               </header>
               <div id="about-content">
-                {articles.map((article) => {
-                  return (
-                    <>
-                      <h3>{article.titlesection}</h3>
-                      <p>{article.description}</p>                    
-                    </>
-                  )
-                })}
+                {about.abouttitle}
+                {rooms.roomstitle}
+                {presentation.presentationtitle}
               </div>
             </div>
           </div>
@@ -91,16 +86,16 @@ HomePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   subheading: PropTypes.string,
   about: PropTypes.shape({
-    titlesection: PropTypes.string,
-    description: PropTypes.string,
+    abouttitle: PropTypes.string,
+    aboutdescription: PropTypes.string,
   }),
   rooms: PropTypes.shape({
-    titlesection: PropTypes.string,
-    description: PropTypes.string,
+    roomstitle: PropTypes.string,
+    roomsdescription: PropTypes.string,
   }),
   presentation: PropTypes.shape({
-    titlesection: PropTypes.string,
-    description: PropTypes.string,
+    presentationtitle: PropTypes.string,
+    presentationdescription: PropTypes.string,
   })
 };
 
@@ -138,16 +133,16 @@ export const homeQuery = graphql`
         }
         subheading
         about {
-          titlesection
-          description
+          abouttitle
+          aboutdescription
         }
         rooms {
-          titlesection
-          description
+          roomstitle
+          roomsdescription
         }
         presentation {
-          titlesection
-          description
+          presentationtitle
+          presentationdescription
         }
       }
     }
