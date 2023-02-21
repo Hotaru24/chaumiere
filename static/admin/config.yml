@@ -349,4 +349,3 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }          
           - { label: Prices, name: prices, widget: image }
-
