@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
-import Content, { HTMLContent } from "../components/Content";
 import Carrousel from '../components/Carrousel/Carrousel';
 import { getImage } from "gatsby-plugin-image";
 import FullWidthImage from "../components/FullWidthImage";
@@ -15,13 +14,15 @@ import './home.css'
 export const HomePageTemplate = ({
   title,
   subheading,
-  content,
-  contentComponent,
-  image
+  image,
+  about,
+  rooms,
+  presentation
 }) => {
   const [locale, setLocale] = useState('FR');
-  const PageContent = contentComponent || Content;
+
   const mobileBackground = getImage(image) || image;
+  const articles = [presentation, rooms, about]
 
   useEffect(() => {
     if (localStorage.getItem('locale')) {
@@ -67,10 +68,16 @@ export const HomePageTemplate = ({
                     </div>
                   </div>                  
                 </div>
-
               </header>
               <div id="about-content">
-                <PageContent  className="content" content={content} />
+                {articles.map((article) => {
+                  return (
+                    <>
+                      <h3>{article.title}</h3>
+                      <p>{article.description}</p>                    
+                    </>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -83,8 +90,18 @@ export const HomePageTemplate = ({
 HomePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   subheading: PropTypes.string,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  about: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  rooms: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  presentation: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+  })
 };
 
 const HomePage = ({ data }) => {
@@ -93,10 +110,11 @@ const HomePage = ({ data }) => {
   return (
     <Layout>      
       <HomePageTemplate
-        contentComponent={HTMLContent}
         title={post.frontmatter.title}
         subheading={post.frontmatter.subheading}
-        content={post.html}
+        about={post.frontmatter.about}
+        rooms={post.frontmatter.rooms}
+        presentation={post.frontmatter.presentation}
       />
     </Layout>
   );
@@ -111,7 +129,6 @@ export default HomePage;
 export const homeQuery = graphql`
   query Home($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
         image {
@@ -120,6 +137,18 @@ export const homeQuery = graphql`
           }
         }
         subheading
+        about {
+          title
+          description
+        }
+        rooms {
+          title
+          description
+        }
+        presentation {
+          title
+          description
+        }
       }
     }
   }

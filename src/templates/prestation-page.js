@@ -36,6 +36,7 @@ export const PrestationPageTemplate = ({
                       <h3 className="subtitle">{mainpitch?.description}</h3>
                     </div>
                   </div>
+                  <iframe src="https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ehbc=2E312F" width="640" height="480"></iframe>
                   <div className="columns">
                     <div className="column is-12">
                       <h3 className="has-text-weight-semibold is-size-2">
