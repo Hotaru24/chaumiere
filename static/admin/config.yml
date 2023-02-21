@@ -74,8 +74,8 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: presentationtitle, widget: string },
-                  { label: Description, name: presentationdescription, widget: text },
+                  { label: Presentationtitle, name: presentationtitle, widget: string },
+                  { label: Presentationescription, name: presentationdescription, widget: text },
                 ],
             }
           - {
@@ -84,8 +84,8 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: roomstitle, widget: string },
-                  { label: Description, name: roomsdescription, widget: text },
+                  { label: Roomstitle, name: roomstitle, widget: string },
+                  { label: Roomsdescription, name: roomsdescription, widget: text },
                 ],
             }
           - {
@@ -94,8 +94,8 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: abouttitle, widget: string },
-                  { label: Description, name: aboutdescription, widget: text },
+                  { label: Abouttitle, name: abouttitle, widget: string },
+                  { label: Aboutescription, name: aboutdescription, widget: text },
                 ],
             }
           
@@ -225,8 +225,8 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: presentationtitle, widget: string },
-                  { label: Description, name: presentationdescription, widget: text },
+                  { label: Presentationtitle, name: presentationtitle, widget: string },
+                  { label: Presentationdescription, name: presentationdescription, widget: text },
                 ],
             }
           - {
@@ -235,8 +235,8 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: roomstitle, widget: string },
-                  { label: Description, name: roomsdescription, widget: text },
+                  { label: Roomstitle, name: roomstitle, widget: string },
+                  { label: Roomsdescription, name: roomsdescription, widget: text },
                 ],
             }
           - {
@@ -245,8 +245,8 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Title, name: abouttitle, widget: string },
-                  { label: Description, name: aboutdescription, widget: text },
+                  { label: Abouttitle, name: abouttitle, widget: string },
+                  { label: Aboutescription, name: aboutdescription, widget: text },
                 ],
             }
 
