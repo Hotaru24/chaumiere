@@ -65,7 +65,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "prestation-page",
+              default: "home-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -209,14 +209,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "prestation-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "prestation-page",
+              default: "home-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - {
