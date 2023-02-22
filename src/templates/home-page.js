@@ -41,7 +41,7 @@ export const HomePageTemplate = ({
                 </div>
                 <div className="desktop">
                   <div className="carrousel">
-                    <Carrousel />                  
+                    <Carrousel />
                   </div>
                   <div className="caption">
                     <div className="text">
@@ -55,7 +55,7 @@ export const HomePageTemplate = ({
                       <a title="facebook" href="https://facebook.com">
                         <img
                           src={facebook}
-                          alt="Facebook"                        
+                          alt="Facebook"
                         />
                       </a>
                       <a title="instagram" href="https://instagram.com">
@@ -65,13 +65,22 @@ export const HomePageTemplate = ({
                         />
                       </a>
                     </div>
-                  </div>                  
+                  </div>
                 </div>
               </header>
               <div id="about-content">
-                {manager.abouttitle}
-                {accommodation.roomstitle}
-                {presentation.presentationtitle}
+                <article>
+                  <h3>{presentation.presentationtitle}</h3>
+                  <p>{presentation.presentationdescription}</p>
+                </article>
+                <article>
+                  <h3>{accommodation.roomstitle}</h3>
+                  <p>{accommodation.roomsdescription}</p>
+                </article>
+                <article>
+                  <h3>{manager.abouttitle}</h3>
+                  <p>{manager.aboutdescription}</p>
+                </article>
               </div>
             </div>
           </div>

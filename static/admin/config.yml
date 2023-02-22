@@ -32,8 +32,11 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price", name: "price", widget: "string" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image2", name: "featuredimage2", widget: image }
+      - { label: "Featured Image3", name: "featuredimage3", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "rooms_EN"
     label: "Rooms EN"
@@ -50,8 +53,11 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price", name: "price", widget: "string" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image2", name: "featuredimage2", widget: image }
+      - { label: "Featured Image3", name: "featuredimage3", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages_FR"

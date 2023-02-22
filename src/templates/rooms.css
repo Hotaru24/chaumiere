@@ -1,0 +1,77 @@
+
+.room {
+  margin: 3vh 2vw 4vh;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rooms-slider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-detail-price {
+  margin: 0 1.5rem 0.5rem;
+  min-width: fit-content;
+  display: flex;
+}
+
+.room-detail-price p {
+  margin: 0 2px;
+  text-align: center;
+}
+
+.rooms-slider-buttons {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 80px;
+}
+
+
+/*============_Tablet_===========*/
+
+@media (min-width: 800px) {
+  .room {
+    margin: 5vh 15vw 7vh;
+  }
+
+  .header-container {
+    max-width: 950px;
+    flex-direction: row;
+  }
+
+  .rooms-slider {
+    height: 45vh;
+  }
+
+  .room-detail-price {
+    flex-direction: column;
+    margin: 2rem 3rem;
+  }
+
+  .room-detail-price p {
+    margin-bottom: 1rem;
+  }
+
+  .rooms-slider-buttons {   
+    bottom: 120px;
+  }
+}
+
+
+/*============_Desktop_===========*/
+
+@media (min-width: 1200px) {
+  .room {
+    margin: 5vh 20vw 7vh;
+  }
+}
