@@ -145,6 +145,7 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
+                        { label: Title, name: title, widget: title },
                         { label: Text, name: text, widget: text },
                       ],
                   },
@@ -289,6 +290,7 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
+                        { label: Title, name: title, widget: title },
                         { label: Text, name: text, widget: text },
                       ],
                   },
