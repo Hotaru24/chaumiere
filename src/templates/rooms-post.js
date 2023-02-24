@@ -52,9 +52,9 @@ export const RoomsPostTemplate = ({
   }
 
   return (
-    <section className="section">
+    <section>
       {helmet || ""}
-      <div className="container content room">
+      <div className="page-body">
         <h1>
           {title} {slideCount}
         </h1>

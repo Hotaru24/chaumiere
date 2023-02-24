@@ -10,20 +10,14 @@ const RoomsIndexPage = () => {
 
   return (
     <Layout>
-      <div
-        className="full-width-image-container margin-top-0"
-        style={{
-          backgroundImage: `url('/img/chambre5.jpg')`,
-        }}
-      >
-         <FullWidthImage img={image} title={'Nos gites & chambres'} />
+      <div style={{ backgroundImage: `url('/img/chambre5.jpg')` }}>
+         <FullWidthImage
+          img={image}
+          title={ 'Nos gites & chambres' }
+         />
       </div>
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <RoomsRoll />
-          </div>
-        </div>
+      <section className="page-body">
+        <RoomsRoll />
       </section>
     </Layout>
   );

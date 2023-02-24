@@ -69,7 +69,7 @@ export default function FullWidthImage(props) {
                 boxShadow:
                   "#14213D 0.5rem 0px 0px, #14213D -0.5rem 0px 0px",
                 backgroundColor: "#14213D",
-                color: "#FCA311",
+                color: "#f2cd68",
                 lineHeight: "1",
                 padding: "0.25em",
               }}
@@ -84,7 +84,7 @@ export default function FullWidthImage(props) {
                 boxShadow:
                   "#14213D 0.5rem 0px 0px, #14213D -0.5rem 0px 0px",
                 backgroundColor: "#14213D",
-                color: "#FCA311",
+                color: "#f2cd68",
                 lineHeight: "1",
                 padding: "0.25rem",
                 marginTop: "0.5rem",

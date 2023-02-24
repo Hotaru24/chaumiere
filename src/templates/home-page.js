@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout/Layout";
-import Carrousel from '../components/Carrousel/Carrousel';
+
 import { getImage } from "gatsby-plugin-image";
+import './home.css'
+
+import Carrousel from '../components/Carrousel/Carrousel';
 import FullWidthImage from "../components/FullWidthImage";
 import instagram from "../img/social/instagram.svg";
 import facebook from "../img/social/facebook.svg";
+import Layout from "../components/Layout/Layout";
 
-import './home.css'
 
 // eslint-disable-next-line
 export const HomePageTemplate = ({
@@ -30,61 +32,53 @@ export const HomePageTemplate = ({
   }, []);
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section home">
-              <header>
-                <div className="mobile">
-                  <FullWidthImage img={mobileBackground} title={title} subheading={subheading} />
-                </div>
-                <div className="desktop">
-                  <div className="carrousel">
-                    <Carrousel />
-                  </div>
-                  <div className="caption">
-                    <div className="text">
-                      <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                        {title}
-                      </h2>
-                      <h3>{subheading}</h3>
-                      <a id="scrollButton" href="#about-content" >{locale === 'FR' ? 'En découvrir plus' : 'Learn More'}</a>
-                    </div>
-                    <div className="social">
-                      <a title="facebook" href="https://facebook.com">
-                        <img
-                          src={facebook}
-                          alt="Facebook"
-                        />
-                      </a>
-                      <a title="instagram" href="https://instagram.com">
-                        <img
-                          src={instagram}
-                          alt="Instagram"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </header>
-              <div id="about-content">
-                <article>
-                  <h3>{presentation.presentationtitle}</h3>
-                  <p>{presentation.presentationdescription}</p>
-                </article>
-                <article>
-                  <h3>{accommodation.roomstitle}</h3>
-                  <p>{accommodation.roomsdescription}</p>
-                </article>
-                <article>
-                  <h3>{manager.abouttitle}</h3>
-                  <p>{manager.aboutdescription}</p>
-                </article>
-              </div>
+    <section className="home">
+      <header>
+        <div className="mobile">
+          <FullWidthImage img={mobileBackground} title={title} subheading={subheading} />
+        </div>
+        <div className="desktop">
+          <div className="carrousel">
+            <Carrousel />
+          </div>
+          <div className="caption">
+            <div className="text">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
+              <h3>{subheading}</h3>
+              <a id="scrollButton" href="#about-content" >{locale === 'FR' ? 'En découvrir plus' : 'Learn More'}</a>
+            </div>
+            <div className="social">
+              <a title="facebook" href="https://facebook.com">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                />
+              </a>
+              <a title="instagram" href="https://instagram.com">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                />
+              </a>
             </div>
           </div>
         </div>
+      </header>
+      <div className="page-body">
+        <article>
+          <h3>{presentation.presentationtitle}</h3>
+          <p>{presentation.presentationdescription}</p>
+        </article>
+        <article>
+          <h3>{accommodation.roomstitle}</h3>
+          <p>{accommodation.roomsdescription}</p>
+        </article>
+        <article>
+          <h3>{manager.abouttitle}</h3>
+          <p>{manager.aboutdescription}</p>
+        </article>
       </div>
     </section>
   );

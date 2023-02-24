@@ -16,7 +16,7 @@ const RoomsRollTemplate = (props) => {
   }, []);
 
   return (
-    <div className="columns is-multiline">
+    <div>
       {posts &&
         posts
           .filter((post) => post?.node?.fields?.slug?.includes(`/${locale}/`))

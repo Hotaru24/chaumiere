@@ -1,8 +1,3 @@
-
-.room {
-  margin: 3vh 2vw 4vh;
-}
-
 .header-container {
   display: flex;
   justify-content: center;
@@ -37,13 +32,9 @@
 }
 
 
-/*============_Tablet_===========*/
+/*============_Tablet & Desktop_===========*/
 
 @media (min-width: 800px) {
-  .room {
-    margin: 5vh 15vw 7vh;
-  }
-
   .header-container {
     max-width: 950px;
     flex-direction: row;
@@ -64,14 +55,5 @@
 
   .rooms-slider-buttons {   
     bottom: 120px;
-  }
-}
-
-
-/*============_Desktop_===========*/
-
-@media (min-width: 1200px) {
-  .room {
-    margin: 5vh 20vw 7vh;
   }
 }

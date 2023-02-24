@@ -21,7 +21,7 @@
 }
 
 .navbar-mobile .mobile-menu-button {
-  color: rgb(21, 21, 21);
+  color: #f2cd68;
 }
 
 .navbar button {
@@ -36,7 +36,7 @@
 /*current page link*/
 [aria-current]:not([aria-current="false"]) {
   font-weight: bold;
-  color: #FCA311 !important;
+  color: #f2cd68 !important;
 }
 
 .navbar ul {
@@ -57,7 +57,9 @@
   border-bottom: none !important;
 }
 
-/*====_Tablet_====*/
+
+/*==========_Tablet_==========*/
+
 @media (min-width: 800px) {
   .navbar-desktop {
     display: unset;
@@ -75,7 +77,9 @@
   }
 }
 
-/*====_Desktop_====*/
+
+/*==========_Desktop_=========*/
+
 @media (min-width: 1000px) {
   .navbar-desktop {
     width: 90vw;

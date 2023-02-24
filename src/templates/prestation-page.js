@@ -21,7 +21,7 @@ export const PrestationPageTemplate = ({
   return (
     <>
       <FullWidthImage img={ heroImage } title={ title } />
-      <div>
+      <div className="page-body">
         {services && 
           <section>
             <h2>{ services.heading }</h2>
