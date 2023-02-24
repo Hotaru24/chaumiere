@@ -6,6 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout/Layout";
 import Features from "../components/Features";
 import FullWidthImage from "../components/FullWidthImage";
+import { StaticImage } from "gatsby-plugin-image"
 
 // eslint-disable-next-line
 export const PrestationPageTemplate = ({
@@ -22,6 +23,7 @@ export const PrestationPageTemplate = ({
   return (
     <div>
       <FullWidthImage img={heroImage} title={title} />
+
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -36,6 +38,14 @@ export const PrestationPageTemplate = ({
                       <h3 className="subtitle">{mainpitch?.description}</h3>
                     </div>
                   </div>
+                  <StaticImage
+        src={heroImage}
+        alt="A dinosaur"
+        placeholder="blurred"
+
+        width={200}
+        height={200}
+      />
                   <iframe src="https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ehbc=2E312F" width="640" height="480"></iframe>
                   <div className="columns">
                     <div className="column is-12">
@@ -104,8 +114,8 @@ PrestationPage.propTypes = {
 export default PrestationPage;
 
 export const pageQuery = graphql`
-  query PrestationPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "prestation-page" } }) {
+  query PrestationPageTemplate($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         image {
