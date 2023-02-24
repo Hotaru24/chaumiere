@@ -4,72 +4,50 @@ import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout/Layout";
-import Features from "../components/Features";
+import Services from "../components/Services/Services";
 import FullWidthImage from "../components/FullWidthImage";
-import { StaticImage } from "gatsby-plugin-image"
+
 
 // eslint-disable-next-line
 export const PrestationPageTemplate = ({
   image,
   title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  services,
+  meal,
+  activities
 }) => {
   const heroImage = getImage(image) || image;
 
   return (
-    <div>
-      <FullWidthImage img={heroImage} title={title} />
-
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch?.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch?.description}</h3>
-                    </div>
-                  </div>
-                  <StaticImage
-        src={heroImage}
-        alt="A dinosaur"
-        placeholder="blurred"
-
-        width={200}
-        height={200}
-      />
-                  <iframe src="https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ehbc=2E312F" width="640" height="480"></iframe>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <>
+      <FullWidthImage img={ heroImage } title={ title } />
+      <div>
+        {services && 
+          <section>
+            <h2>{ services.heading }</h2>
+            <h3 >{ services.description }</h3>
+            <Services gridItems={ services.blurbs } />
+          </section>
+        }
+        {meal &&
+          <section>
+            <h2>{ meal.heading }</h2>
+            <p>{ meal.description }</p>
+          </section>
+        }
+        { activities &&
+          <section>
+              <h2>{ activities.heading }</h2>
+              <h3 >{ activities.description }</h3>
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ehbc=2E312F"
+                width="640"
+                height="480"
+              ></iframe>            
+          </section>
+        }
+      </div>
+    </>
   );
 };
 
@@ -78,11 +56,12 @@ PrestationPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
+  services: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  meal: PropTypes.object,
+  activities: PropTypes.object
 };
 
 const PrestationPage = ({ data }) => {
@@ -95,9 +74,10 @@ const PrestationPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        services={frontmatter.services}
+        meal={frontmatter.meal}
+        activities={frontmatter.activities}
       />
     </Layout>
   );
@@ -125,12 +105,9 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
-          title
+        services {
+          heading
           description
-        }
-        description
-        intro {
           blurbs {
             image {
               childImageSharp {
@@ -140,6 +117,12 @@ export const pageQuery = graphql`
             title
             text
           }
+        }
+        meal {
+          heading
+          description
+        }
+        activities {
           heading
           description
         }

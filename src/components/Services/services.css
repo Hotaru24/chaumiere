@@ -1,0 +1,52 @@
+.services-list {
+  display: grid;
+  grid-auto-rows: 300px;
+  grid-gap: 30px;
+  grid-auto-flow: dense;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-item-icon {
+  width: 3rem;
+}
+
+.service-item h3 {
+  margin: 1.25rem 0 0.5rem;
+}
+
+.service-item p {
+  margin: 0.5rem 15%;
+}
+
+
+/*==============_BIG MOBILE_==============*/
+
+@media screen and (min-width: 500px) {
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/*================_TABLET_================*/
+
+@media screen and (min-width: 800px) {
+  .services-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/*================_DESCKTOP_================*/
+
+@media screen and (min-width: 1000px) {
+  .services-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
