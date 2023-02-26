@@ -7,9 +7,11 @@ import './home.css'
 
 import Carrousel from '../components/Carrousel/Carrousel';
 import FullWidthImage from "../components/FullWidthImage";
+import Layout from "../components/Layout/Layout";
+
 import instagram from "../img/social/instagram.svg";
 import facebook from "../img/social/facebook.svg";
-import Layout from "../components/Layout/Layout";
+
 
 
 // eslint-disable-next-line

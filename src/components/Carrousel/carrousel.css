@@ -15,17 +15,17 @@
   }
 
   .slider div:nth-child(1) {
-    background: url('/img/home1.jpg');
+    background: url('/img/Drone-7.jpg');
     animation-delay: 0s;
   }
 
   .slider div:nth-child(2) {
-    background: url('/img/home2.jpg');
+    background: url('/img/Drone-3.jpg');
     animation-delay: 6s;
   }
 
   .slider div:nth-child(3) {
-    background: url('/img/home3.jpg');
+    background: url('/img/Ext-11.jpg');
     animation-delay: 12s;
   }
   @keyframes animate {

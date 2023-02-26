@@ -3,9 +3,13 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
-import Layout from "../components/Layout/Layout";
-import Services from "../components/Services/Services";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import "./prestations.css";
+
 import FullWidthImage from "../components/FullWidthImage";
+import Services from "../components/Services/Services";
+import Layout from "../components/Layout/Layout";
+
 
 
 // eslint-disable-next-line
@@ -18,35 +22,41 @@ export const PrestationPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
 
+  const activitiesMapUrl = "https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ehbc=2E312F";
+  const isMobile = useMediaQuery('(max-width: 850px)');
+
   return (
     <>
       <FullWidthImage img={ heroImage } title={ title } />
-      <div className="page-body">
-        {services && 
-          <section>
-            <h2>{ services.heading }</h2>
-            <h3 >{ services.description }</h3>
-            <Services gridItems={ services.blurbs } />
-          </section>
-        }
-        {meal &&
-          <section>
+      { services && 
+        <section className="page-body">
+          <h2>{ services.heading }</h2>
+          <h3 >{ services.description }</h3>
+          <Services gridItems={ services.blurbs } />
+        </section>
+      }
+      { meal &&
+        <section>
+          <div className="page-body meal">
             <h2>{ meal.heading }</h2>
             <p>{ meal.description }</p>
-          </section>
-        }
-        { activities &&
-          <section>
-              <h2>{ activities.heading }</h2>
-              <h3 >{ activities.description }</h3>
+          </div>
+        </section>
+      }
+      { activities &&
+        <section className="page-body">
+            <h2>{ activities.heading }</h2>
+            <h3 >{ activities.description }</h3>
+            <div className="activities-map-container">
               <iframe
-                src="https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ehbc=2E312F"
-                width="640"
-                height="480"
-              ></iframe>            
-          </section>
-        }
-      </div>
+                src={ activitiesMapUrl }
+                title="activities"
+                width={ isMobile ? 640 : 800 }
+                height={ isMobile ? 480 : 550 }
+              ></iframe>                 
+            </div>           
+        </section>
+      }
     </>
   );
 };

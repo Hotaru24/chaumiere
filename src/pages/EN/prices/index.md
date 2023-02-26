@@ -2,7 +2,7 @@
 templateKey: 'prices-page'
 path: /prices
 title: Our Coffee
-image: /img/jumbotron.jpg
+image: /img/prices_en.png
 heading: Rates
 description: >-
   Description

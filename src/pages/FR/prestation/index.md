@@ -2,20 +2,18 @@
 templateKey: prestation-page
 path: /prestation
 title: Services & Activités
-image: /img/cuisine.jpg
+image: /img/Cuisine-1.jpg
 heading: Services & Activités
 subheading: La chaumière de Sainte-Alvère
 services:
-  heading: What we offer
+  heading: Nos services
   description: >
-    Texte en français7.
+    Description ?
   blurbs:
     - image: /img/coffee-icon.jpg
       title: Petits déjeuners
       text: >
         Nous proposons tous les matins un petit déjeuner complet et copieux.
-        Pain, viennoiseries, charcuterie, fromage, jus de fruits pressés, fruits et œufs préparés selon vos envies sont au menu.
-        Ce service est gratuit pour les chambres d’hôtes et facturé 15€ pour les locataires du gîte
     - image: /img/swim-icon.jpg
       title: Piscine
       text: >
@@ -43,16 +41,21 @@ services:
     - image: /img/meal-icon.jpg
       title: Table d’hôte
       text: >
-        Sous réservation et en fonction de nos disponibilités, nous organisons une table d’hôte Un des grands atouts du Périgord est bien évidemment sa richesse gastronomique.
-        Nous vous conseillerons des restaurants à proximité, mais nous organisons aussi à l’occasion et sur demande des tables d’hôtes 4 services (entrée, plat, fromage et dessert) qui vous feront découvrir les joyaux de la cuisine périgourdine :' foie gras, truffes (une grande spécialité de Sainte-Alvère), le canard sous toutes ses déclinaisons (magrets, aiguillettes, Parmentier et cuisse confites).
-
-        Tarif : 50€ pp vins compris
+        Sous réservation et en fonction de nos disponibilités, nous organisons une table d’hôte.
+        
 meal:
-  heading: Table
+  heading: La Table
   description: >
-    speach table
+    Un des grands atouts du Périgord est bien évidemment sa richesse gastronomique.
+    Nous vous conseillerons des restaurants à proximité, mais nous organisons aussi à l’occasion et sur demande des tables d’hôtes 4 services (entrée, plat, fromage et dessert) qui vous feront découvrir les joyaux de la Cuisine-1 périgourdine : foie gras, truffes (une grande spécialité de Sainte-Alvère), le canard sous toutes ses déclinaisons (magrets, aiguillettes, Parmentier et cuisse confites).
+    Le matin nous vous proposerons également un petit déjeuné. Pain, viennoiseries, charcuterie, fromage, jus de fruits pressés, fruits et œufs préparés selon vos envies sont au menu.
+    Tarif Table: 50€ pp vins compris
+    Petit déjeuné: gratuit pour les chambres d’hôtes et facturé 15€ pour les locataires du gîte
 activities:
-  heading: Great coffee with no compromises
+  heading: Sainte-Alvère au coeur du Périgord
   description: >
-    fRANÇAIS !!!!
+    Le patrimoine que propose la Dordogne est extrêmement riche.
+    Chacun peut y trouver son bonheur.
+    Vous pouvez y voyager dans le temps en découvrant des sites préhistoriques mondialement reconnus et de très beaux témoignages du Moyen-âge.
+    Saint-Alvère qui se trouve précisément à l’intersection des Périgord vert, pourpre et noir est un point de départ idéal pour les découvrir.
 ---

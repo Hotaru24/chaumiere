@@ -6,11 +6,11 @@ import Layout from "../../../components/Layout/Layout";
 import RoomsRoll from "../../../components/RoomsRoll";
 
 const RoomsIndexPage = () => {
-  const image =  {url: '/img/chambre5.jpg' };
+  const image =  {url: '/img/Chambre-gite-1.jpg' };
 
   return (
     <Layout>
-      <div style={{ backgroundImage: `url('/img/chambre5.jpg')` }}>
+      <div style={{ background: `url('/img/Chambre-gite-1.jpg')` }}>
          <FullWidthImage img={image} title={'Accommodation'} />
       </div>
       <section className="page-body">
