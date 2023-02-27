@@ -19,7 +19,7 @@ const encode = (data) => {
     .join('&')
 }
 
-const Index = (props) => {
+const Index = () => {
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
@@ -35,8 +35,9 @@ const Index = (props) => {
   // });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
+    e.preventDefault();
+    const form = e.target;
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -45,9 +46,9 @@ const Index = (props) => {
         ...contactForm,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
+    .then(() => navigate(form.getAttribute('action')))
+    .catch((error) => alert(error));
+  };
 
   return (
     <Layout>
