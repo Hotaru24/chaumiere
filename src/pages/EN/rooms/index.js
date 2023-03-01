@@ -3,7 +3,7 @@ import * as React from "react";
 import FullWidthImage from "../../../components/FullWidthImage";
 
 import Layout from "../../../components/Layout/Layout";
-import RoomsRoll from "../../../components/RoomsRoll";
+import RoomsList from "../../../components/RoomsList/RoomsList";
 
 const RoomsIndexPage = () => {
   const image =  {url: '/img/Chambre-gite-1.jpg' };
@@ -14,7 +14,7 @@ const RoomsIndexPage = () => {
          <FullWidthImage img={image} title={'Accommodation'} />
       </div>
       <section className="page-body">
-        <RoomsRoll />
+        <RoomsList />
       </section>
     </Layout>
   );

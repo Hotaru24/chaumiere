@@ -1,0 +1,18 @@
+---
+templateKey: rooms-post
+title: Chambre rêverie
+featuredpost: false
+featuredimage: /img/Chambre-2-1.jpg
+featuredimage2: /img/Chambre-2-2.jpg
+featuredimage3: /img/Desserte-etage-2.jpg
+description: Une très charmante chambre sous les combes.
+price: 120€
+
+---
+* 24 m2
+* Grand lit (mesure à rajouter)
+* Salle de bain avec Bain/douche et wc
+* Coin de lecture sur le palier
+* Télévision
+* Machine à Nespresso et Bouilloire électrique
+* Arrivée à partir de 15h – départ à 10h30
