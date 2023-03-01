@@ -1,13 +1,20 @@
-import * as React from "react";
-import Layout from "../components/Layout/Layout";
+import React, { useEffect } from "react";
+import { navigate } from "gatsby";
 
-const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Layout>
-);
+import CircularProgress from '@mui/material/CircularProgress';
+
+
+const NotFoundPage = () => {
+  useEffect(() => {
+    if (localStorage.getItem('locale')) {
+     const locale = localStorage.getItem('locale');    
+     navigate(`/${locale}/home`);
+    }
+  }, []);
+
+  return (
+    <CircularProgress />
+  )
+}
 
 export default NotFoundPage;

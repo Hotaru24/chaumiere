@@ -24,39 +24,35 @@ const RoomsListTemplate = (props) => {
           .filter((post) => post?.node?.fields?.slug?.includes(`/${locale}/`))
           .map(({ node: post }) => (
             <article className="room-card" key={post.id}>
-              <header>
-                { post?.frontmatter?.featuredimage && (
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: post.frontmatter.featuredimage,
-                      alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                      width:
-                        post.frontmatter.featuredimage.childImageSharp
-                          .gatsbyImageData.width,
-                      height:
-                        post.frontmatter.featuredimage.childImageSharp
-                          .gatsbyImageData.height,
-                    }}
-                  />
-                )}
-                <p>
-                  <Link to={ post.fields.slug }>
-                    { post.frontmatter.title }
-                  </Link>
-                  <span> &bull; </span>
-                  <span> { post.frontmatter.price } </span>
-                </p>
-              </header>
-              <p>
+              { post?.frontmatter?.featuredimage && (
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: post.frontmatter.featuredimage,
+                    alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                    width:
+                      post.frontmatter.featuredimage.childImageSharp
+                        .gatsbyImageData.width,
+                    height:
+                      post.frontmatter.featuredimage.childImageSharp
+                        .gatsbyImageData.height,
+                  }}
+                />
+              )}
+              <div className="room-card-description">
+                <h2>{ post.frontmatter.title }</h2>
                 { post.excerpt }
-                <br/>
-                <br/>
                 <Link className="button" to={ post.fields.slug }>
                   { locale === 'FR' ? 'En voir plus' : 'See more' }
                 </Link>
-              </p>
+              </div>
+              <div className="room-card-price">
+                <span>{ locale === 'FR' ? 'A partir de' : 'From' }</span>
+                <span> { post.frontmatter.price } </span>
+                <button>{ locale === 'FR' ? 'Réserver' : 'Booking' }</button>
+              </div>    
             </article>
-          ))}
+          ))
+      }
     </div>
   )
 }
@@ -93,7 +89,7 @@ export default function RoomsList() {
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 120
+                        width: 300
                         quality: 100
                         layout: CONSTRAINED
                       )

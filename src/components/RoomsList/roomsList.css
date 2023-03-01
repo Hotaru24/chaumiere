@@ -4,4 +4,10 @@
 
 .room-card {
   margin-bottom: 3rem;
+  display: flex;
+  width: 100%;
+}
+
+.room-card-description {
+  width: 60%;
 }
