@@ -1,11 +1,11 @@
 ---
 templateKey: rooms-post
-title: A beginners’ guide to brewing with Chemex
+title: Chambre 2
 date: 2017-01-04T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/Chambre-1-1.jpg
-featuredimage2: /img/Chambre-1-2.jpg
-featuredimage3: /img/Chambre-1-3.jpg
+featuredimage: /img/Chambre-2-1.jpg
+featuredimage2: /img/Chambre-2-2.jpg
+featuredimage3: /img/Chambre-2-2.jpg
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 price: 0€
 

@@ -4,7 +4,7 @@ path: /home
 title: La chaumière de Sainte-Alvère
 image: /img/Drone-7.jpg
 heading: La chaumière de Sainte-Alvère
-subheading: Gites et Chambres d'Hôtes
+subheading: Gite et Chambres d'Hôtes
 presentation:
   presentationtitle: presentation
   presentationdescription: >

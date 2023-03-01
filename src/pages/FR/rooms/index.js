@@ -13,7 +13,7 @@ const RoomsIndexPage = () => {
       <div style={{ background: `url('/img/Chambre-gite-1.jpg')` }}>
          <FullWidthImage
           img={image}
-          title={ 'Nos gites & chambres' }
+          title={ 'Nos gite & chambres' }
          />
       </div>
       <section className="page-body">

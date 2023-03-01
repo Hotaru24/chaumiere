@@ -16,7 +16,7 @@ const RoomsRollTemplate = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="rooms-list">
       {posts &&
         posts
           .filter((post) => post?.node?.fields?.slug?.includes(`/${locale}/`))
@@ -53,7 +53,7 @@ const RoomsRollTemplate = (props) => {
                     </Link>
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                      {post.frontmatter.price}
                     </span>
                   </p>
                 </header>
@@ -62,7 +62,7 @@ const RoomsRollTemplate = (props) => {
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                    { locale === 'FR' ? 'En voir plus' : 'See more' }
                   </Link>
                 </p>
               </article>
@@ -87,7 +87,6 @@ export default function RoomsRoll() {
       query={graphql`
         query RoomsRollQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { templateKey: { eq: "rooms-post" } } }
           ) {
             edges {
@@ -100,7 +99,7 @@ export default function RoomsRoll() {
                 frontmatter {
                   title
                   templateKey
-                  date(formatString: "MMMM DD, YYYY")
+                  price
                   featuredpost
                   featuredimage {
                     childImageSharp {
