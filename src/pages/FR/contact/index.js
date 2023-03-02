@@ -55,22 +55,17 @@ const Index = () => {
     <Layout>
       <section className="section">
         <h1>Contact</h1>
-
-        {
-          window && window !== undefined &&
-          <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
-            </Marker>
-          </MapContainer>          
-        }
-
+        <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
         <form
           name="contact"
           method="post"
