@@ -4,7 +4,6 @@ import "./footer.css";
 
 import instagram from "../../img/social/instagram.svg";
 import facebook from "../../img/social/facebook.svg";
-import logo from "../../img/logo.svg";
 
 const Footer = () => {
   const [locale, setLocale] = useState('FR');

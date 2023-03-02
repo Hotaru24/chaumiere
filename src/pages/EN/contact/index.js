@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { navigate } from "gatsby-link";
 
+import 'leaflet/dist/leaflet.css';
+import '../../contact.css';
+
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import * as L from "leaflet";
+
 import Layout from "../../../components/Layout/Layout";
-
-//import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-// import { divIcon } from "leaflet";
-// import 'leaflet/dist/leaflet.css';
-
-//import image from '../../../img/map.svg';
-import '../../contact.css'
+import image from '../../../img/map.svg';
 
 
 const encode = (data) => {
@@ -20,11 +20,38 @@ const encode = (data) => {
 
 
 const Index = () => {
+  const [map, setMap] = useState(<></>);
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
     message: ''
   });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const iconMarkup = renderToStaticMarkup(
+        <img src={image} alt='localisation' className="map-icon" />
+      );
+      
+      const customMarkerIcon = new L.DivIcon({
+        html: iconMarkup
+      });
+
+      setMap(
+        <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
+            <Popup>
+              La Chaumière
+            </Popup>
+          </Marker>
+        </MapContainer>
+      )
+    }  
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,17 +73,7 @@ const Index = () => {
     <Layout>
       <section className="section">
         <h1>Contact</h1>
-        {/* <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer> */}
+        { map }
         <form
           name="contact"
           method="post"

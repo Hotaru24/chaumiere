@@ -5,11 +5,10 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import 'leaflet/dist/leaflet.css';
 import '../../contact.css';
 
-import Layout from "../../../components/Layout/Layout";
-
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import * as L from "leaflet";
 
+import Layout from "../../../components/Layout/Layout";
 import image from '../../../img/map.svg';
 
 
@@ -29,7 +28,7 @@ const Index = () => {
   });
   
   useEffect(() => {
-    if ( typeof window !== "undefined") {
+    if (typeof window !== "undefined") {
       const iconMarkup = renderToStaticMarkup(
         <img src={image} alt='localisation' className="map-icon" />
       );
@@ -75,7 +74,7 @@ const Index = () => {
     <Layout>
       <section className="section">
         <h1>Contact</h1>
-        {map}
+        { map }
         <form
           name="contact"
           method="post"
