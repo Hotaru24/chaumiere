@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby-link";
+import { renderToStaticMarkup } from 'react-dom/server';
 
 import '../../contact.css';
 
@@ -26,13 +27,13 @@ const Index = () => {
     message: ''
   });
 
-  // const iconMarkup = renderToStaticMarkup(
-  //   <img src={image} alt='localisation' className="map-icon" />
-  // );
+  const iconMarkup = renderToStaticMarkup(
+    <img src={image} alt='localisation' className="map-icon" />
+  );
   
-  // const customMarkerIcon = divIcon({
-  //   html: iconMarkup
-  // });
+  const customMarkerIcon = divIcon({
+    html: iconMarkup
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
