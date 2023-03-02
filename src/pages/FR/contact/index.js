@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { navigate } from "gatsby-link";
 import { renderToStaticMarkup } from 'react-dom/server';
 
@@ -20,14 +20,33 @@ const encode = (data) => {
     .join('&')
 }
 
-const Index = () => {
-  const isBrowser = typeof window !== "undefined";
-
+const Index = () => {  
+  const [map, setMap] = useState(<></>);
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
     message: ''
   });
+  
+  useEffect(() => {
+    const isBrowser = typeof window !== "undefined";
+
+    if (isBrowser) {
+      setMap(
+        <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
+            <Popup>
+              La Chaumière
+            </Popup>
+          </Marker>
+        </MapContainer>
+      )
+    }  
+  }, []);
 
   const iconMarkup = renderToStaticMarkup(
     <img src={image} alt='localisation' className="map-icon" />
@@ -53,26 +72,11 @@ const Index = () => {
     .catch((error) => alert(error));
   };
 
-  if (!isBrowser) {
-    return;
-  }
-
   return (
     <Layout>
       <section className="section">
         <h1>Contact</h1>
-        <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer>
-
+        {map}
         <form
           name="contact"
           method="post"
