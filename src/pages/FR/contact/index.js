@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { navigate } from "gatsby-link";
 import { renderToStaticMarkup } from 'react-dom/server';
 
+import 'leaflet/dist/leaflet.css';
 import '../../contact.css';
 
 import Layout from "../../../components/Layout/Layout";
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { divIcon } from "leaflet";
-import 'leaflet/dist/leaflet.css';
+import * as L from "leaflet";
 
 import image from '../../../img/map.svg';
 
@@ -52,7 +52,7 @@ const Index = () => {
     <img src={image} alt='localisation' className="map-icon" />
   );
   
-  const customMarkerIcon = divIcon({
+  const customMarkerIcon = new L.DivIcon({
     html: iconMarkup
   });
 
