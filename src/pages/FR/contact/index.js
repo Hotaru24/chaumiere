@@ -29,9 +29,15 @@ const Index = () => {
   });
   
   useEffect(() => {
-    const isBrowser = typeof window !== "undefined";
+    if ( typeof window !== "undefined") {
+      const iconMarkup = renderToStaticMarkup(
+        <img src={image} alt='localisation' className="map-icon" />
+      );
+      
+      const customMarkerIcon = new L.DivIcon({
+        html: iconMarkup
+      });
 
-    if (isBrowser) {
       setMap(
         <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
           <TileLayer
@@ -48,13 +54,6 @@ const Index = () => {
     }  
   }, []);
 
-  const iconMarkup = renderToStaticMarkup(
-    <img src={image} alt='localisation' className="map-icon" />
-  );
-  
-  const customMarkerIcon = new L.DivIcon({
-    html: iconMarkup
-  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
