@@ -3,6 +3,8 @@ import { navigate } from "gatsby";
 
 import CircularProgress from '@mui/material/CircularProgress';
 
+import Layout from "../components/Layout/Layout";
+
 
 const NotFoundPage = () => {
   useEffect(() => {
@@ -10,10 +12,16 @@ const NotFoundPage = () => {
      const locale = localStorage.getItem('locale');    
      navigate(`/${locale}/home`);
     }
+
+    
   }, []);
 
   return (
-    <CircularProgress />
+    <Layout>
+      <div className="spinner-page">
+        <CircularProgress />
+      </div>
+    </Layout>
   )
 }
 

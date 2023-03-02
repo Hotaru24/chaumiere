@@ -16,6 +16,14 @@ main {
   margin: 4vh 2vw;
 }
 
+.spinner-page {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /*============_Tablet_===========*/
 
