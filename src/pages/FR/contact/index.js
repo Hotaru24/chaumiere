@@ -21,6 +21,12 @@ const encode = (data) => {
 }
 
 const Index = () => {
+  const isBrowser = typeof window !== "undefined";
+
+  if (!isBrowser) {
+    return;
+  }
+
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
@@ -65,7 +71,8 @@ const Index = () => {
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
           </Marker>
-        </MapContainer>
+        </MapContainer>          
+
         <form
           name="contact"
           method="post"
