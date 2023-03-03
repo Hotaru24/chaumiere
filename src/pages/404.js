@@ -11,9 +11,7 @@ const NotFoundPage = () => {
     if (localStorage.getItem('locale')) {
      const locale = localStorage.getItem('locale');    
      navigate(`/${locale}/home`);
-    }
-
-    
+    }    
   }, []);
 
   return (

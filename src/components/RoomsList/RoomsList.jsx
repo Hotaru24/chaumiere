@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 
+import Button from '@mui/material/Button';
 import './roomsList.css';
 
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
@@ -48,7 +49,7 @@ const RoomsListTemplate = (props) => {
               <div className="room-card-price">
                 <span>{ locale === 'FR' ? 'A partir de' : 'From' }</span>
                 <span> { post.frontmatter.price } </span>
-                <button>{ locale === 'FR' ? 'Réserver' : 'Booking' }</button>
+                <Button variant="outlined">{ locale === 'FR' ? 'Réserver' : 'Booking' }</Button>
               </div>    
             </article>
           ))

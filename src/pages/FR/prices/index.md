@@ -1,12 +1,10 @@
 ---
 templateKey: 'prices-page'
 path: /FR/prices
-title: Our Coffee
-image: /img/prices_fr.png
-heading: Tarifs
+title: Tarifs
+image: /img/Entree-2.jpg
 description: >-
    Description
-prices: /img/prices_fr.png
 
 rows:
   room: Chambres d'hôtes

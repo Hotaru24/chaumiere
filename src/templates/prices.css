@@ -1,29 +1,61 @@
+.prices {
+  overflow: hidden;
+}
+
+.prices .card-container {
+  margin: 10vh 15vw
+}
+
+.prices .price-card-body {
+  padding: 3rem;
+}
+
 .prices header {
-	margin: 1vh 1vw 0 1vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.prices article {
-	margin: 4vh 2vw;
+.prices header h1 {
+  font-size: 3rem;
 }
 
-/*==========_Tablet_=========*/
-@media (min-width: 800px) {
-	.prices header {
-		margin: 2vh 2vw 1vh 2vw;
-	}
-	
-	.prices article {
-		margin: 5vh 5vw;
-	}
+.prices section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-/*==========_Desktop_=========*/
-@media (min-width: 1200px) {
-	.prices header {
-		margin: 5vh 5vw;
-	}
+.prices th .th-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-	.prices article {
-		margin: 5vh 15vw;
-	}
+.prices th .th-container .th-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.prices th .th-container .th-subheading {
+  font-size: 0.9rem;
+}
+
+.prices  td  {
+  font-size: 1.1rem;
+}
+
+.prices tr:hover td  {
+  cursor: pointer;
+  background-color: #c0d4ff;
+}
+
+.prices .room-name {
+  font-weight: bold;
+}
+
+.prices .booking-button {
+  margin: 1.5rem 0;
 }

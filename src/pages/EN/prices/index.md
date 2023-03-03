@@ -1,13 +1,10 @@
 ---
 templateKey: 'prices-page'
 path: /prices
-title: Our Coffee
-image: /img/prices_en.png
-heading: Rates
+title: Prices
+image: /img/image: /img/Entree-2.jpg
 description: >-
   Description
-
-prices: /img/prices_en.png
 
 rows:
   room: Guestroom

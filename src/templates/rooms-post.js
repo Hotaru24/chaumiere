@@ -11,6 +11,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { orange } from '@mui/material/colors';
 import './rooms.css';
+import Button from '@mui/material/Button';
 
 // eslint-disable-next-line
 export const RoomsPostTemplate = ({
@@ -87,7 +88,7 @@ export const RoomsPostTemplate = ({
           <div className="room-detail-price">
             <p>A partir de</p>
             <p>{price}</p>
-            <button>réserver</button>
+            <Button variant="outlined" className="booking-button">réserver</Button>
           </div>
         </div>
 
