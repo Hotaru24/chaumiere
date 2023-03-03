@@ -173,6 +173,76 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }          
           - { label: Prices, name: prices, widget: image }
+          - {
+              label: Rows,
+              name: rows,
+              widget: object,
+              fields:
+                [
+                  { label: Room, name: room, widget: string },
+                  { label: Cottage, name: cottage, widget: string }
+                ],
+            }
+          - {
+              label: NightCols,
+              name: nightCols,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Subheading, name: subheading, widget: string }
+                ],
+            }
+          - {
+              label: WeekCols,
+              name: weekCols,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Subheading, name: subheading, widget: string }
+                ],
+            }
+          - {
+              label: Romance,
+              name: romance,
+              widget: object,
+              fields:
+                [
+                  { label: Night, name: night, widget: string },
+                  { label: Week, name: week, widget: string }
+                ],
+            }
+          - {
+              label: Reverie,
+              name: reverie,
+              widget: object,
+              fields:
+                [
+                  { label: Night, name: night, widget: string },
+                  { label: Week, name: week, widget: string }
+                ],
+            }
+          - {
+              label: Songe,
+              name: songe,
+              widget: object,
+              fields:
+                [
+                  { label: Night, name: night, widget: string },
+                  { label: Week, name: week, widget: string }
+                ],
+            }
+          - {
+              label: Cocon,
+              name: cocon,
+              widget: object,
+              fields:
+                [
+                  { label: Night, name: night, widget: string },
+                  { label: Week, name: week, widget: string }
+                ],
+            }
 
   - name: "pages_EN"
     label: "Pages EN"

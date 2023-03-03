@@ -13,11 +13,18 @@ import './prices.css';
 export const PricesPageTemplate = ({
   heading,
   description,
-  prices
+  prices,
+  rows,
+  nightCols,
+  weekCols,
+  romance,
+  reverie,
+  songe,
+  cocon
 }) => {
 
   const priceTablePicture = getImage(prices) || prices;
-
+console.log(weekCols)
   return (
     <div className="content">
       <section className="section prices">
@@ -26,6 +33,9 @@ export const PricesPageTemplate = ({
           <p>{description}</p>
         </header>
         <article>
+          <h1>{weekCols?.heading}</h1>
+          <h1>{rows?.cottage}</h1>
+          <h1>{romance.week}</h1>
           <GatsbyImage
             image={priceTablePicture}
             objectFit={"cover"}
@@ -42,7 +52,14 @@ PricesPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
-  prices: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+  prices: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  rows: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  nightCols: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  weekCols: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  romance: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  reverie: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  songe: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  cocon: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
 };
 
 const PricesPage = ({ data }) => {
@@ -56,6 +73,13 @@ const PricesPage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
         prices={frontmatter.prices}
+        rows={frontmatter.rows}
+        nightCols={frontmatter.nightCols}
+        weekCols={frontmatter.weekCols}
+        romance={frontmatter.romance}
+        reverie={frontmatter.reverie}
+        songe={frontmatter.songe}
+        cocon={frontmatter.cocon}
       />
     </Layout>
   );
@@ -87,6 +111,34 @@ export const pricesPageQuery = graphql`
           childImageSharp {
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
+        }
+        rows {
+          room
+          cottage
+        }
+        nightCols {
+          heading
+          subheading
+        }
+        weekCols {
+          heading
+          subheading
+        }
+        romance {
+          night
+          week
+        }
+        reverie {
+          night
+          week
+        }
+        songe {
+          night
+          week
+        }
+        cocon {
+          night
+          week
         }
       }
     }
