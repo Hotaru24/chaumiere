@@ -2,7 +2,7 @@
 templateKey: 'prices-page'
 path: /prices
 title: Prices
-image: /img/image: /img/Entree-2.jpg
+image: /img/Entree-2.jpg
 description: >-
   Description
 
