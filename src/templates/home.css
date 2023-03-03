@@ -61,8 +61,7 @@
  .home .desktop .caption .social img {
     width: 1.5em;
     height: 1.5em;
-    filter: contrast(0) brightness(1.8);
-    margin: 1rem 0
+    margin: 1rem 0;
   }
   
  .home .desktop .caption .social img:hover {

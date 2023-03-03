@@ -6,7 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import './home.css'
 
 import Carrousel from '../components/Carrousel/Carrousel';
-import FullWidthImage from "../components/FullWidthImage";
+import PageHeaderImage from "../components/PageHeaderImage";
 import Layout from "../components/Layout/Layout";
 
 import instagram from "../img/social/instagram.svg";
@@ -37,7 +37,7 @@ export const HomePageTemplate = ({
     <section className="home">
       <header>
         <div className="mobile">
-          <FullWidthImage img={mobileBackground} title={title} subheading={subheading} />
+          <PageHeaderImage img={mobileBackground} title={title}/>
         </div>
         <div className="desktop">
           <div className="carrousel">

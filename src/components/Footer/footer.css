@@ -1,3 +1,38 @@
 footer {
-    background-color: #14213D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #14213D;
+  color: #f2cd68;
+  padding: 1rem;
+}
+
+.footer-body {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-body nav ul {
+  list-style-type: none;
+}
+
+.footer-body nav a {
+  text-decoration: none;
+  color: #f2cd68;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social a {
+  margin: 0.5rem 0;
+}
+
+.footer-social a:hover {
+  transform: scale(1.25);
 }

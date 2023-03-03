@@ -15,66 +15,63 @@ const Footer = () => {
   }, []);
   
   return (
-    <footer className="footer has-background-black has-text-white-ter">
-      <div className="content has-text-centered has-background-black has-text-white-ter">
-        <div className="container has-background-black has-text-white-ter">
-          <div style={{ maxWidth: "100vw" }} className="columns">
-            <div className="column is-4">
-              <nav className="menu">
-                <ul className="menu-list">
-                  <li>
-                    <Link className="navbar-item" to={`/${locale}/prestation`}>
-                      {locale === 'FR' ? 'Accueil' : 'Home'}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to={`/${locale}/rooms`}>
-                      {locale === 'FR' ? 'Nos chambres' : 'Our rooms'}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to={`/${locale}/prices`}>
-                      {locale === 'FR' ? 'Tarifs' : 'Prices'}
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div className="column is-4">
-              <section>
-                <ul className="menu-list">
-                  <li>
-                    <Link className="navbar-item" to="/rooms">
-                      Latest Stories
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/contact">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <div className="column is-4 social">
-              <a title="facebook" href="https://facebook.com">
-                <img
-                  src={facebook}
-                  alt="Facebook"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a>
-              <a title="instagram" href="https://instagram.com">
-                <img
-                  src={instagram}
-                  alt="Instagram"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a>
-            </div>
-          </div>
+    <footer>
+      <div className="footer-body">
+        <div>
+          <h1>LOGO</h1>
+        </div>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to={ `/${locale}/home` }>
+                  { locale === 'FR' ? 'Accueil' : 'Home' }
+                </Link>
+              </li>
+              <li>
+                <Link to={ `/${locale}/rooms` }>
+                  { locale === 'FR' ? 'Gite & Chambres' : 'Accommodation' }
+                </Link>
+              </li>
+              <li>
+                <Link to={ `/${locale}/prestation` }>
+                  Services & { locale === 'FR' ? ' Activités' : 'Avtivities' }
+                </Link>
+              </li>
+              <li>
+                <Link to={ `/${locale}/prices` }>
+                  { locale === 'FR' ? 'Tarifs' : 'Prices' }
+                </Link>
+              </li>
+              <li>
+                <Link to={ `/${locale}/contact`}>
+                  Contacts & { locale === 'FR' ? 'Accès' : 'Access' }
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="reservation">
+          <button>{ locale === 'FR' ? 'Réserver' : 'Booking' }</button>
+        </div>
+        <div className="footer-social">
+          <a title="facebook" href="https://facebook.com">
+            <img
+              src={facebook}
+              alt="Facebook"
+              style={{ width: "1em", height: "1em" }}
+            />
+          </a>
+          <a title="instagram" href="https://instagram.com">
+            <img
+              src={instagram}
+              alt="Instagram"
+              style={{ width: "1em", height: "1em" }}
+            />
+          </a>
         </div>
       </div>
+      <p>© {new Date().getFullYear()} La Chaumière - { locale === 'FR' ? ' Tous droits réservés' : 'All rights reserved' }</p>
     </footer>
   );
 };

@@ -24,12 +24,36 @@ main {
   align-items: center;
 }
 
+.pages-header {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages-header h1{
+  color: #f2cd68;
+  background-color: #14213D;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+}
+
 
 /*============_Tablet_===========*/
 
 @media (min-width: 800px) {
   .page-body {
     margin: 8vh 15vw;
+  }
+
+  .pages-header {
+    height: 300px;
+  }
+  
+  .pages-header h1{
+    font-size: 2.25rem;
   }
 }
 
@@ -39,5 +63,13 @@ main {
 @media (min-width: 1200px) {
   .page-body {
     margin: 10vh 20vw;
+  }
+
+  .pages-header {
+    height: 350px;
+  }
+
+  .pages-header h1{
+    font-size: 3rem;
   }
 }

@@ -73,7 +73,8 @@ const Index = () => {
   return (
     <Layout>
       <section className="section">
-        <h1>Contact</h1>
+        <h1>Venir à la c</h1>
+        <h1>Contactez nous</h1>
         { map }
         <form
           name="contact"

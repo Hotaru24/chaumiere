@@ -32,7 +32,7 @@ const Navbar = () => {
     setIsDesktop(windowWidth);
 
     scrollFunction();
-    document.body.addEventListener('scroll', scrollFunction);    
+    document.body.addEventListener('scroll', scrollFunction);
 
     if (localStorage.getItem('locale')) {
       setLocale(localStorage.getItem('locale'));

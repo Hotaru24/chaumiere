@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import FullWidthImage from "../../../components/FullWidthImage";
+import PageHeaderImage from "../../../components/PageHeaderImage";
 
 import Layout from "../../../components/Layout/Layout";
 import RoomsList from "../../../components/RoomsList/RoomsList";
@@ -11,7 +11,7 @@ const RoomsIndexPage = () => {
   return (
     <Layout>
       <div style={{ background: `url('/img/Chambre-gite-1.jpg')` }}>
-         <FullWidthImage
+         <PageHeaderImage
           img={image}
           title={ 'Nos gite & chambres' }
          />

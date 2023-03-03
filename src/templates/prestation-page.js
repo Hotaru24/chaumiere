@@ -6,7 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import "./prestations.css";
 
-import FullWidthImage from "../components/FullWidthImage";
+import PageHeaderImage from "../components/PageHeaderImage";
 import Services from "../components/Services/Services";
 import Layout from "../components/Layout/Layout";
 
@@ -27,7 +27,7 @@ export const PrestationPageTemplate = ({
 
   return (
     <>
-      <FullWidthImage img={ heroImage } title={ title } />
+      <PageHeaderImage img={ heroImage } title={ title } />
       { services && 
         <section className="page-body">
           <h2>{ services.heading }</h2>
