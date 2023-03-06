@@ -10,3 +10,48 @@
   background: none !important;
   border: none !important;
 }
+
+.contact-item-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-item:hover {
+  transform: scale(1.25);
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  color: #14213D;
+}
+
+.contact .social-icon,
+.contact .css-i4bv87-MuiSvgIcon-root {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  flex-direction: column;
+}
+
+/* .contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+} */
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 100%;
+  margin: 1rem 0;
+}
