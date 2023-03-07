@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { navigate } from "gatsby-link";
 import { renderToStaticMarkup } from 'react-dom/server';
 
-import Collapse from '@material-ui/core/Collapse';
-import TextField from '@mui/material/TextField';
-import Alert from '@mui/material/Alert';
-import Button from '@mui/material/Button';
 import 'leaflet/dist/leaflet.css';
 import '../../contact.css';
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import * as L from "leaflet";
 
-import Layout from "../../../components/Layout/Layout";
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import TextField from '@mui/material/TextField';
+import CallIcon from '@mui/icons-material/Call';
+import Collapse from '@mui/material/Collapse';
+import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
+
 import instagram from "../../../img/social/instagram-b.svg";
 import facebook from "../../../img/social/facebook-b.svg";
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import CallIcon from '@mui/icons-material/Call';
+import Layout from "../../../components/Layout/Layout";
 import image from '../../../img/map.svg';
-
-
 
 
 const encode = (data) => {
@@ -52,7 +50,7 @@ const Index = () => {
       });
 
       setMap(
-        <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer style={{width: "100%", height: "350px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -92,16 +90,11 @@ const Index = () => {
     <Layout>
       <div className="contact page-body">
         <section>
-          <h1>Venir à la Chaumière</h1>
-          <span>2630 Rte du Pécanier, 24510 Val de Louyre et Caudeau</span>
-          { map }          
-        </section>
-        <section>
-          <h1>Contactez nous</h1>
+          <h2>Contactez nous</h2>
           <div className="contact-item-list">
             <div className="contact-item">
               <CallIcon />
-              33 07 48 11 01 39
+              07 48 11 01 39
             </div>
             <div className="contact-item">
               <img
@@ -145,14 +138,6 @@ const Index = () => {
                   Nom
                 </label>
                 <div>
-                  {/* <input
-                    type={"text"}
-                    name={"name"}
-                    value={contactForm.name}
-                    onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                    id={"name"}
-                    required={true}
-                  /> */}
                   <TextField
                     type={"text"}
                     name={"name"}
@@ -169,14 +154,6 @@ const Index = () => {
                   Email
                 </label>
                 <div>
-                  {/* <input
-                    type={"email"}
-                    name={"email"}
-                    value={contactForm.email}
-                    onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                    id={"email"}
-                    required={true}
-                  /> */}
                   <TextField
                     type={"text"}
                     name={"email"}
@@ -193,13 +170,6 @@ const Index = () => {
                   Message
                 </label>
                 <div>
-                  {/* <textarea
-                    name={"message"}
-                    value={contactForm.message}
-                    onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                    id={"message"}
-                    required={true}
-                  /> */}
                   <TextField
                     type={"text"}
                     name={"message"}
@@ -218,73 +188,82 @@ const Index = () => {
                 </Button>
               </div>
             </form>
-            <Collapse in={sendSuccess}>
-              <Alert
-                severity="success"
-                action={
-                  (
-                    <IconButton
-                      aria-label="close"
-                      color="inherit"
-                      size="small"
-                      onClick={() => {
-                        setSendSuccess(false);
-                      }}
-                    >
-                      <CloseIcon fontSize="inherit" />
-                    </IconButton>
-                  )
-                }
-              >
-                Message envoyé !
-              </Alert>
-            </Collapse>
-            <Collapse in={formComplete}>
-              <Alert
-                severity="error"
-                action={
-                  (
-                    <IconButton
-                      aria-label="close"
-                      color="inherit"
-                      size="small"
-                      onClick={() => {
-                        setFormComplete(false);
-                      }}
-                    >
-                      <CloseIcon fontSize="inherit" />
-                    </IconButton>
-                  )
-                }
-              >
-                Tous les champs doivent être complétés
-              </Alert>
-            </Collapse>
-            <Collapse in={sendError}>
-              <Alert
-                severity="error"
-                action={
-                  (
-                    <IconButton
-                      aria-label="close"
-                      color="inherit"
-                      size="small"
-                      onClick={() => {
-                        setSendError(false);
-                      }}
-                    >
-                      <CloseIcon fontSize="inherit" />
-                    </IconButton>
-                  )
-                }
-              >
-                Une erreur est survenue lors de l'envoi du message. En cas de problème n'hésitez pas à nous contacter par téléphone.
-              </Alert>
-            </Collapse>
+            <div className="form-messages">
+              <Collapse in={sendSuccess}>
+                <Alert
+                  severity="success"
+                  action={
+                    (
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setSendSuccess(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    )
+                  }
+                >
+                  Message envoyé !
+                </Alert>
+              </Collapse>
+              <Collapse in={formComplete}>
+                <Alert
+                  severity="error"
+                  action={
+                    (
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setFormComplete(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    )
+                  }
+                >
+                  Tous les champs doivent être complétés
+                </Alert>
+              </Collapse>
+              <Collapse in={sendError}> 
+                <Alert
+                  severity="error"
+                  action={
+                    (
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setSendError(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    )
+                  }
+                >
+                  Une erreur est survenue lors de l'envoi du message. En cas de problème n'hésitez pas à nous contacter par téléphone ou sur les réseaux sociaux.
+                </Alert>
+              </Collapse>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Venir à la Chaumière</h2>
+          <span>La Chaumière est située au coeur du Périgord, au sein de la commune de Sainte-Alvère Val de Louyre et Caudeau.
+            Venez nous retrouver au 2630 Rte du Pécanier, 24510 Val de Louyre et Caudeau (GPS : 44.956800, 0.779186)</span>
+          <div className="contact-map">
+            { map }
           </div>
         </section>
       </div>
-
     </Layout>
   );
 }

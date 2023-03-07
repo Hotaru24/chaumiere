@@ -14,6 +14,7 @@
 .contact-item-list {
   display: flex;
   justify-content: space-around;
+  margin-top: 4rem;
 }
 
 .contact-item {
@@ -33,8 +34,8 @@
 
 .contact .social-icon,
 .contact .css-i4bv87-MuiSvgIcon-root {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -46,12 +47,25 @@
   flex-direction: column;
 }
 
-/* .contact-form-container input,
-.contact-form-container textarea {
+.contact-form-container form {
   width: 100%;
-} */
+}
+
+.contact-form-container .form-messages {
+  height: 3rem;
+}
 
 .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
   width: 100%;
   margin: 1rem 0;
+}
+
+/*============_Tablet & Desktop_===========*/
+
+@media (min-width: 600px) {
+  .contact .social-icon,
+  .contact .css-i4bv87-MuiSvgIcon-root {
+    width: 3rem;
+    height: 3rem;
+  }
 }

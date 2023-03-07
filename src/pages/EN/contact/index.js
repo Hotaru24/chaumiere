@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { renderToStaticMarkup } from "react-dom/server";
-import { navigate } from "gatsby-link";
+import { renderToStaticMarkup } from 'react-dom/server';
 
 import 'leaflet/dist/leaflet.css';
 import '../../contact.css';
@@ -8,6 +7,16 @@ import '../../contact.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import * as L from "leaflet";
 
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import TextField from '@mui/material/TextField';
+import CallIcon from '@mui/icons-material/Call';
+import Collapse from '@mui/material/Collapse';
+import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
+
+import instagram from "../../../img/social/instagram-b.svg";
+import facebook from "../../../img/social/facebook-b.svg";
 import Layout from "../../../components/Layout/Layout";
 import image from '../../../img/map.svg';
 
@@ -18,7 +27,6 @@ const encode = (data) => {
     .join('&')
 }
 
-
 const Index = () => {
   const [map, setMap] = useState(<></>);
   const [contactForm, setContactForm] = useState({
@@ -26,7 +34,11 @@ const Index = () => {
     email: '',
     message: ''
   });
-
+  const [formComplete, setFormComplete] = React.useState(false);
+  const [sendSuccess, setSendSuccess] = React.useState(false);
+  const [sendError, setSendError] = React.useState(false);
+  const formIsValid = contactForm.name.length > 0 && contactForm.email.length > 0 && contactForm.message.length > 0;
+  
   useEffect(() => {
     if (typeof window !== "undefined") {
       const iconMarkup = renderToStaticMarkup(
@@ -38,14 +50,14 @@ const Index = () => {
       });
 
       setMap(
-        <MapContainer style={{width: "50%", height: "250px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer style={{width: "100%", height: "350px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={[44.958450, 0.777649]} icon={customMarkerIcon}>
             <Popup>
-              La Chaumière
+              La Chaumière - 2630 Rte du Pécanier, 24510 Val de Louyre et Caudeau
             </Popup>
           </Marker>
         </MapContainer>
@@ -53,97 +65,205 @@ const Index = () => {
     }  
   }, []);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...contactForm,
-      }),
-    })
-    .then(() => navigate(form.getAttribute('action')))
-    .catch((error) => alert(error));
+    if (formIsValid) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...contactForm,
+        }),
+      })
+      .then((e) => e.ok === true ? setSendSuccess(true) : setSendError(true))
+      .catch((error) => alert(error));      
+    } else {
+      setFormComplete(true);
+    }
   };
 
   return (
     <Layout>
-      <section className="section">
-        <h1>Contact</h1>
-        { map }
-        <form
-          name="contact"
-          method="post"
-          action="/EN/contact/thanks/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-        >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
-          <div hidden>
-            <label>
-              Don’t fill this out:{" "}
-              <input
-                name="bot-field"
-                onChange={(e) => setContactForm({...contactForm})}
+      <div className="contact page-body">
+        <section>
+          <h2>Contact us</h2>
+          <div className="contact-item-list">
+            <div className="contact-item">
+              <CallIcon />
+              07 48 11 01 39
+            </div>
+            <div className="contact-item">
+              <img
+                src={facebook}
+                alt="Facebook"
+                className="social-icon"
               />
-            </label>
-          </div>
-          <div>
-            <label htmlFor={"name"}>
-              Your name
-            </label>
-            <div>
-              <input
-                type={"text"}
-                name={"name"}
-                value={contactForm.name}
-                onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                id={"name"}
-                required={true}
+              facebook
+            </div>
+            <div className="contact-item">
+              <img
+                src={instagram}
+                alt="Instagram"
+                className="social-icon"
               />
+              instagram
             </div>
           </div>
-          <div>
-            <label htmlFor={"email"}>
-              Email
-            </label>
-            <div>
-              <input
-                type={"email"}
-                name={"email"}
-                value={contactForm.email}
-                onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                id={"email"}
-                required={true}
-              />
+          <div className="contact-form-container">
+            <form
+              name="contact"
+              method="post"
+              action="/FR/contact/thanks/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+            >
+              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+              <input type="hidden" name="form-name" value="contact" />
+              <div hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input
+                    name="bot-field"
+                    onChange={() => setContactForm({...contactForm})}
+                  />
+                </label>
+              </div>
+              <div>
+                <label htmlFor={"name"} hidden>
+                  Nom
+                </label>
+                <div>
+                  <TextField
+                    type={"text"}
+                    name={"name"}
+                    value={contactForm.name}
+                    onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                    id={"name"}
+                    label="Your name"
+                    multiline
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor={"email"} hidden>
+                  Email
+                </label>
+                <div>
+                  <TextField
+                    type={"text"}
+                    name={"email"}
+                    value={contactForm.email}
+                    onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                    id={"email"}
+                    label="Email"
+                    multiline
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor={"message"} hidden>
+                  Message
+                </label>
+                <div>
+                  <TextField
+                    type={"text"}
+                    name={"message"}
+                    value={contactForm.message}
+                    onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                    id={"message"}                    
+                    label="Message"
+                    multiline
+                    rows={6}
+                  />
+                </div>
+              </div>
+              <div>
+                <Button variant="outlined" className="button is-link" type="submit">
+                  Send
+                </Button>
+              </div>
+            </form>
+            <div className="form-messages">
+              <Collapse in={sendSuccess}>
+                <Alert
+                  severity="success"
+                  action={
+                    (
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setSendSuccess(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    )
+                  }
+                >
+                  Message sent !
+                </Alert>
+              </Collapse>
+              <Collapse in={formComplete}>
+                <Alert
+                  severity="error"
+                  action={
+                    (
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setFormComplete(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    )
+                  }
+                >
+                  All fields must be completed
+                </Alert>
+              </Collapse>
+              <Collapse in={sendError}>
+                <Alert
+                  severity="error"
+                  action={
+                    (
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setSendError(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    )
+                  }
+                >
+                  An error occurred while sending the message. In case of problem do not hesitate to contact us by phone.
+                </Alert>
+              </Collapse>
             </div>
           </div>
-          <div>
-            <label htmlFor={"message"}>
-              Message
-            </label>
-            <div>
-              <textarea
-                name={"message"}
-                value={contactForm.message}
-                onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                id={"message"}
-                required={true}
-              />
-            </div>
+        </section>
+        <section>
+          <h2>Come to the Chaumière</h2>
+          <span>La Chaumière is located in the heart of Périgord, within the commune of Sainte-Alvère Val de Louyre and Caudeau.
+            Come and meet us at 2630 Rte du Pécanier, 24510 Val de Louyre et Caudeau (GPS: 44.956800, 0.779186)</span>
+          <div className="contact-map">
+            { map }
           </div>
-          <div>
-            <button className="button is-link" type="submit">
-              Send
-            </button>
-          </div>
-        </form>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 }
