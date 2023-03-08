@@ -25,6 +25,7 @@ export const HomePageTemplate = ({
   const [locale, setLocale] = useState('FR');
 
   const mobileBackground = getImage(image) || image;
+  const accommodationBackground = getImage(accommodation.image) || image;
 
   useEffect(() => {
     if (localStorage.getItem('locale')) {
@@ -78,7 +79,7 @@ export const HomePageTemplate = ({
           <article 
             className="background-section" 
             style={{
-              background: `url(${mobileBackground?.url ? mobileBackground?.url : mobileBackground?.images?.fallback?.src}) no-repeat center center`,
+              background: `url(${accommodationBackground?.url ? accommodationBackground?.url : accommodationBackground?.images?.fallback?.src}) no-repeat center center`,
               backgroundSize: 'cover',
               backgroundAttachment: 'fixed'
             }}
@@ -159,6 +160,11 @@ export const homeQuery = graphql`
         accommodation {
           roomstitle
           roomsdescription
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+            }
+          }
         }
         presentation {
           presentationtitle

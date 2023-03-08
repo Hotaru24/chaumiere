@@ -2,7 +2,7 @@
 templateKey: prestation-page
 path: /prestation
 title: Services & Activités
-image: /img/Cuisine-1.jpg
+image: /img/Sejour-4-min.jpg
 heading: Services & Activités
 subheading: La chaumière de Sainte-Alvère
 services:
@@ -51,6 +51,7 @@ meal:
     Le matin nous vous proposerons également un petit déjeuné. Pain, viennoiseries, charcuterie, fromage, jus de fruits pressés, fruits et œufs préparés selon vos envies sont au menu.
     Tarif Table: 50€ pp vins compris
     Petit déjeuné: gratuit pour les chambres d’hôtes et facturé 15€ pour les locataires du gîte
+  image: /img/Cuisine-1-min.jpg
 activities:
   heading: Sainte-Alvère au coeur du Périgord
   description: >

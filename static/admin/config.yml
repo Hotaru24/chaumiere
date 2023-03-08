@@ -92,6 +92,7 @@ collections:
                 [
                   { label: Roomstitle, name: roomstitle, widget: string },
                   { label: Roomsdescription, name: roomsdescription, widget: text },
+                  { label: Image, name: image, widget: image }
                 ],
             }
           - {
@@ -147,7 +148,8 @@ collections:
               fields:
                 [
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text }
+                  { label: Description, name: description, widget: text },
+                  { label: Image, name: image, widget: image }
                 ],
             }
           - {
@@ -276,6 +278,7 @@ collections:
                 [
                   { label: Roomstitle, name: roomstitle, widget: string },
                   { label: Roomsdescription, name: roomsdescription, widget: text },
+                  { label: Image, name: image, widget: image }
                 ],
             }
           - {
@@ -341,7 +344,8 @@ collections:
               fields:
                 [
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text }
+                  { label: Description, name: description, widget: text },
+                  { label: Image, name: image, widget: image }
                 ],
             }
       - file: "src/pages/EN/prices/index.md"

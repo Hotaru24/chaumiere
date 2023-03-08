@@ -18,6 +18,7 @@ accommodation:
   roomsdescription: >
     Des chambres d’hôtes, un gîte spacieux et des petits coins de détentes agréables et cosys tant à l’intérieur qu’à l’extérieur de la maison.
     La Chaumière met aussi à votre disposition une piscine (12 X 6).
+  image: /img/Chambre-gite-1-min.jpg
 manager:
   abouttitle: Le propriétaire
   aboutdescription: >

@@ -2,7 +2,7 @@
 templateKey: prestation-page
 path: /prestation
 title: Services & Activities
-image: /img/Cuisine-1.jpg
+image: /img/Sejour-4-min.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 services:
@@ -49,6 +49,7 @@ meal:
   heading: Table
   description: >
     speach table
+  image: /img/Cuisine-1-min.jpg
 activities:
   heading: Great coffee with no compromises
   description: >

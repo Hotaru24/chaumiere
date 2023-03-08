@@ -11,7 +11,6 @@ import Services from "../components/Services/Services";
 import Layout from "../components/Layout/Layout";
 
 
-
 // eslint-disable-next-line
 export const PrestationPageTemplate = ({
   image,
@@ -21,8 +20,9 @@ export const PrestationPageTemplate = ({
   activities
 }) => {
   const heroImage = getImage(image) || image;
+  const mealImage = getImage(meal.image) || image;
 
-  const activitiesMapUrl = "https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ehbc=2E312F";
+  const activitiesMapUrl = "https://www.google.com/maps/d/embed?mid=16CBReMCohNJGMQbyAda9dMR3TAQEswE&ll=44.99928270770276%2C0.7665738710937475&z=10";
   const isMobile = useMediaQuery('(max-width: 850px)');
 
   return (
@@ -39,7 +39,7 @@ export const PrestationPageTemplate = ({
         <article
           className="background-section meal" 
           style={{
-            background: `url(${heroImage?.url ? heroImage?.url : heroImage?.images?.fallback?.src}) no-repeat center center`,
+            background: `url(${mealImage?.url ? mealImage?.url : mealImage?.images?.fallback?.src}) no-repeat center center`,
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed'
           }}
@@ -138,6 +138,11 @@ export const pageQuery = graphql`
         meal {
           heading
           description
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+            }
+          }
         }
         activities {
           heading
