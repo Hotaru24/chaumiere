@@ -26,10 +26,14 @@ export const RoomsPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-
+  const [locale, setLocale] = useState('FR');
   const slideImages = [];
 
   useEffect(() => {
+    if (localStorage.getItem('locale')) {
+      setLocale(localStorage.getItem('locale'));
+    }
+
     if (featuredimage) {
       slideImages.push(featuredimage);
     }
@@ -38,8 +42,7 @@ export const RoomsPostTemplate = ({
     }
     if (featuredimage3) {
       slideImages.push(featuredimage3);
-    }
-    
+    }    
   }, []);
 
   const [slideCount, setSlideCount] = useState(0);
@@ -55,9 +58,9 @@ export const RoomsPostTemplate = ({
   return (
     <section>
       {helmet || ""}
-      <div className="page-body">
+      <div className="page-body room-detail">
         <h1>
-          {title} {slideCount}
+          {title}
         </h1>
         <div className="header-container">
           <div className="rooms-slider">
@@ -86,14 +89,16 @@ export const RoomsPostTemplate = ({
             </div>
           </div>
           <div className="room-detail-price">
-            <p>A partir de</p>
+            <p>{ locale === 'FR' ? 'A partir de' : 'From' }</p>
             <p>{price}</p>
-            <Button variant="outlined" className="booking-button">réserver</Button>
+            <Button variant="outlined" className="booking-button">{ locale === 'FR' ? 'Réserver' : 'Booking' }</Button>
           </div>
         </div>
 
-        <p>{description}</p>
-        <PostContent content={content} />
+        <h2>{description}</h2>
+        <p>
+          <PostContent content={content} />          
+        </p>
       </div>
     </section>
   );
@@ -174,7 +179,7 @@ export const pageQuery = graphql`
         featuredimage {
           childImageSharp {
             gatsbyImageData(
-              width: 800
+              width: 9800
               quality: 100
               layout: CONSTRAINED
             )
@@ -183,7 +188,7 @@ export const pageQuery = graphql`
         featuredimage2 {
           childImageSharp {
             gatsbyImageData(
-              width: 800
+              width: 9800
               quality: 100
               layout: CONSTRAINED
             )
@@ -192,7 +197,7 @@ export const pageQuery = graphql`
         featuredimage3 {
           childImageSharp {
             gatsbyImageData(
-              width: 800
+              width: 9800
               quality: 100
               layout: CONSTRAINED
             )
