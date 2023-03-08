@@ -36,6 +36,9 @@ main {
 .page-body {
   margin: 4vh 2vw;
 }
+.bold {
+  font-weight: bold;
+}
 
 .spinner-page {
   width: 100vw;

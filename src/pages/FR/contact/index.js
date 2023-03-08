@@ -50,7 +50,7 @@ const Index = () => {
       });
 
       setMap(
-        <MapContainer style={{width: "100%", height: "350px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer style={{width: "100%", height: "400px" }} center={[44.958450, 0.777649]} zoom={13} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -91,104 +91,105 @@ const Index = () => {
       <div className="contact page-body">
         <section>
           <h2>Contactez nous</h2>
-          <div className="contact-item-list">
-            <div className="contact-item">
-              <CallIcon />
-              07 48 11 01 39
+          <div className="contact-section">
+            <div className="contact-item-list">
+              <div className="contact-item">
+                <CallIcon />
+                07 48 11 01 39
+              </div>
+              <div className="contact-item">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                  className="social-icon"
+                />
+                facebook
+              </div>
+              <div className="contact-item">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                  className="social-icon"
+                />
+                instagram
+              </div>
             </div>
-            <div className="contact-item">
-              <img
-                src={facebook}
-                alt="Facebook"
-                className="social-icon"
-              />
-              facebook
-            </div>
-            <div className="contact-item">
-              <img
-                src={instagram}
-                alt="Instagram"
-                className="social-icon"
-              />
-              instagram
-            </div>
-          </div>
-          <div className="contact-form-container">
-            <form
-              name="contact"
-              method="post"
-              action="/FR/contact/thanks/"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-            >
-              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-              <input type="hidden" name="form-name" value="contact" />
-              <div hidden>
-                <label>
-                  Don’t fill this out:{" "}
-                  <input
-                    name="bot-field"
-                    onChange={() => setContactForm({...contactForm})}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor={"name"} hidden>
-                  Nom
-                </label>
-                <div>
-                  <TextField
-                    type={"text"}
-                    name={"name"}
-                    value={contactForm.name}
-                    onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                    id={"name"}
-                    label="Votre nom"
-                    multiline
-                  />
+            <div className="contact-form-container">
+              <form
+                name="contact"
+                method="post"
+                action="/FR/contact/thanks/"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+              >
+                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                <input type="hidden" name="form-name" value="contact" />
+                <div hidden>
+                  <label>
+                    Don’t fill this out:{" "}
+                    <input
+                      name="bot-field"
+                      onChange={() => setContactForm({...contactForm})}
+                    />
+                  </label>
                 </div>
-              </div>
-              <div>
-                <label htmlFor={"email"} hidden>
-                  Email
-                </label>
                 <div>
-                  <TextField
-                    type={"text"}
-                    name={"email"}
-                    value={contactForm.email}
-                    onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                    id={"email"}
-                    label="Email"
-                    multiline
-                  />
+                  <label htmlFor={"name"} hidden>
+                    Nom
+                  </label>
+                  <div>
+                    <TextField
+                      type={"text"}
+                      name={"name"}
+                      value={contactForm.name}
+                      onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                      id={"name"}
+                      label="Votre nom"
+                      multiline
+                    />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <label htmlFor={"message"} hidden>
-                  Message
-                </label>
                 <div>
-                  <TextField
-                    type={"text"}
-                    name={"message"}
-                    value={contactForm.message}
-                    onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                    id={"message"}                    
-                    label="Message"
-                    multiline
-                    rows={6}
-                  />
+                  <label htmlFor={"email"} hidden>
+                    Email
+                  </label>
+                  <div>
+                    <TextField
+                      type={"text"}
+                      name={"email"}
+                      value={contactForm.email}
+                      onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                      id={"email"}
+                      label="Email"
+                      multiline
+                    />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <Button variant="outlined" className="button is-link" type="submit">
-                  Envoyer
-                </Button>
-              </div>
-            </form>
-            <div className="form-messages">
+                <div>
+                  <label htmlFor={"message"} hidden>
+                    Message
+                  </label>
+                  <div>
+                    <TextField
+                      type={"text"}
+                      name={"message"}
+                      value={contactForm.message}
+                      onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                      id={"message"}                    
+                      label="Message"
+                      multiline
+                      rows={6}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Button variant="outlined" className="button is-link" type="submit">
+                    Envoyer
+                  </Button>
+                </div>
+              </form>
+              <div className="form-messages">
               <Collapse in={sendSuccess}>
                 <Alert
                   severity="success"
@@ -253,12 +254,15 @@ const Index = () => {
                 </Alert>
               </Collapse>
             </div>
+            </div>
           </div>
         </section>
         <section>
           <h2>Venir à la Chaumière</h2>
-          <span>La Chaumière est située au coeur du Périgord, au sein de la commune de Sainte-Alvère Val de Louyre et Caudeau.
-            Venez nous retrouver au 2630 Rte du Pécanier, 24510 Val de Louyre et Caudeau (GPS : 44.956800, 0.779186)</span>
+          <p>
+            La Chaumière est située au coeur du Périgord, au sein de la commune de Sainte-Alvère Val de Louyre et Caudeau.<br />
+            Venez nous retrouver au <span className="bold">2630 Rte du Pécanier, 24510 Val de Louyre et Caudeau</span> (GPS : 44.956800, 0.779186).
+          </p>
           <div className="contact-map">
             { map }
           </div>
