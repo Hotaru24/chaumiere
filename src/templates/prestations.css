@@ -3,3 +3,7 @@
   display: flex;
   justify-content: center;
 }
+
+.meal {
+  height: 550px !important;
+}

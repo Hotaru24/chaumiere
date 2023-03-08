@@ -1,3 +1,8 @@
+@font-face {
+  font-family: main-font;
+  src: url(../../img/fonts/TT\ Chocolates\ Trial\ Light.otf);
+}
+
 html,
 body {
   width: 100%;
@@ -5,6 +10,22 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: main-font;
+}
+
+body h1 {
+  font-size: 2.5rem;
+}
+
+body h2,
+body h3 {
+  font-size: 2rem;
+  color: #14213D;
+}
+
+body p,
+body span {
+  font-size: 1.5rem;
 }
 
 main {
@@ -40,12 +61,38 @@ main {
   font-size: 1.5rem;
 }
 
+.background-section {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-section-content {
+  background-color: rgba(255, 255, 255, 0.829);
+  padding: 2.5rem;
+  margin: 1rem 1.5vw;
+  border-radius: 10px;
+}
+
+.background-section-content h3 {
+  margin: 0;
+}
+
 
 /*============_Tablet_===========*/
 
 @media (min-width: 800px) {
   .page-body {
     margin: 8vh 15vw;
+  }
+
+  .background-section-content {
+    margin: 1rem 14vw;
   }
 
   .pages-header {
@@ -63,6 +110,10 @@ main {
 @media (min-width: 1200px) {
   .page-body {
     margin: 10vh 20vw;
+  }
+
+  .background-section-content {
+    margin: 1rem 19vw;
   }
 
   .pages-header {

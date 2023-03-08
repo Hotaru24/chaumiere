@@ -26,38 +26,45 @@ export const PrestationPageTemplate = ({
   const isMobile = useMediaQuery('(max-width: 850px)');
 
   return (
-    <>
+    <section className="activities">
       <PageHeaderImage img={ heroImage } title={ title } />
       { services && 
-        <section className="page-body">
+        <article className="page-body">
           <h2>{ services.heading }</h2>
           <h3 >{ services.description }</h3>
           <Services gridItems={ services.blurbs } />
-        </section>
-      }
+        </article>
+      };
       { meal &&
-        <section>
-          <div className="page-body meal">
+        <article
+          className="background-section meal" 
+          style={{
+            background: `url(${heroImage?.url ? heroImage?.url : heroImage?.images?.fallback?.src}) no-repeat center center`,
+            backgroundSize: 'cover',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="background-section-content">
             <h2>{ meal.heading }</h2>
             <p>{ meal.description }</p>
           </div>
-        </section>
-      }
+        </article>
+      };
       { activities &&
-        <section className="page-body">
-            <h2>{ activities.heading }</h2>
-            <h3 >{ activities.description }</h3>
-            <div className="activities-map-container">
-              <iframe
-                src={ activitiesMapUrl }
-                title="activities"
-                width={ isMobile ? 640 : 800 }
-                height={ isMobile ? 480 : 550 }
-              ></iframe>                 
-            </div>           
-        </section>
-      }
-    </>
+        <article className="page-body">
+          <h2>{ activities.heading }</h2>
+          <p >{ activities.description }</p>
+          <div className="activities-map-container">
+            <iframe
+              src={ activitiesMapUrl }
+              title="activities"
+              width={ isMobile ? 640 : 800 }
+              height={ isMobile ? 480 : 550 }
+            ></iframe>                 
+          </div>           
+        </article>
+      };
+    </section>
   );
 };
 

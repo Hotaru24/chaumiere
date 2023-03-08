@@ -19,10 +19,12 @@
 
 .service-item h3 {
   margin: 1.25rem 0 0.5rem;
+  font-size: 1.5rem;
 }
 
 .service-item p {
   margin: 0.5rem 15%;
+  font-size: 1.25rem;
 }
 
 
