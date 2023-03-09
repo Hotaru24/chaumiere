@@ -9,7 +9,7 @@ import HomePagePreview from './preview-templates/HomePagePreview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
-CMS.registerPreviewTemplate('index', HomePagePreview)
+CMS.registerPreviewTemplate('home', HomePagePreview)
 CMS.registerPreviewTemplate('prestation', PrestationPagePreview)
-CMS.registerPreviewTemplate('pricess', PricesPagePreview)
+CMS.registerPreviewTemplate('prices', PricesPagePreview)
 CMS.registerPreviewTemplate('rooms', RoomsPostPreview)

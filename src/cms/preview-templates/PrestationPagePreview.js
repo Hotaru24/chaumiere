@@ -5,7 +5,7 @@ import { HomePageTemplate } from '../../templates/prestation-page'
 const PrestationPagePreview = ({ entry, widgetFor }) => (
   <HomePageTemplate
     title={entry.getIn(['data', 'title'])}
-    content={widgetFor('body')}
+    cheading={entry.getIn(['data', 'heading'])}
   />
 )
 
