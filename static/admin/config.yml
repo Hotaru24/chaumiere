@@ -63,7 +63,7 @@ collections:
   - name: "pages_FR"
     label: "Pages FR"
     files:
-      - file: "src/pages/FR/home.md"
+      - file: "src/pages/FR/home/index.md"
         label: "Home Page"
         name: "home"
         fields:
@@ -250,7 +250,7 @@ collections:
   - name: "pages_EN"
     label: "Pages EN"
     files:
-      - file: "src/pages/EN/home.md"
+      - file: "src/pages/EN/home/index.md"
         label: "Home Page"
         name: "home"
         fields:
