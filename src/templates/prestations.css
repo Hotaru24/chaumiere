@@ -5,5 +5,29 @@
 }
 
 .meal {
-  height: 550px !important;
+  height: 1200px !important;
+}
+
+/*==========_Phone High_=========*/
+
+@media (min-width: 400px) {
+  .meal {
+    height: 1000px !important;
+  }
+}
+
+/*============_Tablet_===========*/
+
+@media (min-width: 800px) {
+  .meal {
+    height: 750px !important;
+  }
+}
+
+/*============_Desktop_===========*/
+
+@media (min-width: 1000px) {
+  .meal {
+    height: 600px !important;
+  }
 }

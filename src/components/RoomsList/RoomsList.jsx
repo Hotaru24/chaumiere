@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import './roomsList.css';
 
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 

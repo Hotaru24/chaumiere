@@ -134,7 +134,7 @@ const Index = () => {
                     />
                   </label>
                 </div>
-                <div>
+                <div className="form-field">
                   <label htmlFor={"name"} hidden>
                     Nom
                   </label>
@@ -150,7 +150,7 @@ const Index = () => {
                     />
                   </div>
                 </div>
-                <div>
+                <div className="form-field">
                   <label htmlFor={"email"} hidden>
                     Email
                   </label>
@@ -166,7 +166,7 @@ const Index = () => {
                     />
                   </div>
                 </div>
-                <div>
+                <div className="form-field">
                   <label htmlFor={"message"} hidden>
                     Message
                   </label>

@@ -19,14 +19,21 @@ footer {
   list-style-type: none;
 }
 
-.footer-body nav a {
+.footer-body a {
   text-decoration: none;
   color: #f2cd68;
+  font-size: 1.15rem;
+}
+
+.footer-contact a {
+  font-weight: bold;
 }
 
 .footer-social {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.25rem;
 }
 
 .footer-social a {
@@ -35,4 +42,13 @@ footer {
 
 .footer-social a:hover {
   transform: scale(1.25);
+}
+
+.footer-social a img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.footer-legal {
+  font-size: 1.25rem;
 }
