@@ -51,7 +51,10 @@ export const HomePageTemplate = ({
                 { title }
               </h1>
               <h2>{ subheading }</h2>
-              <a id="scrollButton" href="#about-content" >{ locale === 'FR' ? 'En découvrir plus' : 'Learn More' }</a>
+              <a id="scrollButton" href="#home-body" >
+                <div><span></span></div>
+                <p>{ locale === 'FR' ? 'Découvrir plus' : 'Learn More' }</p>
+              </a>
             </div>
             <div className="social">
               <a title="facebook" href="https://facebook.com">
@@ -70,9 +73,9 @@ export const HomePageTemplate = ({
           </div>
         </div>
       </header>
-      <div>
+      <div id="home-body">
         { presentation &&
-          <article className="page-body">
+          <article className="page-body first">
             <h3>{ presentation.presentationtitle }</h3>
             <p>{ presentation.presentationdescription }</p>
           </article>        

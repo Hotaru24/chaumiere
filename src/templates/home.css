@@ -1,3 +1,6 @@
+*, html {
+  scroll-behavior: smooth !important;
+}
 
 .home .desktop {
   display: none;
@@ -11,6 +14,7 @@
 .home .room-link a {
   text-decoration: none;
 }
+
 
 /*============_Desktop_===========*/
 
@@ -75,5 +79,69 @@
   
  .home .desktop .caption .social img:hover {
     scale: 1.2;
+  }
+
+  .home .first {
+    margin-top: 4vh !important;
+    padding-top: 4vh ;
+  }
+
+  /*--Scroll Button--*/
+  #scrollButton {
+    position: absolute;
+    top: 47vh;
+    left: 50%;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  #scrollButton p {
+    color: #EFD285;
+    font-weight: bold;
+  }
+  
+  #scrollButton div {
+    margin-right: 25px;
+    margin-bottom: 5rem;
+  }
+  
+  #scrollButton span {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+  
+    border-left: 4px solid #EFD285;
+    border-bottom: 4px solid #EFD285;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb05 {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes sdb05 {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
   }
 }
