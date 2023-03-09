@@ -74,6 +74,8 @@ collections:
               default: "home-page",
             }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: Image, name: image, widget: image }
+          - { label: "Subheading", name: "subheading", widget: "string" }
           - {
               label: Presentation,
               name: presentation,

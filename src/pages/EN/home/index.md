@@ -3,8 +3,7 @@ templateKey: 'home-page'
 path: /home
 title: La chaumière de Sainte-Alvère
 image: /img/Drone-7.jpg
-heading: La chaumière de Sainte-Alvère
-subheading: Gite et Chambres d'Hôtes
+subheading: Cottage and Bed and Breakfast in the heart of Périgord
 presentation:
   presentationtitle: presentation
   presentationdescription: >
