@@ -156,7 +156,7 @@ collections:
             }
           - {
               label: Activities,
-              name: Activities,
+              name: activities,
               widget: object,
               fields:
                 [
@@ -262,6 +262,8 @@ collections:
               default: "home-page",
             }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: Image, name: image, widget: image }
+          - { label: "Subheading", name: "subheading", widget: "string" }
           - {
               label: Presentation,
               name: presentation,
@@ -330,16 +332,6 @@ collections:
                 ],
             }
           - {
-              label: Activities,
-              name: activities,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text }
-                ],
-            }
-          - {
               label: Meal,
               name: meal,
               widget: object,
@@ -348,6 +340,16 @@ collections:
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text },
                   { label: Image, name: image, widget: image }
+                ],
+            }
+          - {
+              label: Activities,
+              name: activities,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text }
                 ],
             }
       - file: "src/pages/EN/prices/index.md"
