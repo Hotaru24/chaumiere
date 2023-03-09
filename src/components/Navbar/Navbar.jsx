@@ -6,31 +6,34 @@ import "./navbar.css";
 import FrFlag from "../../img/FR.png";
 import EnFlag from "../../img/EN.png";
 
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 
+const theme = createTheme({
+  palette: {
+    gold: {
+      main: '#f2cd68',
+      darker: '#f2cd68',
+    },
+  },
+});
 
 const Navbar = () => {
   const [anchorLocaleSelect, setAnchorLocaleSelect] = useState(null);
   const [anchorMobileMenu, setAnchorMobileMenu] = useState(null);
   const [bcolor, setBcolor] = useState('transparent');
-  const [isDesktop, setIsDesktop] = useState(true);  
   const [tcolor, setTcolor] = useState("white");  
   const [location, setLocation] = useState('');
   const [locale, setLocale] = useState('FR');
 
-
   const openMobileMenu = Boolean(anchorMobileMenu);
   const openLocaleMenu = Boolean(anchorLocaleSelect);
 
-  const windowWidth = useMediaQuery('(min-width:1200px)');
 
   useEffect(() => {
-    setIsDesktop(windowWidth);
-
     scrollFunction();
     document.body.addEventListener('scroll', scrollFunction);
 
@@ -43,13 +46,8 @@ const Navbar = () => {
     }
   }, []);
 
-  useEffect(() => {
-    setIsDesktop(windowWidth);
-  }, [windowWidth]);
-
-
   const scrollFunction = () => {
-    if (globalHistory.location.pathname.includes('home') && document.body.scrollTop < 80 && isDesktop) {
+    if (globalHistory.location.pathname.includes('home') && document.body.scrollTop < 80) {
       return setBcolor("transparent") & setTcolor("white");
     } else {
       return setBcolor("#14213D") & setTcolor("inherit");
@@ -148,6 +146,11 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <div className="nav-booking">
+        <ThemeProvider theme={theme}>
+          <Button color="gold" variant="outlined">{ locale === 'FR' ? 'Réserver' : 'Booking' }</Button>
+        </ThemeProvider>
+      </div>
       <Button
         id="locale-button"
         aria-controls={openLocaleMenu ? 'locale-menu' : undefined}

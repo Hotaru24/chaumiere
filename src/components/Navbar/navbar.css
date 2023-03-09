@@ -1,9 +1,18 @@
+@media (max-width: 1200px) {
+  .navbar {
+    background-color: #14213D !important;
+  }
+}
+
 .navbar {
+  display: flex;
+  align-items: center;
   z-index: 1250;
   display: flex;
   position: sticky;
   top: 0;
   color: white;
+  font-weight: bold;
 }
 
 .navbar-desktop,
@@ -45,6 +54,10 @@
 
 .navbar ul li {
   margin: 0rem 0.7rem
+}
+
+.navbar .nav-booking {
+  margin: 0.35rem 0.5rem;
 }
 
 .nav-locale-flag {
