@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from "react";
-import { graphql, navigate } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import { graphql, navigate } from "gatsby";
 import PropTypes from "prop-types";
 
 import Layout from "../components/Layout/Layout";
 import './prices.css';
 
-import Table from '@mui/material/Table';
+import TableContainer from '@mui/material/TableContainer';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
+import Table from '@mui/material/Table';
+import Paper from '@mui/material/Paper';
 import Card from '@mui/material/Card';
 
 

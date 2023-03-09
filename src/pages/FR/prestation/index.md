@@ -7,8 +7,7 @@ heading: Services & Activités
 subheading: La chaumière de Sainte-Alvère
 services:
   heading: Nos services
-  description: >
-    Description ?
+  description: ''
   blurbs:
     - image: /img/coffee-icon.jpg
       title: Petits déjeuners

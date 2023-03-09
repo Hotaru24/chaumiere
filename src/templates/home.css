@@ -3,6 +3,14 @@
   display: none;
 }
 
+.home .room-link {
+  width: 100%;
+  text-align: center;
+}
+
+.home .room-link a {
+  text-decoration: none;
+}
 
 /*============_Desktop_===========*/
 

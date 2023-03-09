@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import { getImage } from "gatsby-plugin-image";
 import './home.css'
+
+import Button from '@mui/material/Button';
 
 import PageHeaderImage from "../components/PageHeaderImage";
 import Carrousel from '../components/Carrousel/Carrousel';
@@ -87,8 +89,15 @@ export const HomePageTemplate = ({
             <div className="background-section-content">
               <h3>{ accommodation.roomstitle }</h3>
               <p>{ accommodation.roomsdescription }</p>
+              <div className="room-link">
+                <Link className="navbar-item" to={`/${locale}/rooms`}>
+                  <Button variant="outlined" color="primary">
+                    { locale === 'FR' ? 'Gite & Chambres' : 'Accommodation' }
+                  </Button>
+                </Link>
+              </div>
             </div>
-          </article>        
+          </article>
         };
         { manager &&
           <article className="page-body">
