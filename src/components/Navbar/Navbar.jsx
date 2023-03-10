@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link, navigate } from "gatsby";
 import { globalHistory } from "@reach/router";
+import { Link, navigate } from "gatsby";
+
 import "./navbar.css";
 
 import FrFlag from "../../img/FR.png";
@@ -156,7 +157,7 @@ const Navbar = () => {
         aria-controls={openLocaleMenu ? 'locale-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={openLocaleMenu ? 'true' : undefined}
-        onClick={(event) => setAnchorLocaleSelect(event.currentTarget)}
+        onClick={ (event) => setAnchorLocaleSelect(event.currentTarget) }
       >
         <img className="nav-locale-flag" src={locale === 'FR' ? FrFlag : EnFlag} alt="locale-flag" />
       </Button>
@@ -175,10 +176,10 @@ const Navbar = () => {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={() => { setAnchorLocaleSelect(null); handleLocale('FR'); }}>
+        <MenuItem onClick={ () => { setAnchorLocaleSelect(null); handleLocale('FR'); }}>
           <img className="nav-locale-flag" src={FrFlag} alt="fr-flag" />
         </MenuItem>
-        <MenuItem onClick={() => { setAnchorLocaleSelect(null); handleLocale('EN'); }}>
+        <MenuItem onClick={ () => { setAnchorLocaleSelect(null); handleLocale('EN'); }}>
           <img className="nav-locale-flag" src={EnFlag} alt="en-flag" />
         </MenuItem>
       </Menu>

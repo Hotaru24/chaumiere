@@ -57,6 +57,10 @@
   margin-bottom: 0.25rem;
 }
 
+.contact-form-container form .form-field .css-i44wyl {
+  width: 100%;
+}
+
 .contact-form-container .form-messages {
   height: 3rem;
 }

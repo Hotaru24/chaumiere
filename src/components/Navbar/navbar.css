@@ -33,6 +33,11 @@
   color: #f2cd68;
 }
 
+#mobile-menu a {
+  text-decoration: none;
+  color: #14213D;
+}
+
 .navbar button {
   min-width: 0 !important;
 }

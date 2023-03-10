@@ -59,28 +59,30 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
-        <div className="reservation">
-          <ThemeProvider theme={theme}>
-            <Button color="gold" variant="outlined">{ locale === 'FR' ? 'Réserver' : 'Booking' }</Button>
-          </ThemeProvider>
-        </div>
-        <div className="footer-contact">
-          <Link to={ `/${locale}/contact`}>
-            Contacts & { locale === 'FR' ? 'Accès' : 'Access' }
-          </Link>
-          <div className="footer-social">
-            <a title="facebook" href="https://facebook.com">
-              <img
-                src={facebook}
-                alt="Facebook"
-              />
-            </a>
-            <a title="instagram" href="https://instagram.com">
-              <img
-                src={instagram}
-                alt="Instagram"
-              />
-            </a>
+        <div className="footer-end">
+          <div className="footer-reservation">
+            <ThemeProvider theme={theme}>
+              <Button color="gold" variant="outlined">{ locale === 'FR' ? 'Réserver' : 'Booking' }</Button>
+            </ThemeProvider>
+          </div>
+          <div className="footer-contact">
+            <Link to={ `/${locale}/contact`}>
+              Contacts & { locale === 'FR' ? 'Accès' : 'Access' }
+            </Link>
+            <div className="footer-social">
+              <a title="facebook" href="https://facebook.com">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                />
+              </a>
+              <a title="instagram" href="https://instagram.com">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

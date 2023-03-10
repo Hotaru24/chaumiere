@@ -13,10 +13,13 @@ footer {
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
 }
 
 .footer-body nav ul {
   list-style-type: none;
+  text-align: center;
+  padding: 0;
 }
 
 .footer-body a {
@@ -25,8 +28,17 @@ footer {
   font-size: 1.15rem;
 }
 
+.footer-reservation {
+  margin-bottom: 1rem;
+}
+
+.footer-contact {
+  text-align: center;
+}
+
 .footer-contact a {
   font-weight: bold;
+  text-align: center;
 }
 
 .footer-social {
@@ -51,4 +63,33 @@ footer {
 
 .footer-legal {
   font-size: 1.25rem;
+  text-align: center;
+}
+
+.footer-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*==========_Tablet & Desktop_==========*/
+
+@media (min-width: 800px) {
+
+  .footer-body {
+    flex-direction: row;
+  }
+
+  .footer-body nav ul {
+    text-align:justify
+  }
+
+  .footer-end {
+    flex-direction: row;
+  }
+
+  .footer-reservation {
+    margin-right: 5rem;
+  }
 }
