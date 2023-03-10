@@ -41,8 +41,8 @@ collections:
           fields:
             [
               { label: Roomimage, name: roomimage, widget: image },
-            ],
-        },
+            ]
+        }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Featured Image2", name: "featuredimage2", widget: image }
       - { label: "Featured Image3", name: "featuredimage3", widget: image }
@@ -58,7 +58,7 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "rooms-post",
-      }
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -71,8 +71,8 @@ collections:
           fields:
             [
               { label: Roomimage, name: roomimage, widget: image },
-            ],
-        },
+            ]
+        }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages_FR"
