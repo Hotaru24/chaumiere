@@ -6,7 +6,7 @@ import Layout from "../../../components/Layout/Layout";
 import RoomsList from "../../../components/RoomsList/RoomsList";
 
 const RoomsIndexPage = () => {
-  const image =  {url: '/img/Chambre-gite-1.jpg' };
+  const image =  {url: '/img/Chambre-gite-1-min.jpg' };
 
   return (
     <Layout>
