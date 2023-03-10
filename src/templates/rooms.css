@@ -18,8 +18,14 @@
 
 .room-detail .room-detail-price {
   margin: 0 1.5rem 0.5rem;
-  min-width: fit-content;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.room-detail .room-detail-price .css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+  width: fit-content;
 }
 
 .room-detail .room-detail-price p {
@@ -27,21 +33,22 @@
   text-align: center;
 }
 
-.room-detail .rooms-slider-buttons {
+.rooms-slider-buttons {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  bottom: 80px;
+  bottom: 150px;
 }
 
 
 /*============_Tablet & Desktop_===========*/
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .room-detail .header-container {
     max-width: 950px;
     flex-direction: row;
+    margin-bottom: 2rem;
   }
 
   .room-detail .rooms-slider {
@@ -57,7 +64,16 @@
     margin-bottom: 1rem;
   }
 
-  .room-detail .rooms-slider-buttons {   
+  .rooms-slider-buttons {   
+    bottom: 120px;
+  }
+}
+
+
+/*============_Tablet & Desktop_===========*/
+
+@media (min-width: 1100px) {
+  .rooms-slider-buttons {   
     bottom: 120px;
   }
 }

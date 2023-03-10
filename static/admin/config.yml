@@ -44,8 +44,6 @@ collections:
             ]
         }
       - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Featured Image2", name: "featuredimage2", widget: image }
-      - { label: "Featured Image3", name: "featuredimage3", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
   
   - name: "rooms_EN"
