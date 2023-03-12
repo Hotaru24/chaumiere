@@ -2,12 +2,8 @@
   overflow: hidden;
 }
 
-.prices .card-container {
-  margin: 10vh 15vw
-}
-
 .prices .price-card-body {
-  padding: 3rem;
+  padding: 10vh 2vw;
 }
 
 .prices header {
@@ -18,7 +14,7 @@
 }
 
 .prices header h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .prices section {
@@ -28,6 +24,10 @@
   flex-direction: column;
 }
 
+.prices .css-quj9j6-MuiTable-root {
+  min-width: 300px !important;
+}
+
 .prices th .th-container {
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 }
 
 .prices th .th-container .th-heading {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
@@ -43,8 +43,9 @@
   font-size: 0.9rem;
 }
 
+.prices  th,
 .prices  td  {
-  font-size: 1.1rem;
+  padding: 0.5rem 5px;
 }
 
 .prices tr:hover td  {
@@ -52,10 +53,53 @@
   background-color: #c0d4ff;
 }
 
-.prices .room-name {
-  font-weight: bold;
-}
-
 .prices .booking-button {
   margin: 1.5rem 0;
+}
+
+.prices .type-cell {
+  display: none;
+}
+
+.prices .room-name {
+  font-weight: bold;
+  font-size: 0.8rem; 
+}
+
+
+/*============_Tablet & Desktop_===========*/
+
+@media (min-width: 900px) {
+  .prices .card-container {
+    margin: 10vh 15vw
+  }
+
+  .prices .price-card-body {
+    padding: 3rem;
+  }
+
+  .prices header h1 {
+    font-size: 3rem;
+  }
+
+  .prices .type-cell {
+    display: table-cell;
+  }
+
+  .prices  th,
+  .prices td  {
+    padding: 1rem;
+  }
+
+  .prices th .th-container .th-heading {
+    font-size: 1.3rem;
+  }
+
+  .prices  td  {
+    font-size: 1.1rem;
+  }
+
+  .prices .room-name {
+    font-size: 1.5rem;
+  }
 }

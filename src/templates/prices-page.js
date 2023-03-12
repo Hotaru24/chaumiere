@@ -69,7 +69,7 @@ export const PricesPageTemplate = ({
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                   <TableHead>
                     <TableRow>
-                    <TableCell></TableCell>
+                      <TableCell className="type-cell"></TableCell>
                       <TableCell></TableCell>
                       <TableCell align="right">
                         <div className="th-container">
@@ -92,10 +92,10 @@ export const PricesPageTemplate = ({
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         onClick={() => {navigate(`/${locale}/rooms/${row.name?.toLowerCase()}`)}}
                       >
-                        <TableCell scope="row">{row.type}</TableCell>
+                        <TableCell scope="row" className="type-cell">{row.type}</TableCell>
                         <TableCell scope="row" ><span className="room-name">{row.name}</span></TableCell>
-                        <TableCell align="right">{row.night}</TableCell>
-                        <TableCell align="right">{row.week}</TableCell>
+                        <TableCell align="center">{row.night}</TableCell>
+                        <TableCell align="center">{row.week}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
