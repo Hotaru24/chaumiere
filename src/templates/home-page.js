@@ -78,7 +78,16 @@ export const HomePageTemplate = ({
           <article className="page-body first">
             <h3>{ presentation.presentationtitle }</h3>
             <p>{ presentation.presentationdescription }</p>
-          </article>        
+            <div className="home-link">
+              <h4> { locale === 'FR' ? 'Nos services pour un séjour exceptionnel' : 'Our services for an exceptional stay' }</h4>
+              <Link to={`/${locale}/prestation`}>
+                <Button variant="outlined" color="primary">
+                  { locale === 'FR' ? 'Services & Activités' : 'Services & Activities' }
+                </Button>
+              </Link>
+              </div>
+          </article>
+          
         };
         { accommodation &&
           <article 
@@ -92,8 +101,8 @@ export const HomePageTemplate = ({
             <div className="background-section-content">
               <h3>{ accommodation.roomstitle }</h3>
               <p>{ accommodation.roomsdescription }</p>
-              <div className="room-link">
-                <Link className="navbar-item" to={`/${locale}/rooms`}>
+              <div className="home-link">
+                <Link to={`/${locale}/rooms`}>
                   <Button variant="outlined" color="primary">
                     { locale === 'FR' ? 'Gite & Chambres' : 'Accommodation' }
                   </Button>

@@ -7,7 +7,7 @@ images :
     - roomimage: /img/Chambre-2-1.jpg
     - roomimage: /img/Chambre-2-2.jpg
     - roomimage: /img/Desserte-etage-2.jpg
-description: Une très charmante chambre sous les combes.
+description: Une très charmante chambre sous les combles.
 price: 120€
 
 ---

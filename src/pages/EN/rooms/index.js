@@ -10,7 +10,7 @@ const RoomsIndexPage = () => {
 
   return (
     <Layout>
-      <div style={{ background: `url('/img/Chambre-gite-1.jpg')` }}>
+      <div >
          <PageHeaderImage img={image} title={'Accommodation'} />
       </div>
       <section className="page-body">

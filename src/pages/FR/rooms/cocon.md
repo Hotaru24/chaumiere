@@ -5,9 +5,9 @@ date: 2023-03-09T17:19:03.961Z
 description: Un gîte confortable et chaleureux pour deux personnes
 price: 150€
 featuredpost: true
-featuredimage: /img/Sejour gite 2.jpg
+featuredimage: /img/Sejour-gite-2.jpg
 images :
-    - roomimage: /img/Sejour gite 2.jpg
+    - roomimage: /img/Sejour-gite-2.jpg
     - roomimage: /img/Sejour-gite-1.jpg
     - roomimage: /img/Sejour-gite-3.jpg
     - roomimage: /img/Chambre-gite-1.jpg

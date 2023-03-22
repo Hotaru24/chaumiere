@@ -19,7 +19,7 @@ export default function PageHeaderImage(props) {
           }}
         >
           <h1>{ title }</h1>
-        </header>      
+        </header>
       }
     </>
   );

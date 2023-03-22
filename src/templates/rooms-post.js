@@ -85,12 +85,16 @@ export const RoomsPostTemplate = ({
           }
         </div>
         <div className="rooms-slider-buttons">
-          <IconButton onClick={handleCountDown} aria-label="right">
-            <ArrowBackIosIcon sx={{ color: orange[500] }} fontSize="large"/>
-          </IconButton>
-          <IconButton onClick={handleCountUp} aria-label="right">
-            <ArrowForwardIosIcon sx={{ color: orange[500] }} fontSize="large"/>
-          </IconButton>
+          <div className="slider-button">
+            <IconButton onClick={handleCountDown} aria-label="right">
+              <ArrowBackIosIcon sx={{ color: orange[500] }} fontSize="large"/>
+            </IconButton>
+          </div>
+          <div className="slider-button">
+            <IconButton onClick={handleCountUp} aria-label="right">
+              <ArrowForwardIosIcon sx={{ color: orange[500] }} fontSize="large"/>
+            </IconButton>
+          </div>
         </div>
       </div>
     )

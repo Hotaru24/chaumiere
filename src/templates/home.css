@@ -6,12 +6,18 @@
   display: none;
 }
 
-.home .room-link {
+.home .home-link {
   width: 100%;
   text-align: center;
 }
 
-.home .room-link a {
+.home .home-link h4 {
+  font-weight: bold;
+  color: #14213D;
+  margin-bottom: 1rem;
+}
+
+.home .home-link a {
   text-decoration: none;
 }
 

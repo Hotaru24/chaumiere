@@ -41,6 +41,10 @@
   bottom: 150px;
 }
 
+.slider-button {
+  background-color: rgba(146, 146, 146, 0.432);
+  border-radius: 100%;
+}
 
 /*============_Tablet & Desktop_===========*/
 

@@ -3,11 +3,13 @@ import { Link } from "gatsby";
 
 import "./footer.css";
 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
 import instagram from "../../img/social/instagram.svg";
 import facebook from "../../img/social/facebook.svg";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import logo from '../../img/logo.png';
+
 
 const theme = createTheme({
   palette: {
@@ -31,7 +33,7 @@ const Footer = () => {
     <footer>
       <div className="footer-body">
         <div>
-          <h1>LOGO</h1>
+          <h1>Logo</h1>
         </div>
         <div>
           <nav>

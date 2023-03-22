@@ -14,18 +14,20 @@ body {
 }
 
 body h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 body h2,
 body h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #14213D;
+  text-align: center;
 }
 
 body p,
 body span {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 main {
@@ -34,7 +36,7 @@ main {
 }
 
 .page-body {
-  margin: 4vh 2vw;
+  margin: 4vh 3vw;
 }
 .bold {
   font-weight: bold;
@@ -60,10 +62,12 @@ main {
 .pages-header h1{
   color: #f2cd68;
   background-color: #14213D;
-  padding: 0.75rem;
-  font-size: 1.5rem;
+  padding: 0.85rem;
+  font-size: 2rem;
   border-radius: 7px;
+  box-shadow: rgba(248, 240, 194, 0.1) 0px 1px 0px, rgba(248, 240, 194, 0.1) 0px 8px 24px, rgba(248, 240, 194, 0.1) 0px 16px 48px;
 }
+
 
 .background-section {
   height: 500px;
@@ -78,8 +82,8 @@ main {
 
 .background-section-content {
   background-color: rgba(255, 255, 255, 0.829);
-  padding: 2.5rem;
-  margin: 1rem 1.5vw;
+  padding: 2.5rem 2vw;
+  margin: 1rem 1vw;
   border-radius: 10px;
 }
 
@@ -96,15 +100,31 @@ main {
   }
 
   .background-section-content {
-    margin: 1rem 14vw;
+    margin: 1rem 12vw;
   }
 
   .pages-header {
-    height: 300px;
+    height: 250px;
   }
   
-  .pages-header h1{
+  body h1 {
     font-size: 2.25rem;
+  }
+  
+  body h2,
+  body h3 {
+    font-size: 1.75rem;
+    text-align: left;
+  }
+
+  body h4 {
+    font-size: 1.45rem;
+  }
+  
+  body p,
+  body span {
+    font-size: 1.4rem;
+    text-align: justify;
   }
 
   .background-section {
