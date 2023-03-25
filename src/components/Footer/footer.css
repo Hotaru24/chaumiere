@@ -1,3 +1,8 @@
+@font-face {
+  font-family: logo-font;
+  src: url(../../img/fonts/Monotype\ Corsiva.ttf);
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -14,6 +19,39 @@ footer {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+}
+
+.footer-body .footer-logo {
+  font-family: logo-font;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-body .footer-logo span {
+  font-size: 2rem;
+}
+
+.footer-body .footer-logo .logo-subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.footer-body .footer-logo .logo-subtitle span {
+  font-size: 1rem;
+}
+
+.footer-body .footer-logo .logo-line {
+  height: 1px;
+  border-radius: 100%;
+  background-color: #f2cd68;
+  margin: 0 5px;
+  min-width: 26%;
+}
+
+.footer-body .footer-logo img {
+  height: 100px;
+  width: 200px;
 }
 
 .footer-body nav ul {
@@ -79,6 +117,10 @@ footer {
 
   .footer-body {
     flex-direction: row;
+  }
+
+  .footer-body .footer-logo {
+    margin-bottom: 0;
   }
 
   .footer-body nav ul {

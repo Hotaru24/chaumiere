@@ -32,8 +32,18 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-body">
-        <div>
-          <h1>Logo</h1>
+        <div className="footer-logo">
+          <img
+            src={logo}
+            alt="logo"
+          />
+          <div className="logo-line"></div>
+            <span>La chaumière</span>
+          <div className="logo-subtitle">
+            <div className="logo-line"></div>
+              <span>Sainte Alvère</span>
+            <div className="logo-line"></div>
+          </div>
         </div>
         <div>
           <nav>
