@@ -53,7 +53,7 @@ meal:
     services (entrée, plat, fromage et dessert) qui vous feront découvrir les
     joyaux de la Cuisine-1 périgourdine : foie gras, truffes (une grande
     spécialité de Sainte-Alvère), le canard sous toutes ses déclinaisons
-    (magrets, aiguillettes, Parmentier et cuisse confites). Le matin nous vous
+    (magrets, aiguillettes, Parmentier et cuisse confites). Le matin, nous vous
     proposerons également un petit déjeuné. Pain, viennoiseries, charcuterie,
     fromage, jus de fruits pressés, fruits et œufs préparés selon vos envies
     sont au menu. 

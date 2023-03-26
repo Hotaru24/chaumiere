@@ -24,6 +24,10 @@
   flex-direction: column;
 }
 
+.room-detail .room-detail-price a {
+  text-decoration: none;
+}
+
 .room-detail .room-detail-price .css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
   width: fit-content;
 }

@@ -7,14 +7,14 @@ images :
     - roomimage: /img/Chambre-2-1.jpg
     - roomimage: /img/Chambre-2-2.jpg
     - roomimage: /img/Desserte-etage-2.jpg
-description: Une très charmante chambre sous les combles.
+description: A very charming room under the roof.
 price: 120€
 
 ---
 * 24 m2
-* Grand lit (mesure à rajouter)
-* Salle de bain avec Bain/douche et wc
-* Coin de lecture sur le palier
-* Télévision
-* Machine à Nespresso et Bouilloire électrique
-* Arrivée à partir de 15h – départ à 10h30
+* Large bed (mesures à rajouter)
+* Bathroom with bath/shower and toilet
+* Reading corner in the hall		
+* Television
+* Nespresso machine and electric kettle
+* Arrival from 3 pm - Departure at 10:30 am

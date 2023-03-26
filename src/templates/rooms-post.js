@@ -113,8 +113,13 @@ export const RoomsPostTemplate = ({
           <div className="room-detail-price">
             <p>{ locale === 'FR' ? 'A partir de' : 'From' }</p>
             <p>{price}</p>
-            <Button variant="outlined" className="booking-button">{ locale === 'FR' ? 'Réserver' : 'Booking' }</Button>
-          </div>
+            <a 
+                href="https://reservation.elloha.com/?IdPublication=046be7c8-8f62-4f49-81bc-893c382d67ea&culture=fr-FR&idoi=f6289d3b-e380-4b54-9675-b9db9b7d0c32&searchFirstAvailableDates=1"
+                target="_blank"
+              >
+                <Button variant="outlined" className="booking-button">{ locale === 'FR' ? 'Disponibilités et Réservation' : 'Booking' }</Button>
+              </a>
+            </div>
         </div>
 
         <h2>{ description}</h2>

@@ -42,15 +42,20 @@ services:
       text: >
         Host Table TEXT (coming soon in english)
 meal:
-  heading: Table
+  heading: Table d'hôte
   description: >
-    speach table
+    Upon reservation and according to our availability, we organize a table d'hôte. 
+    One of the great assets of the Périgord is of course its gastronomical wealth. 
+    We will advise you on nearby restaurants, but we also organize on request a 4-course dinner (starter, main course, cheese and dessert) which will allow you to discover the jewels of Périgord cuisine: foie gras, truffles (a great specialty of Sainte-Alvère), duck in all its variations (magrets, aiguillettes, parmentier et cuisse confites).
+    Every morning we offer a complete and generous breakfast. 
+    Bread, pastries, charcuterie, cheese, freshly squeezed fruit juices, fruit and eggs prepared according to your wishes are on the menu. 
+
+Price: 50€/person wine included
   image: /img/Cuisine-1-min.jpg
 activities:
-  heading: Great coffee with no compromises
+  heading: Sainte-Alvère in the heart of Périgord
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    The heritage of the Dordogne is extremely rich, and there is something for everyone. 
+    You can travel back in time and discover world famous prehistoric sites and beautiful testimonies of the Middle Ages. 
+    Saint-Alvère, which is precisely at the intersection of the green, purple and black Périgord, is an ideal starting point to discover them.
 ---

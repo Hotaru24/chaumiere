@@ -149,7 +149,12 @@ const Navbar = () => {
       </ul>
       <div className="nav-booking">
         <ThemeProvider theme={theme}>
-          <Button color="gold" variant="outlined">{ locale === 'FR' ? 'Réserver' : 'Booking' }</Button>
+        <a 
+          href="https://reservation.elloha.com/?IdPublication=046be7c8-8f62-4f49-81bc-893c382d67ea&culture=fr-FR&idoi=f6289d3b-e380-4b54-9675-b9db9b7d0c32&searchFirstAvailableDates=1"
+          target="_blank"
+        >
+          <Button color="gold" variant="outlined">{ locale === 'FR' ? 'Disponibilités et Réservation' : 'Booking' }</Button>                
+        </a>
         </ThemeProvider>
       </div>
       <Button
