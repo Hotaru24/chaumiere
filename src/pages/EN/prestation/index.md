@@ -49,8 +49,7 @@ meal:
     We will advise you on nearby restaurants, but we also organize on request a 4-course dinner (starter, main course, cheese and dessert) which will allow you to discover the jewels of Périgord cuisine: foie gras, truffles (a great specialty of Sainte-Alvère), duck in all its variations (magrets, aiguillettes, parmentier et cuisse confites).
     Every morning we offer a complete and generous breakfast. 
     Bread, pastries, charcuterie, cheese, freshly squeezed fruit juices, fruit and eggs prepared according to your wishes are on the menu. 
-
-Price: 50€/person wine included
+    Price: 50€/person wine included
   image: /img/Cuisine-1-min.jpg
 activities:
   heading: Sainte-Alvère in the heart of Périgord
