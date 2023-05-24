@@ -2,7 +2,7 @@
 templateKey: 'home-page'
 path: /home
 title: La chaumière
-image: /img/Sejour-1-min.jpg
+image: /img/home.png
 subheading: Cottage and Bed and Breakfast in the heart of Périgord
 presentation:
   presentationtitle: presentation
