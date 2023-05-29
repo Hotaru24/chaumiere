@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "La Chaumière",
+    title: "La Chaumière - Saint-Alvère",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+      "Havre de paix à quelques kilomètres de Sainte-Alvère, cette Périgourdine du XVIIIe siècle, à la frontière des Périgord noir, pourpre et blanc, est un point de départ idéal pour découvrir le riche patrimoine et la beauté authentique de la Dordogne.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
