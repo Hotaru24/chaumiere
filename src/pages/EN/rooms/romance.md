@@ -8,7 +8,7 @@ images :
     - roomimage: /img/Chambre-1-2.jpg
     - roomimage: /img/Chambre-1-3.jpg
 description: The Romance room is located on the first floor. It is very spacious and bright.
-price: 120€
+price: 100€
 
 ---
 * 32 m2

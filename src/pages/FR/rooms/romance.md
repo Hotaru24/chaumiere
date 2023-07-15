@@ -8,7 +8,7 @@ images :
     - roomimage: /img/Chambre-1-2.jpg
     - roomimage: /img/Chambre-1-3.jpg
 description: La chambre Romance est située au rez-de-chaussée. Elle est très spacieuse et lumineuse.  
-price: 120€
+price: 100€
 
 ---
 * 32 m2

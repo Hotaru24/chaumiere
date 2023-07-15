@@ -16,13 +16,13 @@ weekCols:
   heading: Price per week
   subheading: 7 nights
 romance:
-  night: 120€
+  night: 100€
   week: 700€
 reverie:
-  night: 120€
+  night: 100€
   week: 700€
 songe:
-  night: 120€
+  night: 100€
   week: 700€
 cocon:
   night: 150€

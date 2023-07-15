@@ -8,7 +8,7 @@ images :
     - roomimage: /img/Chambre-2-2.jpg
     - roomimage: /img/Desserte-etage-2.jpg
 description: A very charming room under the roof.
-price: 120€
+price: 100€
 
 ---
 * 24 m2

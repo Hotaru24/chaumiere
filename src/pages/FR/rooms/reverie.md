@@ -8,7 +8,7 @@ images :
     - roomimage: /img/Chambre-2-2.jpg
     - roomimage: /img/Desserte-etage-2.jpg
 description: Une très charmante chambre sous les combles.
-price: 120€
+price: 100€
 
 ---
 * 24 m2
