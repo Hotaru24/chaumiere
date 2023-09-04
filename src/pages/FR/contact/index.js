@@ -98,19 +98,31 @@ const Index = () => {
                 07 48 11 01 39
               </div>
               <div className="contact-item">
+              <a
+                title="facebook"
+                href="https://www.facebook.com/profile.php?id=100091547882089"
+                target="_blank"
+              >
                 <img
                   src={facebook}
                   alt="Facebook"
                   className="social-icon"
-                />
+                />                
+              </a>
                 facebook
               </div>
               <div className="contact-item">
+              <a
+                title="instagram"
+                href="https://www.instagram.com/la.chaumiere.sainte.alvere/"
+                target="_blank"
+              >
                 <img
-                  src={instagram}
+                  src={ instagram }
                   alt="Instagram"
                   className="social-icon"
                 />
+              </a>
                 instagram
               </div>
             </div>

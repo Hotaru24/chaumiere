@@ -87,13 +87,21 @@ const Footer = () => {
               Contacts & { locale === 'FR' ? 'Accès' : 'Access' }
             </Link>
             <div className="footer-social">
-              <a title="facebook" href="https://www.facebook.com/profile.php?id=100091547882089">
+              <a
+                title="facebook"
+                href="https://www.facebook.com/profile.php?id=100091547882089"
+                target="_blank"
+              >
                 <img
                   src={facebook}
                   alt="Facebook"
                 />
               </a>
-              <a title="instagram" href="https://www.instagram.com/la.chaumiere.sainte.alvere/">
+              <a
+                title="instagram"
+                href="https://www.instagram.com/la.chaumiere.sainte.alvere/"
+                target="_blank"
+              >
                 <img
                   src={instagram}
                   alt="Instagram"
