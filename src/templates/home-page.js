@@ -57,13 +57,13 @@ export const HomePageTemplate = ({
               </a>
             </div>
             <div className="social">
-              <a title="facebook" href="https://facebook.com">
+              <a title="facebook" href="https://www.facebook.com/profile.php?id=100091547882089">
                 <img
                   src={ facebook }
                   alt="Facebook"
                 />
               </a>
-              <a title="instagram" href="https://instagram.com">
+              <a title="instagram" href="https://www.instagram.com/la.chaumiere.sainte.alvere/">
                 <img
                   src={ instagram }
                   alt="Instagram"
