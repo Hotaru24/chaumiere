@@ -9,6 +9,9 @@ const Carrousel = () => {
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
 
       <div style={{

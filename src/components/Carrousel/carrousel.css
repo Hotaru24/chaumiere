@@ -11,7 +11,7 @@
   height: 100%;
   background-size: cover;
   opacity: 0;
-  animation: animate 18s linear infinite;
+  animation: animate 40s linear infinite;
 }
 
 .slider div:nth-child(1) {
@@ -20,18 +20,34 @@
 }
 
 .slider div:nth-child(2) {
-  background: url('/img/Drone-3.jpg');
-  animation-delay: 6s;
+  background: url('/img/Piscine-2.jpg');
+  animation-delay: 8s;
 }
 
 .slider div:nth-child(3) {
   background: url('/img/Ext-11.jpg');
-  animation-delay: 12s;
+  animation-delay: 16s;
 }
+
+.slider div:nth-child(4) {
+  background: url('/img/Drone-3.jpg');
+  animation-delay: 22s;
+}
+
+.slider div:nth-child(5) {
+  background: url('/img/Cour.jpg');
+  animation-delay: 28s;
+}
+
+.slider div:nth-child(6) {
+  background: url('/img/Sous-arbre-panorama.jpg');
+  animation-delay: 34s;
+}
+
 
 @keyframes animate {
   0%,100%{opacity: 0;}
   10%{opacity: 1}
-  30%{opacity: 1; transform: scale(1.25)}
+  30%{opacity: 0; transform: scale(1.25)}
   60%{opacity: 0; transform: scale(1.5)}
 }
