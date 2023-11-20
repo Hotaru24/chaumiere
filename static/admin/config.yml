@@ -89,6 +89,15 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }
+          - {
+            label: Gallery,
+            name: gallery,
+            widget: list,
+            fields:
+              [
+                { label: Galleryimage, name: galleryimage, widget: image },
+              ]
+          }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - {
               label: Presentation,
@@ -276,6 +285,15 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }
+          - {
+            label: Gallery,
+            name: gallery,
+            widget: list,
+            fields:
+              [
+                { label: Galleryimage, name: galleryimage, widget: image },
+              ]
+          }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - {
               label: Presentation,

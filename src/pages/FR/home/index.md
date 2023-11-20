@@ -3,6 +3,10 @@ templateKey: 'home-page'
 path: /home
 title: La Chaumière
 image: /img/home.png
+gallery :
+  - galleryimage: /img/Chambre-2-1.jpg
+  - galleryimage: /img/Chambre-2-2.jpg
+  - galleryimage: /img/Desserte-etage-2.jpg
 subheading: Gite et Chambres d'Hôtes au coeur du Périgord
 presentation:
   presentationtitle: La Chaumière, échappée romantique au cœur du Périgord
