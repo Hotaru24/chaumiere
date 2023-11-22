@@ -15,7 +15,6 @@ export default function PageHeaderImage(props) {
           style={{
             background: `url(${img.url ? img.url : img.images?.fallback?.src}) no-repeat center center`,
             backgroundSize: 'cover',
-            backgroundAttachment: 'fixed'
           }}
         >
           <h1>{ title }</h1>

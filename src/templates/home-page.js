@@ -93,6 +93,11 @@ export const HomePageTemplate = ({
                   { locale === 'FR' ? 'Services & Activités' : 'Services & Activities' }
                 </Button>
               </Link>
+              <Link to={`/${locale}/gallery`}>
+                <Button variant="outlined" color="primary">
+                  { locale === 'FR' ? 'Galerie' : 'Gallery' }
+                </Button>
+              </Link>
             </div>
           </article>
           
@@ -144,7 +149,7 @@ HomePageTemplate.propTypes = {
   }),
   presentation: PropTypes.shape({
     presentationtitle: PropTypes.string,
-    presentationdescription: PropTypes.string,
+    presentationdescription: PropTypes.string
   })
 };
 

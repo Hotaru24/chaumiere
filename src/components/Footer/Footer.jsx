@@ -59,6 +59,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to={ `/${locale}/gallery` }>
+                  { locale === 'FR' ? 'Galerie' : 'Gallery' }
+                </Link>
+              </li>
+              <li>
                 <Link to={ `/${locale}/prestation` }>
                   Services & { locale === 'FR' ? ' Activités' : 'Avtivities' }
                 </Link>
