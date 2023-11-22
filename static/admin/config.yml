@@ -133,8 +133,8 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - {
-            label: Gallery,
-            name: gallery,
+            label: Galleryimages,
+            name: galleryimages,
             widget: list,
             fields:
               [
@@ -339,8 +339,8 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - {
-            label: Gallery,
-            name: gallery,
+            label: Galleryimages,
+            name: galleryimages,
             widget: list,
             fields:
               [
