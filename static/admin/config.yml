@@ -21,7 +21,6 @@ collections:
     label: "Rooms FR"
     folder: "src/pages/FR/rooms"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -50,7 +49,6 @@ collections:
     label: "Rooms EN"
     folder: "src/pages/EN/rooms"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
           label: "Template Key",

@@ -1,7 +1,6 @@
 ---
 templateKey: rooms-post
 title: Room Songe
-date: 2023-03-09T17:30:24.461Z
 description: A spacious room under the roof
 price: 110€
 featuredpost: true

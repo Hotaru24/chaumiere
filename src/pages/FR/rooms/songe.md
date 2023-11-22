@@ -1,7 +1,6 @@
 ---
 templateKey: rooms-post
 title: Chambre songe
-date: 2023-03-09T17:16:38.936Z
 description: Une chambre spacieuse sous les combles
 price: 110€
 featuredpost: true

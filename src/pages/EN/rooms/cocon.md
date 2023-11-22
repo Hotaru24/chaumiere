@@ -1,7 +1,6 @@
 ---
 templateKey: rooms-post
 title: Cottage Cocon
-date: 2023-03-09T17:27:59.008Z
 description: A comfortable and warm cottage for two people
 price: 150€
 featuredpost: true

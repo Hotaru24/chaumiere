@@ -1,7 +1,6 @@
 ---
 templateKey: rooms-post
 title: Gîte Cocon
-date: 2023-03-09T17:19:03.961Z
 description: Un gîte confortable et chaleureux pour deux personnes
 price: 150€
 featuredpost: true
