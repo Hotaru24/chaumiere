@@ -50,7 +50,7 @@ export const PricesPageTemplate = ({
     createData(rows.room, 'Reverie', reverie.night, reverie.week),
     createData(rows.room, 'Songe', songe.night, songe.week),
     createData(rows.cottage, 'Cocon', cocon.night, cocon.week),
-    createData(rows.cottage, 'Chaumière', chaumiere.night, chaumiere.week)
+    createData(rows.cottage, 'Chaumiere', chaumiere.night, chaumiere.week)
   ];
 
   return (
