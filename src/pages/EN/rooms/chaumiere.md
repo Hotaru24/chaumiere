@@ -2,7 +2,7 @@
 templateKey: rooms-post
 title: La Chaumière
 description: 18th century Périgourdine residence in the heart of the Dordogne
-price: 250€
+price: 200€
 featuredpost: true
 featuredimage: /img/Sejour-4.jpg
 images :
