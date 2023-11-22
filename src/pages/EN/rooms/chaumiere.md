@@ -15,4 +15,4 @@ images :
     - roomimage: /img/Chambre-2-2.jpg
     - roomimage: /img/Chambre-3-1.jpg
 ---
-* Text
+* coming soon
