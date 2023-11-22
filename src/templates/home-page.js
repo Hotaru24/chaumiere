@@ -93,11 +93,6 @@ export const HomePageTemplate = ({
                   { locale === 'FR' ? 'Services & Activités' : 'Services & Activities' }
                 </Button>
               </Link>
-              <Link to={`/${locale}/gallery`}>
-                <Button variant="outlined" color="primary">
-                  { locale === 'FR' ? 'Galerie' : 'Gallery' }
-                </Button>
-              </Link>
             </div>
           </article>
           
@@ -118,6 +113,11 @@ export const HomePageTemplate = ({
                 <Link to={`/${locale}/rooms`}>
                   <Button variant="outlined" color="primary">
                     { locale === 'FR' ? 'Gite & Chambres' : 'Accommodation' }
+                  </Button>
+                </Link>
+                <Link to={`/${locale}/gallery`}>
+                  <Button variant="outlined" color="primary">
+                    { locale === 'FR' ? 'Galerie' : 'Gallery' }
                   </Button>
                 </Link>
               </div>
