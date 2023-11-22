@@ -204,6 +204,10 @@ export const pricesPageQuery = graphql`
           night
           week
         }
+        chaumiere {
+          night
+          week
+        }
       }
     }
   }

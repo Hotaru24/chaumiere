@@ -27,4 +27,7 @@ songe:
 cocon:
   night: 150€
   week: 890€
+chaumiere:
+  night: 200€
+  week: 1000€
 ---

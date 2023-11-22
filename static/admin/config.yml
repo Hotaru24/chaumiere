@@ -277,6 +277,16 @@ collections:
                   { label: Week, name: week, widget: string }
                 ],
             }
+          - {
+              label: Chaumiere,
+              name: chaumiere,
+              widget: object,
+              fields:
+                [
+                  { label: Night, name: night, widget: string },
+                  { label: Week, name: week, widget: string }
+                ],
+            }
 
   - name: "pages_EN"
     label: "Pages EN"
@@ -476,6 +486,16 @@ collections:
           - {
               label: Cocon,
               name: cocon,
+              widget: object,
+              fields:
+                [
+                  { label: Night, name: night, widget: string },
+                  { label: Week, name: week, widget: string }
+                ],
+            }
+          - {
+              label: Chaumiere,
+              name: chaumiere,
               widget: object,
               fields:
                 [
