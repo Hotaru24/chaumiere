@@ -89,15 +89,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }
-          - {
-            label: Gallery,
-            name: gallery,
-            widget: list,
-            fields:
-              [
-                { label: Galleryimage, name: galleryimage, widget: image },
-              ]
-          }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - {
               label: Presentation,
@@ -130,7 +121,26 @@ collections:
                   { label: Aboutescription, name: aboutdescription, widget: text },
                 ],
             }
-          
+      - file: "src/pages/FR/gallery/index.md"
+        label: "Gallery Page"
+        name: "gallery"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "gallery",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+            label: Gallery,
+            name: gallery,
+            widget: list,
+            fields:
+              [
+                { label: Galleryimage, name: galleryimage, widget: image },
+              ]
+            }          
       - file: "src/pages/FR/prestation/index.md"
         label: "Prestation Page"
         name: "prestation"
@@ -285,15 +295,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }
-          - {
-            label: Gallery,
-            name: gallery,
-            widget: list,
-            fields:
-              [
-                { label: Galleryimage, name: galleryimage, widget: image },
-              ]
-          }
           - { label: "Subheading", name: "subheading", widget: "string" }
           - {
               label: Presentation,
@@ -326,7 +327,26 @@ collections:
                   { label: Aboutescription, name: aboutdescription, widget: text },
                 ],
             }
-
+      - file: "src/pages/EN/gallery/index.md"
+        label: "Gallery Page"
+        name: "gallery"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "gallery",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+            label: Gallery,
+            name: gallery,
+            widget: list,
+            fields:
+              [
+                { label: Galleryimage, name: galleryimage, widget: image },
+              ]
+            }          
       - file: "src/pages/EN/prestation/index.md"
         label: "Prestation Page"
         name: "prestation"

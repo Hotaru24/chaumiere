@@ -3,10 +3,6 @@ templateKey: 'home-page'
 path: /home
 title: La chaumière
 image: /img/home.png
-gallery :
-  - galleryimage: /img/Chambre-2-1.jpg
-  - galleryimage: /img/Chambre-2-2.jpg
-  - galleryimage: /img/Desserte-etage-2.jpg
 subheading: Cottage and Bed and Breakfast in the heart of Périgord
 presentation:
   presentationtitle: presentation

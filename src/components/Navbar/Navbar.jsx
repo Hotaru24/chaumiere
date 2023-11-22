@@ -102,7 +102,12 @@ const Navbar = () => {
             <Link className="navbar-item" to={`/${locale}/rooms`}>
               {locale === 'FR' ? 'Gite & Chambres' : 'Accommodation'}
             </Link>
-          </MenuItem>          
+          </MenuItem>  
+          <MenuItem>
+            <Link className="navbar-item" to={`/${locale}/gallery`}>
+              {locale === 'FR' ? 'Galerie' : 'Gallery'}
+            </Link>
+          </MenuItem>
           <MenuItem>
             <Link className="navbar-item" to={`/${locale}/prestation`}>
               {locale === 'FR' ? 'Services & Activités' : 'Services & Activities'}
@@ -132,6 +137,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="navbar-item" style={{ padding: "0px" }}>
+          <Link className="navbar-item" to={`/${locale}/gallery`} selected={`/${locale}/gallery` === location} style={{ color: tcolor }}>
+            {locale === 'FR' ? 'Galerie' : 'Gallery'}
+          </Link>
+        </li>
+        <li className="navbar-item" style={{ padding: "0px" }}>
           <Link className="navbar-item" to={`/${locale}/prestation`} selected={`/${locale}/prestation` === location} style={{ color: tcolor }}>
             {locale === 'FR' ? 'Services & Activités' : 'Services & Activities'}
           </Link>
@@ -153,7 +163,7 @@ const Navbar = () => {
           href="https://reservation.elloha.com/?IdPublication=046be7c8-8f62-4f49-81bc-893c382d67ea&culture=fr-FR&idoi=f6289d3b-e380-4b54-9675-b9db9b7d0c32&searchFirstAvailableDates=1"
           target="_blank"
         >
-          <Button color="gold" variant="outlined">{ locale === 'FR' ? 'Réservation' : 'Booking' }</Button>                
+          <Button color="gold" variant="outlined">{ locale === 'FR' ? 'Réservation' : 'Booking' }</Button>
         </a>
         </ThemeProvider>
       </div>

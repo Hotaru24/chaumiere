@@ -93,7 +93,7 @@ export const HomePageTemplate = ({
                   { locale === 'FR' ? 'Services & Activités' : 'Services & Activities' }
                 </Button>
               </Link>
-              </div>
+            </div>
           </article>
           
         };
