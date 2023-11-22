@@ -28,7 +28,8 @@ export const PricesPageTemplate = ({
   romance,
   reverie,
   songe,
-  cocon
+  cocon,
+  chaumiere
 }) => {
   const [locale, setLocale] = useState('FR');
   const bgImage = getImage(image) || image;
@@ -48,7 +49,8 @@ export const PricesPageTemplate = ({
     createData(rows.room, 'Romance', romance.night, romance.week),
     createData(rows.room, 'Reverie', reverie.night, reverie.week),
     createData(rows.room, 'Songe', songe.night, songe.week),
-    createData(rows.cottage, 'Cocon', cocon.night, cocon.week)
+    createData(rows.cottage, 'Cocon', cocon.night, cocon.week),
+    createData(rows.cottage, 'Chaumière', chaumiere.night, chaumiere.week)
   ];
 
   return (
@@ -126,7 +128,8 @@ PricesPageTemplate.propTypes = {
   romance: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   reverie: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   songe: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  cocon: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+  cocon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  chaumiere: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
 };
 
 const PricesPage = ({ data }) => {
@@ -145,6 +148,7 @@ const PricesPage = ({ data }) => {
         reverie={frontmatter.reverie}
         songe={frontmatter.songe}
         cocon={frontmatter.cocon}
+        chaumiere={frontmatter.chaumiere}
       />
     </Layout>
   );
