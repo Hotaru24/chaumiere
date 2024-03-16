@@ -7,7 +7,7 @@ galleryimages :
   - galleryimage: /img/Drone-7.jpg
   - galleryimage: /img/Piscine-2.jpg
   - galleryimage: /img/Piscine-1.jpg
-  - galleryimage: /img/Piscine nuit.jpg
+  - galleryimage: /img/Piscine-nuit.jpg
   - galleryimage: /img/Ext-11.jpg
   - galleryimage: /img/Cour.jpg
   - galleryimage: /img/IMG_1169.jpg
