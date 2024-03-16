@@ -9,6 +9,11 @@
 .home .home-link {
   width: 100%;
   text-align: center;
+  
+}
+
+.home .home-gallery {
+  display: none;
 }
 
 .home .home-link h4 {
@@ -22,8 +27,14 @@
   margin: 0 5px;
 }
 
+.home .home-gallery {
+  display: flex;
+  margin: 50px 2vw 0 2vw;
+  justify-content: center;
+}
 
-/*============_Desktop_===========*/
+
+/*============_Desktop_===========*/ 
 
 
 @media (min-width: 1200px) {
@@ -44,6 +55,13 @@
   .home .desktop .carrousel {
     position: relative;
     overflow: hidden;
+  }
+
+  .home .home-gallery .home-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
   }
 
  .home .desktop .caption {

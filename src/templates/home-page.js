@@ -7,6 +7,7 @@ import './home.css'
 
 import Button from '@mui/material/Button';
 
+import CarrouselButton from '../components/CarrouselButton/CarrouselButton';
 import PageHeaderImage from "../components/PageHeaderImage";
 import Carrousel from '../components/Carrousel/Carrousel';
 import Layout from "../components/Layout/Layout";
@@ -86,14 +87,9 @@ export const HomePageTemplate = ({
           <article className="page-body first">
             <h3>{ presentation.presentationtitle }</h3>
             <p>{ presentation.presentationdescription }</p>
-            <div className="home-link">
-              <h4> { locale === 'FR' ? 'Nos services pour un séjour exceptionnel' : 'Our services for an exceptional stay' }</h4>
-              <Link to={`/${locale}/prestation`}>
-                <Button variant="outlined" color="primary">
-                  { locale === 'FR' ? 'Services & Activités' : 'Services & Activities' }
-                </Button>
-              </Link>
-            </div>
+            <div className="home-gallery">
+              <CarrouselButton/>
+            </div>            
           </article>
           
         };
@@ -115,12 +111,7 @@ export const HomePageTemplate = ({
                     { locale === 'FR' ? 'Gite & Chambres' : 'Accommodation' }
                   </Button>
                 </Link>
-                <Link to={`/${locale}/gallery`}>
-                  <Button variant="outlined" color="primary">
-                    { locale === 'FR' ? 'Galerie' : 'Gallery' }
-                  </Button>
-                </Link>
-              </div>
+               </div>
             </div>
           </article>
         };
@@ -128,6 +119,14 @@ export const HomePageTemplate = ({
           <article className="page-body">
             <h3>{ manager.abouttitle }</h3>
             <p>{ manager.aboutdescription }</p>
+            <div className="home-link">
+              <h4> { locale === 'FR' ? 'Nos services pour un séjour exceptionnel' : 'Our services for an exceptional stay' }</h4>
+              <Link to={`/${locale}/prestation`}>
+                <Button variant="outlined" color="primary">
+                  { locale === 'FR' ? 'Services & Activités' : 'Services & Activities' }
+                </Button>
+              </Link>
+            </div>
           </article>
         };
       </div>
